@@ -1,4 +1,4 @@
-﻿var Directives = angular.module("InfyGlasswall")
+﻿var Directives = angular.module("chin2km")
 .directive('datepicker', function () {
 
     return function (scope, element, attrs) {

@@ -3,7 +3,7 @@
 (function () {
     "use strict";
 
-    angular.module('InfyGlasswall')
+    angular.module('chin2km')
             .directive('glasswallToastNotifications', glasswallToastNotifications)
 })();
 

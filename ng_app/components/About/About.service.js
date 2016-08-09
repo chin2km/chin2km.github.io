@@ -1,5 +1,5 @@
 ﻿(function () {
-    angular.module('InfyGlasswall.About.services',[])
+    angular.module('chin2km.About.services',[])
            .factory('AboutService', AboutService);
 
     AboutService.$inject = ["$timeout"];

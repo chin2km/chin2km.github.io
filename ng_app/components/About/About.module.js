@@ -1,9 +1,9 @@
 ﻿(function () {
     "use strict";
 
-    angular.module('InfyGlasswall.About', [
-        "InfyGlasswall.About.controllers",
-        "InfyGlasswall.About.services",
+    angular.module('chin2km.About', [
+        "chin2km.About.controllers",
+        "chin2km.About.services",
     ])
     .config(routeConfig);
 
