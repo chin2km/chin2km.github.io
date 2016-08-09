@@ -1,13 +1,13 @@
 ﻿/// <reference path="components/About/About.html" />
 var chin2km = angular.module("chin2km", [
                 'ngRoute',
-                'chin2km.Me',
+                'chin2km.About',
             ])
             .config(['$routeProvider','$compileProvider', '$locationProvider',
                   function ($routeProvider, $compileProvider, $locationProvider) {
                       $routeProvider
                         .otherwise({
-                            redirectTo: '/Me'
+                            redirectTo: '/About'
                         });
                   }]);
 
