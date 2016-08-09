@@ -1,0 +1,527 @@
+﻿<div class="divBlueBar" ng-cloak>
+
+
+    <div style="border-radius: 3px; border: 1px #6497BA solid; float: left; margin-right: 15px; position: relative; ">
+
+        <div class="ToolStripBox ripple" ng-click="AddNewDetails()" data-toggle="tooltip" data-placement="bottom" title="Add Meeting(s)">
+            <img src="Images/AddPart.png" />
+            Add
+        </div>
+
+        <div class="ToolStripBox ripple" ng-click="SaveAll()" data-toggle="tooltip" data-placement="bottom" title="Save all Meetings">
+            <img src="Images/saveall.png" />
+            Save All
+        </div>
+
+        <div class="ToolStripBox ripple" ng-click="DeleteAll()" data-toggle="tooltip" data-placement="bottom" title="Delete all Meetings in edit mode">
+            <img src="Images/delete.png" />
+            Delete
+        </div>
+
+
+        <div class="ToolStripBox" ng-click="DownloadTemplate()" data-toggle="tooltip" data-placement="bottom" title="Download template for Excel Entry of MOMs for the Current Meetings">
+            <img src="Images/excel.png" />
+            Template
+        </div>
+
+        <div class="ToolStripBox" ng-click="UploadMOMdialog()" data-toggle="tooltip" data-placement="bottom" title="Upload new Meeting from Excel">
+            <img src="Images/upload.png" />
+            Upload
+        </div>
+        <div class="ToolStripBox" ng-click="DownloadAllMeetings()" data-toggle="tooltip" data-placement="bottom" title="Download all the meetings in an excel">
+            <img src="Images/excel.png" />
+            Download
+        </div>
+        <div class="clearDiv"></div>
+
+        <div style="border-radius: 0px 0px 3px 3px; background: rgba(0, 0, 0, 0.13); text-align: center; font-size: 10px; font-weight: bold; line-height: 1.8em">
+            ACTIONS
+        </div>
+
+
+    </div>
+
+    <div style=" height: 100px; border-radius: 3px; border: 1px #6497BA solid; float: left; margin-right: 15px; position: relative; ">
+        <div class="form-group" style="padding:15px;float: left;">
+            <input ng-model="ForumTypeQuery" class="form-control input-sm ng-pristine ng-valid ng-touched" type="text" id="inputSmall" placeholder="Forum type" style=" border-radius: 200px; background-color: rgba(91, 95, 98, 0.14); border: 1px SOLID #1F5C84;color:white">
+        </div>
+        <div class="form-group" style="padding:15px;float: left;">
+            <input ng-model="UnitPUDUQuery" class="form-control input-sm ng-pristine ng-valid ng-touched" type="text" id="inputSmall" placeholder="Unit / PU / DU" style=" border-radius: 200px; background-color: rgba(91, 95, 98, 0.14); border: 1px SOLID #1F5C84;color:white">
+        </div>
+        <div class="form-group" style="padding:15px;float: left;">
+            <input ng-model="LocationQuery" class="form-control input-sm ng-pristine ng-valid ng-touched" type="text" id="inputSmall" placeholder="Location" style=" border-radius: 200px; background-color: rgba(91, 95, 98, 0.14); border: 1px SOLID #1F5C84;color:white">
+        </div>
+        <div class="form-group" style="padding:15px;float: left;">
+            <input ng-model="AnchorQuery" class="form-control input-sm ng-pristine ng-valid ng-touched" type="text" id="inputSmall" placeholder="Event Anchor" style=" border-radius: 200px; background-color: rgba(91, 95, 98, 0.14); border: 1px SOLID #1F5C84;color:white">
+        </div>
+        <div class="form-group" style="padding:15px;float: left;">
+            <input ng-model="CreatedbyQuery" class="form-control input-sm ng-pristine ng-valid ng-touched" type="text" id="inputSmall" placeholder="Created By" style=" border-radius: 200px; background-color: rgba(91, 95, 98, 0.14); border: 1px SOLID #1F5C84;color:white">
+        </div>
+
+        <div class="clearDiv"></div>
+        <div style="width: 100%; border-radius: 0px 0px 3px 3px; background:rgba(0, 0, 0, 0.13);text-align:center;font-size:10px;font-weight:bold;bottom:0px;position:absolute;line-height:1.8em ">
+            SMART SEARCH
+        </div>
+    </div>
+
+
+    <div class="clearDiv"></div>
+</div>
+
+<!--This is the table just to display-->
+
+<div dp-infinite-scroll load-more="forumVM.loadMore(currentPage)" current-page="forumVM.currentPage" ng-init="forumVM.ShowAllCol=false">
+
+    <span ng-cloak style="font-style: italic; position: fixed; transform: rotate(270deg); font-size: 30px; left: -173px; bottom: 210px; ">Showing <b> {{MyMeetings.length}} of {{forumVM.meetingsCount}}</b> meetings!</span>
+    <div data-toggle="tooltip" data-placement="top" title="{{forumVM.ShowAllCol?'Hide':'Show'}} additional (optional) Columns.Namely Project , Account, PD EmailID, DM EmailID" style="float:right"><input type="checkbox" ng-model="forumVM.ShowAllCol"> <span class="mouse-default" ng-click="forumVM.ShowAllCol=!forumVM.ShowAllCol"> {{forumVM.ShowAllCol?'Hide':'Show'}} More Colums</span></div>
+    
+    <table class="table table-striped table-hover" style="font-size:11px" id="MeetingTable">
+        <thead>
+            <tr class="info">
+                <th colspan="1">Sl No</th>
+                <th colspan="2">
+                    <span style="float:left;">Forum-Type</span>
+                    <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMeetingData('SelectedForumTypeID')"></span>
+                </th>
+                <th colspan="3">Created by </th>
+                <th colspan="2">Date </th>
+                <th colspan="2">
+                    <span style="float:left;">Unit</span>
+                    <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMeetingData('UnitID')"></span>
+                </th>
+                <th colspan="2">
+                    <span style="float:left;">PU</span>
+                    <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMeetingData('PUID')"></span>
+                </th>
+                <th colspan="2">
+                    <span style="float:left;">DU</span>
+                    <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMeetingData('DUID')"></span>
+                </th>
+                <th colspan="2">
+                    <span style="float:left;">Location</span>
+                    <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMeetingData('LocationID')"></span>
+                </th>
+                <th colspan="1">
+                    <span style="float:left;">Employee Participation </span>
+                    <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMeetingData('ParticipationNumber')"></span>
+                </th>
+                <th colspan="3">
+                    <span style="float:left;">Event Anchor</span>
+                    <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMeetingData('EventAnchor')"></span>
+                </th>
+
+                <th colspan="2">
+                    <span style="float:left;">Remarks</span>
+                    <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMeetingData('Comments')"></span>
+                </th>
+                <th colspan="2" ng-if="forumVM.ShowAllCol">
+                    <span style="float:left;">Account</span>
+                </th>
+                <th colspan="2" ng-if="forumVM.ShowAllCol">
+                    <span style="float:left;">Project</span>
+                </th>
+                <th colspan="2" ng-if="forumVM.ShowAllCol">
+                    <span style="float:left;">PM e-mail</span>
+                </th>
+                <th colspan="2" ng-if="forumVM.ShowAllCol">
+                    <span style="float:left;">DM e-mail</span>
+                </th>
+                <th colspan="2">Actions</th>
+                <th colspan="1">Edit</th>
+            </tr>
+        </thead>
+
+
+
+        <tbody>
+
+            <tr class="active HoverClass PartTable" style="border-top:1px solid rgba(0, 0, 0, 0.16)" ng-class="MyMeeting.Clazz" ng-repeat-start="MyMeeting in MyMeetings | orderBy:sortType:sortReverse " ng-init="MyMeeting.IsVisible=true" ng-show="MyMeeting.IsVisible">
+
+                <td colspan="1">{{($index+1)}}</td>
+                <td colspan="2">
+                    <span ng-if="!MyMeeting.InEditMode">{{MyMeeting.ForumTypeName}}</span>
+                    <select ng-if="MyMeeting.InEditMode" class="form-control input-sm" ng-model="MyMeeting.SelectedForumTypeID" ng-options="item.ForumTypeID as item.ForumTypeName for item in ForumTypeDetails"></select>
+                </td>
+                <td colspan="3">
+                    <a style="float: left;margin-top:5px;margin-right:5px" href="sip:{{MyMeeting.EmailID}}@infosys.com" ng-if="!IsUser">
+                        <div id="LyncImg">
+                            <img style="width:30px" ng-src="{{ImgPathBegin}}{{MyMeeting.EmailID}}{{ImgPathEnd}}" onerror="this.src='Images/user.png';" />
+                        </div>
+                    </a>
+                    <span style="float: left;margin-top:5px">{{MyMeeting.EmailID}}</span>
+                </td>
+                <td colspan="2">
+                    <span ng-if="!MyMeeting.InEditMode">{{MyMeeting.UpdatedDate}}</span>
+                    <input class="form-control input-sm datepicker" style="color: black;" type="text" ng-show="MyMeeting.InEditMode" ng-model="MyMeeting.UpdatedDate" forumdatepicker>
+                </td>
+                <td colspan="2">
+                    <span ng-if="!MyMeeting.InEditMode">{{MyMeeting.UnitName}}</span>
+                    <select ng-if="MyMeeting.InEditMode" class="form-control input-sm" ng-model="MyMeeting.UnitID" ng-change="setResultPUsForMeeting(MyMeeting);setResultDUsForMeeting(MyMeeting);Meeting.DUs=[];" ng-options="item.UnitID as item.UnitName for item in MyMeeting.AllUnitsPUsDUs"></select>
+                </td>
+                <td colspan="2">
+                    <span ng-if="!MyMeeting.InEditMode">{{MyMeeting.PUName}}</span>
+                    <select ng-if="MyMeeting.InEditMode" class="form-control input-sm" ng-model="MyMeeting.PUID" ng-change="setResultDUsForMeeting(MyMeeting);Meeting.DUs=[];" ng-options="item2.PUID as item2.PUName for item2 in MyMeeting.ResultedPUsNew"></select>
+                </td>
+                <td colspan="2" style="overflow:visible">
+                    <!--<span ng-if="!MyMeeting.InEditMode">{{MyMeeting.DUName}}</span>-->
+                    <div ng-if="!MyMeeting.InEditMode" style="width: 122px; overflow: hidden; height: auto; overflow-wrap: break-word; word-wrap: break-word; word-break: break-all; white-space: nowrap; text-overflow: ellipsis;">
+                        <span ng-repeat="d in MyMeeting.ResultedDUsNew" ng-if="MyMeeting.DUs.indexOf(d.DUID)!=-1">{{d.DUName}}, </span>
+                    </div>
+                    
+                    <!--<select ng-if="MyMeeting.InEditMode" class="form-control input-sm" ng-model="MyMeeting.DUID" ng-options="item3.DUID as item3.DUName for item3 in MyMeeting.ResultedDUsNew"></select>-->
+                    <div ng-if="MyMeeting.InEditMode" class="select-div">
+                        <ui-select multiple ng-model="MyMeeting.DUs" theme="bootstrap" close-on-select="false" value="MyMeeting.DUs" reset-search-input="true" class="modal-select">
+                            <ui-select-match placeholder="Select DUs">{{$item.DUName}} , </ui-select-match>
+
+                            <ui-select-choices repeat="meet.DUID as meet in MyMeeting.ResultedDUsNew">
+                                <div ng-if="$index==0">
+                                    <a class="btn btn-success btn-select-all" ng-click="forumVM.selectAllDU(MyMeeting);" data-toggle="tooltip" data-placement="left" title="Select All" style="font-size: 6px; height: 30px; width: 50px; position: absolute; right: 0px; top: 0px;">
+                                        <img style="width: 15px; cursor: pointer; margin-top: -4px;" src="Images/select-all.png" />
+                                    </a>
+                                    {{meet.DUName}}
+                                </div>
+                                <div ng-if="$index!=0">{{meet.DUName}}</div>
+                            </ui-select-choices>
+
+                        </ui-select>
+                    </div>
+
+                </td>
+                <td colspan="2" style="overflow:visible">
+                    <span ng-if="!MyMeeting.InEditMode">{{MyMeeting.LocationName}}</span>
+
+                    <div ng-if="!MyMeeting.InEditMode" style="width: 122px; overflow: hidden; height: auto; overflow-wrap: break-word; word-wrap: break-word; word-break: break-all; white-space: nowrap; text-overflow: ellipsis;">
+                        <span ng-repeat="l in LocationDetails" ng-if="MyMeeting.LocationIDs.indexOf(l.LocationID)!=-1">{{l.LocationName}}, </span>
+                    </div>
+
+                    <!--<select ng-if="MyMeeting.InEditMode" class="form-control input-sm" ng-model="MyMeeting.LocationID" ng-options="item.LocationID as item.LocationName for item in LocationDetails"></select>-->
+                    <div ng-if="MyMeeting.InEditMode" class="select-div">
+                        <ui-select multiple ng-model="MyMeeting.LocationIDs" theme="bootstrap" close-on-select="false" value="MyMeeting.DUs" reset-search-input="true" class="modal-select">
+                            <ui-select-match placeholder="Select Locations">{{$item.LocationName}} , </ui-select-match>
+
+                            <ui-select-choices repeat="loc.LocationID as loc in LocationDetails">
+                                <div ng-if="$index==0">
+                                    <a class="btn btn-success btn-select-all" ng-click="forumVM.selectAllLocations(MyMeeting);" data-toggle="tooltip" data-placement="left" title="Select All" style="font-size: 6px; height: 30px; width: 50px; position: absolute; right: 0px; top: 0px;">
+                                        <img style="width: 15px; cursor: pointer; margin-top: -4px;" src="Images/select-all.png" />
+                                    </a>
+                                    {{loc.LocationName}}
+                                </div>
+                                <div ng-if="$index!=0">{{loc.LocationName}}</div>
+                            </ui-select-choices>
+
+                        </ui-select>
+                    </div>
+                </td>
+                <td colspan="1">
+                    <span ng-if="!MyMeeting.InEditMode">{{MyMeeting.ParticipationNumber}}</span>
+                    <input style="padding:5px 1px" placeholder="Participation Number" class="form-control input-sm" type="text" ng-if="MyMeeting.InEditMode" ng-model="MyMeeting.ParticipationNumber" />
+                </td>
+                <td colspan="3">
+                    <a style="float: left;margin-top:5px;margin-right:5px" href="sip:{{MyMeeting.EventAnchor}}@infosys.com">
+                        <div id="LyncImg">
+                            <img style="width:30px" ng-src="{{ImgPathBegin}}{{MyMeeting.EventAnchor}}{{ImgPathEnd}}" onerror="this.src='Images/user.png';" />
+                        </div>
+                    </a>
+                    <span style="float:left;margin-top:5px;" ng-if="!MyMeeting.InEditMode">{{ MyMeeting.EventAnchor }}</span>
+                    <input style="width: 75%; float: left" placeholder="Event Anchor/s" class="form-control input-sm" type="text" ng-if="MyMeeting.InEditMode" ng-model="MyMeeting.EventAnchor" />
+                </td>
+                <td colspan="2">
+                    <span ng-if="!MyMeeting.InEditMode">{{ MyMeeting.Comments }}</span>
+                    <input placeholder="Comments" class="form-control input-sm" type="text" ng-if="MyMeeting.InEditMode" ng-model="MyMeeting.Comments" />
+                </td>
+                <td colspan="2" ng-if="forumVM.ShowAllCol">
+                    <span ng-if="!MyMeeting.InEditMode">{{ MyMeeting.Account }}</span>
+                    <input placeholder="Account" class="form-control input-sm" type="text" ng-if="MyMeeting.InEditMode" ng-model="MyMeeting.Account" />
+                </td>
+                <td colspan="2" ng-if="forumVM.ShowAllCol">
+                    <span ng-if="!MyMeeting.InEditMode">{{ MyMeeting.Project }}</span>
+                    <input placeholder="Project" class="form-control input-sm" type="text" ng-if="MyMeeting.InEditMode" ng-model="MyMeeting.Project" />
+                </td>
+                <td colspan="2" ng-if="forumVM.ShowAllCol">
+                    <span ng-if="!MyMeeting.InEditMode">{{ MyMeeting.PM_EmailID }}</span>
+                    <input placeholder="PM EmailID" class="form-control input-sm" type="text" ng-if="MyMeeting.InEditMode" ng-model="MyMeeting.PM_EmailID" />
+                </td>
+                <td colspan="2" ng-if="forumVM.ShowAllCol">
+                    <span ng-if="!MyMeeting.InEditMode">{{ MyMeeting.DM_EmailID }}</span>
+                    <input placeholder="DM EmailID" class="form-control input-sm" type="text" ng-if="MyMeeting.InEditMode" ng-model="MyMeeting.DM_EmailID" />
+                </td>
+                <td colspan="2">
+
+                    <a ng-click="getMyMeetingsMOM(MyMeeting , true);" data-toggle="tooltip" data-placement="top" title="Word Cloud" style="font-size:7px">
+                        <img style="width:25px;margin-right:10px;cursor:pointer" src="Images/cloud.png" />
+                    </a>
+                    <a ng-click="OpendivAddCalendar(MyMeeting)" data-toggle="tooltip" data-placement="top" title="Add to Outlook Calendar" style="font-size:7px">
+                        <img style="width:25px;margin-right:10px;cursor:pointer" src="Images/calendar.png" />
+                    </a>
+                </td>
+                <td colspan="1">
+                    <a class="btn btn-success btn-sm" ng-if="!MyMeeting.InEditMode" ng-click="getMyMeetingsMOM(MyMeeting)" data-toggle="tooltip" data-placement="top" title="Edit Meeting" style="font-size:6px">
+                        &#149; &nbsp;&#149; &nbsp;&#149;
+                    </a>
+                </td>
+            </tr>
+            <tr class="active HoverClass" ng-show="MyMeeting.InEditMode" ng-class="MyMeeting.Clazz">
+                <td colspan="2"></td>
+                <td colspan="{{forumVM.ShowAllCol?28:20}}">
+                    <div style="max-height:325px;overflow-y:auto">
+                        <table class="table table-striped table-hover" style="table-layout:fixed; width:100%;max-height:325px;font-size:12px">
+                            <thead>
+                                <tr class="info">
+                                    <td colspan="1">SI #</td>
+                                    <td colspan="3">
+                                        <span style="float:left;">MOM Type</span>
+                                        <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMOMData(MyMeeting,'MOMTypeID')"></span>
+                                    </td>
+                                    <td colspan="3">
+                                        <span style="float:left;">Anchor Responsible</span>
+                                        <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMOMData(MyMeeting,'AnchorResponsible')"></span>
+                                    </td>
+                                    <td colspan="3">
+                                        <span style="float:left;">Comment</span>
+                                        <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMOMData(MyMeeting,'Comment')"></span>
+                                    </td>
+                                    <td colspan="3">
+                                        <span style="float:left;">Status</span>
+                                        <span style="cursor: pointer; float: left; margin-left:5px; height: 15px; width: 15px; background-image: url(Images/autofill.png); background-size: 100% 100%" ng-click="AutofillMOMData(MyMeeting,'Status')"></span>
+                                    </td>
+                                    <td colspan="1">Delete</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="active" ng-repeat="MOMModel in MyMeeting.lstMOM" ng-if="MOMModel.Deleted==false">
+                                    <td colspan="1">
+                                        {{($index+1)}}
+                                    </td>
+                                    <td colspan="3">
+                                        <select class="form-control input-sm" ng-model="MOMModel.MOMTypeID" ng-options="item.MOMTypeID as item.MOMTypeName for item in MOMTypeDetails"></select>
+                                    </td>
+                                    <td colspan="3">
+                                        <a style="float: left;margin-top:5px;margin-right:5px" href="sip:{{MOMModel.AnchorResponsible}}@infosys.com">
+                                            <div id="LyncImg">
+                                                <img style="width:30px" ng-src="{{ImgPathBegin}}{{MOMModel.AnchorResponsible}}{{ImgPathEnd}}" onerror="this.src='Images/user.png';" />
+                                            </div>
+                                        </a>
+                                        <input style="float: left;width:60%" placeholder="Anchor Responsible" class="form-control input-sm" type="text" ng-model="MOMModel.AnchorResponsible">
+                                    </td>
+                                    <td colspan="3">
+                                        <input placeholder="Comment" class="form-control input-sm" type="text" ng-model="MOMModel.Comment">
+                                    </td>
+                                    <td colspan="3" ng-init="MOMModel.Statuses=[{'StatusID':'Open','Status':'Open'},{'StatusID':'Closed','Status':'Closed'}]">
+                                        <select class="form-control input-sm" ng-model="MOMModel.Status" ng-options="stts.StatusID as stts.Status for stts in MOMModel.Statuses"></select>
+                                    </td>
+                                    <td colspan="1">
+                                        <a class="btn btn-danger btn-sm" ng-click="MOMModel.Deleted=true">
+                                            <img style=" height: 15px;  cursor: pointer" src="Images/delete.png" data-toggle="tooltip" data-placement="top" title="Delete" />
+                                        </a>
+                                    </td>
+
+                                </tr>
+                                <tr class="active" ng-if="MyMeeting.lstMOM==undefined || MyMeeting.lstMOM.length==0">
+                                    <td colspan="14" style="font-size:13px;font-style:italic;color:#1F5C84">No MOMs added! Feel free to go on and add as many as needed!</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </td>
+                <td colspan="3">
+                    <br />
+                    <a ng-click="AddMOMtoThisMeeting(MyMeeting)" class="btn btn-primary btn-sm ripple" style="float:right;color:white" data-toggle="tooltip" data-placement="top" title="Add a MOM">
+                        <img style=" height: 20px; width: 20px; cursor: pointer" src="Images/AddPart.png"><br>Add<br>MOM
+                    </a>
+                </td>
+            </tr>
+
+            <tr ng-repeat-end ng-show="MyMeeting.InEditMode" ng-class="MyMeeting.Clazz" style="border-bottom:3px solid rgba(225, 225, 225, 0.65)">
+                <td colspan="{{forumVM.ShowAllCol?16:12}}">
+                    <div style="float:right">
+                        <a class="btn btn-info btn-sm" ng-click="SaveThisMeeting(MyMeeting)">
+                            <img style=" height: 18px;  cursor: pointer" src="Images/save.png" data-toggle="tooltip" data-placement="top" title="Save Meeting" />
+                            &nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;
+                        </a>
+                    </div>
+                </td>
+                <td colspan="{{forumVM.ShowAllCol?17:13}}">
+                    <div style="float:left">
+                        <a class="btn btn-danger btn-sm" ng-click="DeleteThisMeeting(MyMeeting);">
+                            <img style=" height: 18px;  cursor: pointer" src="Images/delete.png" data-toggle="tooltip" data-placement="top" title="Delete Meeting" />
+                            Delete
+                        </a>
+                    </div>
+                </td>
+
+            </tr>
+
+            <tr class="active" ng-if="MyMeetings==undefined || MyMeetings.length==0">
+                <td colspan="{{forumVM.ShowAllCol?33:25}}" style="font-size:14px;font-style:italic;">No Meetings to display at this moment! Feel free to go on and add/plan meetings!</td>
+            </tr>
+
+            <tr class="active" ng-if="forumVM.meetingsCount <= forumVM.pageOffset">
+                <td colspan="{{forumVM.ShowAllCol?33:25}}" style="font-size:14px;font-style:italic;">All <b>{{forumVM.meetingsCount}}</b> meetings are loaded!</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+
+
+<!--THIS TABLE IS FOR EXCEL DOWNLOAD-->
+
+<div id="Forumssss" style="display: none">
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    <span>Forum-Type</span>
+                </th>
+                <th>Created by </th>
+                <th>Date </th>
+                <th>
+                    <span>Unit</span>
+                </th>
+                <th>
+                    <span>PU</span>
+                </th>
+                <th>
+                    <span>DU</span>
+                </th>
+                <th>
+                    <span>Location</span>
+                </th>
+                <th>
+                    <span>Employee Participation </span>
+                </th>
+                <th>
+                    <span>Event Anchor</span>
+                </th>
+
+                <th>
+                    <span>Remarks</span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="MyMeeting in MyMeetings" ng-init="MyMeeting.IsVisible=true" ng-if="MyMeeting.IsVisible">
+
+                <td>
+                    {{MyMeeting.ForumTypeName}}
+                </td>
+                <td>{{MyMeeting.EmailID}}</td>
+                <td>{{MyMeeting.UpdatedDate}}</td>
+                <td>
+                    {{MyMeeting.UnitName}}
+                </td>
+                <td>
+                    {{MyMeeting.PUName}}
+                </td>
+                <td>
+                    {{MyMeeting.DUName}}
+                </td>
+                <td>
+                    {{MyMeeting.LocationName}}
+                </td>
+                <td>
+                    {{MyMeeting.ParticipationNumber}}
+                </td>
+                <td>
+                    {{ MyMeeting.EventAnchor }}
+                </td>
+                <td>
+                    {{ MyMeeting.Comments }}
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+    <a id="dlink" style="display:none;"></a>
+</div>
+
+
+<div class="modal fade" id="divAddCalendar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Calendar Specifics!</h4>
+            </div>
+
+            <table class="table table-striped table-hover ">
+                <tbody>
+                    <tr>
+                        <td>Title: </td>
+                        <td><input class="form-control input-sm" type="text" ng-model="CalendarObj.title" /></td>
+                    </tr>
+                    <tr>
+                        <td>Date:</td>
+                        <td><input class="form-control input-sm" type="text" ng-model="CalendarObj.Date" id="CalenderDate" ui-date-format="yy-mm-dd" ui-date="dateOptions" /></td>
+                    </tr>
+                    <tr>
+                        <td>Start time:</td>
+                        <td><input class="form-control input-sm" type="time" ng-model="CalendarObj.StartTime" /></td>
+                    </tr>
+                    <tr>
+                        <td>End time:</td>
+                        <td><input class="form-control input-sm" type="time" ng-model="CalendarObj.EndTime" /></td>
+                    </tr>
+                    <tr>
+                        <td>Location:</td>
+                        <td><input class="form-control input-sm" type="text" ng-model="CalendarObj.Location" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <input type="button" value="Import to Outlook" class="btn btn-info btn-sm" style="float:right;margin-right:25px" ng-click="CalendarFileDownload(CalendarObj)" />
+            <br />
+            <br />
+            <div class="clearDiv"></div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="divUploadMOM" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Select Meeting Excel to upload!</h4>
+            </div>
+            <form class="modal-body" action="MyService.asmx/ImportMOM" method="post" enctype="multipart/form-data">
+
+                <input style="width:100%" type="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" ng-model="UploadDocumentEXCEL" app-filereader />
+                <!--<input type="file" id="inputUploadMOM" name="file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" style="width: 300px; background-color: #428bca; border-color: #357ebd; ">-->
+                <input type="button" id="btnImport" value="Import" class="btn btn-primary" style="margin-left: 1%;display:inline" ng-click="ImportMOM()" />
+
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document" style="width:400px;height:400px !important">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Word Cloud</h4>
+            </div>
+            <div class="modal-body">
+                <div id="commentCloud">
+                    <svg></svg>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<glasswall-toast-notifications notifications="forumVM.notifications"></glasswall-toast-notifications>

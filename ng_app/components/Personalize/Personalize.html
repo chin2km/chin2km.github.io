@@ -1,0 +1,160 @@
+﻿<div class="divBlueBar">
+
+    <div style="float:right">
+        <input ng-model="query" class="form-control input-sm SearchInput" type="text" id="inputSmall" placeholder="Search here">
+    </div>
+
+    <div><span style="font-size:20px">Personalize your Glasswall</span></div>
+
+    <div class="clearDiv"></div>
+</div>
+<glasswall-toast-notifications notifications="toolsVM.notifications"></glasswall-toast-notifications>
+
+
+<div class="Panel100">
+    <span style="float:right">
+        <label for="ContentWidth">Site Content Width:</label>
+        <span style="font-size:30px" id="ContentWidth"> </span>   
+    </span>
+    <div class="clearDiv"></div>
+    <div id="WidthSlider"></div>
+
+
+   
+
+    <div class="Panel50" style="background:none;">
+        <div id="BrightThemePreview" onclick="SetTheme('Bright')">
+            <div id="BrightThemePreviewSave" onclick="SetTheme('Bright')">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="Panel50" style="background:none;">
+        <div id="DarkThemePreview" onclick="SetTheme('Dark')">
+            <div id="DarkThemePreviewSave" onclick="SetTheme('Dark')">
+
+            </div>
+        </div>
+    </div>
+    <div class="clearDiv"></div>
+    <div style="font-size: 25px; width: 100px; margin: auto; ">UI Mode</div>
+    <br />
+
+
+    <div class="Panel100" style="min-height:0px;">
+        <h4>Choose Background</h4>
+
+        <div class="BackgroundPreview" onclick="SetBackground('3')">
+            <img src="Images/BGs/Thumbs/bg3.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('2')">
+            <img src="Images/BGs/Thumbs/bg2.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('1')">
+            <img src="Images/BGs/Thumbs/bg1.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('10')">
+            <img src="Images/BGs/Thumbs/bg10.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('4')">
+            <img src="Images/BGs/Thumbs/bg4.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('5')">
+            <img src="Images/BGs/Thumbs/bg5.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('6')">
+            <img src="Images/BGs/Thumbs/bg6.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('8')">
+            <img src="Images/BGs/Thumbs/bg8.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('9')">
+            <img src="Images/BGs/Thumbs/bg9.jpg" />
+        </div>
+
+        <div class="BackgroundPreview" onclick="SetBackground('7')">
+            <img src="Images/BGs/Thumbs/bg7.jpg" />
+        </div>
+
+
+
+
+    </div>
+
+</div>
+
+
+
+<!--Website Preferences Saved Loaclly-->
+<script>
+
+
+    if (localStorage.getItem("HRDIARYWidth") != null) {
+        var HRDIARYWidth = localStorage.getItem("HRDIARYWidth")
+        $("#ContentWidth").html(HRDIARYWidth + "%");
+    }
+
+
+    $("#WidthSlider").slider({
+        step: 1,
+        max:100,
+        min: 0,
+        value: localStorage.getItem("HRDIARYWidth") == null ? 85 : parseInt(localStorage.getItem("HRDIARYWidth")),
+        slide: function (event, ui) {
+            if (ui.value < 50) {
+                return;
+            }
+            $("#ContentWidth").html(ui.value + "%");
+            $("#MainFrame").css("width", ui.value + "%"); 
+            $(".site-footer").css("width", ui.value + "%");
+
+            if (typeof (Storage) !== "undefined") {
+                localStorage.setItem("HRDIARYWidth", ui.value);
+            } else {
+
+            }
+        }
+    });
+
+    $("#ContentWidth").html($("#WidthSlider").slider("value") + "%");
+
+
+    function SetTheme(Theme) {
+        var oldlink = document.getElementsByTagName("link").item(2);
+
+        var newlink = document.createElement("link");
+        newlink.setAttribute("rel", "stylesheet");
+        newlink.setAttribute("type", "text/css");
+
+        newlink.setAttribute("href", "CSS/Boot" + Theme + ".css");
+        if (typeof (Storage) !== "undefined") {
+            localStorage.setItem("HRDIARYcss", Theme);
+        }
+        document.getElementsByTagName("head").item(0).replaceChild(newlink, oldlink);
+    }
+
+
+    function SetBackground(BG) {
+
+
+        $("body").css("background", "url('Images/BGs/bg" + BG + ".jpg') no-repeat fixed");
+        $("body").css("background-size", "100% 100%");
+
+        if (typeof (Storage) !== "undefined") {
+            localStorage.setItem("HRDIARYBackround", BG);
+        } else {
+
+        }
+
+    }
+
+</script>

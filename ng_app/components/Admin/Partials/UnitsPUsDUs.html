@@ -1,0 +1,125 @@
+﻿<ol class="tree">
+    <li ng-cloak ng-repeat="Unit in AllUnitsPUsDUs" ng-init="Unit.Editable=false;NewUnitVisibility=false">
+        <label for={{Unit.UnitName}} style="background: url('CSS/jqTreeView/Unit.png') 15px 5px no-repeat;">
+            <span>{{Unit.UnitName}}</span> <!--<span style="color:#8b8b8b">|| Unit Strength: {{Unit.UnitStrength}}</span>-->
+        </label>
+        <div style="float:right;margin-top:-33px;margin-right:20px" ng-show="IsSuperAdmin">
+            <input ng-model="Unit.UnitName" ng-show="Unit.Editable==true" placeholder="Name" />
+            <!--<input ng-model="Unit.UnitStrength" ng-show="Unit.Editable==true" placeholder="Strength" />-->
+            <a ng-click="Unit.Editable=!Unit.Editable" ng-show="Unit.Editable==false">
+                <img style=" height: 25px;  cursor: pointer" src="Images/edit.png" data-toggle="tooltip" data-placement="left" title="Edit" />
+            </a>
+
+            <a ng-click="SaveItemOftype('Unit',Unit);Unit.Editable=!Unit.Editable" ng-show="Unit.Editable==true">
+                <img style=" height: 25px;  cursor: pointer" src="Images/Save.png" data-toggle="tooltip" data-placement="bottom" title="Save" />
+            </a>
+
+            <a ng-click="DeleteItemOftype('Unit',Unit.UnitID);Unit.Editable==false" ng-show="IsSuperAdmin">
+                <img style=" height: 25px;  cursor: pointer" src="Images/delete.png" data-toggle="tooltip" data-placement="top" title="Delete" />
+            </a>
+
+        </div>
+        <input type="checkbox" id={{Unit.UnitName}} />
+
+        <ol>
+            <li ng-repeat="PU in Unit.lstPUs" ng-init="PU.Editable=false">
+                <label for={{(PU.PUName+Unit.UnitName)}} style="background: url('CSS/jqTreeView/PU.png') 15px 5px no-repeat;">
+                    <span>{{PU.PUName}}</span><span style="color:#4c738b">|| PU Strength: {{PU.PUStrength}}</span>
+                </label>
+
+                <div style="float:right;margin-top:-33px;margin-right:20px" ng-show="IsSuperAdmin||IsUnitLevelAdmin||IsPULevelAdmin">
+                    <input ng-model="PU.PUName" ng-show="PU.Editable==true" />
+                    <input ng-model="PU.PUStrength" ng-show="PU.Editable==true" placeholder="Strength" />
+                    <a ng-click="PU.Editable=!PU.Editable" ng-show="PU.Editable==false">
+                        <img style=" height: 25px;  cursor: pointer" src="Images/edit.png" data-toggle="tooltip" data-placement="left" title="Edit" />
+                    </a>
+
+                    <a ng-click="SaveItemOftype('PU',PU);PU.Editable=!PU.Editable" ng-show="PU.Editable==true">
+                        <img style=" height: 25px;  cursor: pointer" src="Images/Save.png" data-toggle="tooltip" data-placement="bottom" title="Save" />
+                    </a>
+
+                    <a ng-click="DeleteItemOftype('PU',PU.PUID);PU.Editable==false" ng-show="IsSuperAdmin">
+                        <img style=" height: 25px;  cursor: pointer" src="Images/delete.png" data-toggle="tooltip" data-placement="bottom" title="Delete" />
+                    </a>
+
+                </div>
+
+                <input type="checkbox" id={{(PU.PUName+Unit.UnitName)}} />
+                <ol>
+                    <li ng-repeat="DU in PU.lstDUs" style="background: url('CSS/jqTreeView/DU.png') 15px 5px no-repeat;" ng-init="DU.Editable=false">
+                        <a href="" style="margin-left:30px">{{DU.DUName}}</a>
+                        <div style="float:right;margin-right:15px">
+                            <input ng-model="DU.DUName" ng-show="DU.Editable==true" />
+                            <a ng-click="DU.Editable=!DU.Editable" ng-show="DU.Editable==false && (IsSuperAdmin||IsUnitLevelAdmin||IsPULevelAdmin)">
+                                <img style="height:25px; cursor:pointer" src="Images/edit.png" data-toggle="tooltip" data-placement="left" title="Edit" />
+                            </a>
+
+                            <a ng-click="SaveItemOftype('DU',DU);DU.Editable=!DU.Editable" ng-show="DU.Editable==true">
+                                <img style=" height: 25px;  cursor: pointer" src="Images/Save.png" data-toggle="tooltip" data-placement="bottom" title="Save" />
+                            </a>
+
+                            <a ng-click="DeleteItemOftype('DU',DU.DUID);DU.Editable==false" ng-show="IsSuperAdmin">
+                                <img style=" height: 25px;  cursor: pointer" src="Images/delete.png" data-toggle="tooltip" data-placement="bottom" title="Delete" />
+                            </a>
+
+                        </div>
+                    </li>
+
+                    <li class="file" ng-show="IsSuperAdmin||IsUnitLevelAdmin||IsPULevelAdmin">
+                        <a href="" ng-click="ShowAddNewItemOfType('DU',Unit,PU)">Add a <img style="width:22px" src="CSS/jqTreeView/DU.png" /></a>
+
+                        <div class="success" ng-show="PU.NewDUVisibility==true" ng-init="PU.NewDUVisibility=false">
+                            <input class="form-control input-sm" type="text" ng-model="NewDU.DUName" style="width: 84%; float: left; height: 35px">
+                            <a ng-click="PU.NewDUVisibility=false" style="width:8%;float:right;background:none">
+                                <img style=" height:25px;  cursor: pointer" src="Images/delete.png" data-toggle="tooltip" data-placement="top" title="Cancel" />
+                            </a>
+                            <a ng-click="SaveItemOftype('DU',NewDU);PU.NewDUVisibility=false" style="width: 8%; float: right; background: none">
+                                <img style=" height: 25px;  cursor: pointer" src="Images/Save.png" data-toggle="tooltip" data-placement="top" title="Edit" />
+                            </a>
+                            <div class="clearDiv"></div>
+                        </div>
+                    </li>
+
+                </ol>
+            </li>
+
+            <li class="file" ng-show="IsSuperAdmin||IsUnitLevelAdmin">
+                <a href="" ng-click="ShowAddNewItemOfType('PU',Unit);">Add a <img style="width:22px" src="CSS/jqTreeView/PU.png" /></a>
+
+                <div class="success" ng-show="Unit.NewPUVisibility==true" ng-init="Unit.NewPUVisibility=false">
+                    <input class="form-control input-sm" type="text" ng-model="NewPU.PUName" style="width: 42%; float: left;height:35px">
+                    <input class="form-control input-sm" placeholder="Give PU Strength" type="text" ng-model="NewPU.PUStrength" style="width: 42%; float: left;height:35px">
+
+                    <a ng-click="Unit.NewPUVisibility=false" style="width:8%;float:right;background:none">
+                        <img style=" height:25px;  cursor: pointer" src="Images/delete.png" data-toggle="tooltip" data-placement="bottom" title="Cancel" />
+                    </a>
+                    <a ng-click="SaveItemOftype('PU',NewPU);Unit.NewPUVisibility=false" style="width: 8%; float: right; background: none">
+                        <img style=" height: 25px;  cursor: pointer" src="Images/Save.png" data-toggle="tooltip" data-placement="bottom" title="Edit" />
+                    </a>
+                    <div class="clearDiv"></div>
+                </div>
+
+            </li>
+
+        </ol>
+    </li>
+
+    <li class="file" ng-show="IsSuperAdmin">
+        <a href="" ng-click="ShowAddNewItemOfType('Unit')">Add a <img style="width:22px" src="CSS/jqTreeView/Unit.png" /></a>
+
+        <div class="success" ng-show="NewUnitVisibility==true" ng-init="NewUnitVisibility=false">
+            <input class="form-control input-sm" placeholder="Give a Unit Name" type="text" ng-model="NewUnit.UnitName" style="width: 84%; float: left;height:35px">
+            <!--<input class="form-control input-sm" placeholder="Give Unit Strength" type="text" ng-model="NewUnit.UnitStrength" style="width: 42%; float: left;height:35px">-->
+
+            <a ng-click="NewUnitVisibility=false" style="width:8%;float:right;background:none">
+                <img style=" height:25px;  cursor: pointer" src="Images/delete.png" data-toggle="tooltip" data-placement="top" title="Cancel" />
+            </a>
+            <a ng-click="SaveItemOftype('Unit',NewUnit);NewUnitVisibility=false" style="width: 8%; float: right; background: none">
+                <img style=" height: 25px;  cursor: pointer" src="Images/Save.png" data-toggle="tooltip" data-placement="bottom" title="Edit" />
+            </a>
+
+            <div class="clearDiv"></div>
+        </div>
+
+    </li>
+</ol>

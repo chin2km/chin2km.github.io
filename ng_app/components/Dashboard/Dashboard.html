@@ -1,0 +1,63 @@
+﻿<div class="divBlueBar">
+
+    <div style="float:right;margin-right:15px">
+        <span>Website Visit Count: {{TotalHitCount}} </span>
+    </div>
+    <!--<div style="float:left">
+        <span style="font-size: 20px; color: rgb(255, 0, 0);">Work in Progress......</span>
+    </div>-->
+    <div class="clearDiv"></div>
+
+</div>
+
+<glasswall-toast-notifications notifications="dashboard.notifications"></glasswall-toast-notifications>
+
+<div class="clearDiv"></div>
+<div class="panel ">
+    <!--<div class="panel-heading">Session Data</div>-->
+    <div class="panel-body">
+        <div class="panel-info">
+            <div class="panel-heading">Session Report</div>
+            <div style="margin-top:5px">
+
+                <div id="ReportPeriodRadio" style="display:none;">
+                    <label for="ReportPeriod"> Report Period </label>
+                    <input name="radiobutton" type="radio" checked="checked" ng-model="MonthlyorQuaterly" value="Monthly">Monthly
+                    <input name="radiobutton" type="radio" ng-model="MonthlyorQuaterly" value="Quaterly">Quaterly
+                </div>
+                <!--<div style="margin-top:-50px;margin-left:180px;">
+                    <label for="ReportedPeriod"> Month/Quarter </label>
+                    <select>
+                        <option value="">--select--</option>
+                        <option ng:repeat="thisQuarter in monthquarter" value="{{thisQuarter}}">{{thisQuarter}}</option>
+
+                    </select>
+            </div>-->
+            <div id="sessionReportGraph" style="width: 100%; height: 250px; margin: 20px auto" ng-model="sessionReportSelected"></div>
+            <div style="margin-top:10px">
+                <table id="sessionDataTable" class="table table-striped table-hover">
+                    <thead>
+                        <tr class="info">   
+                            <th>CommunicationType</th>
+                            <th>No. of Attendee</th>
+                            <th>Date</th>
+                            <th>UnitName</th>
+                            <th>PUName</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="active" ng-repeat="sessDetail in DashBoardData | filter : currentSelectedUnit ">
+                            <td>{{sessDetail.ForumTypeName}}</td>
+                            <td>{{sessDetail.ParticipationNumber}}</td>
+                            <td>{{sessDetail.UpdatedDate}}</td>
+                            <td>{{sessDetail.UnitName}}</td>
+                            <td>{{sessDetail.PUName}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
