@@ -1,15 +1,14 @@
 ﻿/// <reference path="components/About/About.html" />
 var chin2km = angular.module("chin2km", [
                 'ngRoute',
-                'chin2km.About',
+                'chin2km.Me',
             ])
             .config(['$routeProvider','$compileProvider', '$locationProvider',
                   function ($routeProvider, $compileProvider, $locationProvider) {
                       $routeProvider
                         .otherwise({
-                            redirectTo: '/About'
+                            redirectTo: '/Me'
                         });
-                      $compileProvider.aHrefSanitizationWhitelist(/^\s*(https?|file|sip|tel):/);
                   }]);
 
 chin2km.run(function ($route,$rootScope, $location, AppService) {
