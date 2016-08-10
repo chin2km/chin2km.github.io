@@ -1,5 +1,5 @@
-﻿#LoaderAnime {
-  background: rgba(0, 0, 0, 0.34);
+#LoaderAnime {
+  background: rgba(0, 0, 0, 0.58);
   height: 100%;
   width: 100%;
   top: 0px;
@@ -16,8 +16,8 @@
 }
 
         #LoaderAnime>div{
-          height: 250px;
-          width: 250px;
+          height: 200px;
+          width: 200px;
           margin: auto;
           position: absolute;
           top: 0;
@@ -25,12 +25,13 @@
           bottom: 0;
           right: 0;
           font-size: 25px;
-          line-height: 12em;             
+          line-height: 12em;
+          transform: scale(0.9);
         }
 
 
 .wrapper {
-  margin: 10rem;
+  margin: 0px;
 }
 .wrapper > div {
   -webkit-animation: 0.8s  rotate  linear  forwards  infinite;
