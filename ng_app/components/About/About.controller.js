@@ -17,9 +17,6 @@
             AppService.LoadTimer(5000);
         })();
 
-
-
-
     }
 
 })();
