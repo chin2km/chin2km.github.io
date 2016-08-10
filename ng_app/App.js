@@ -13,7 +13,4 @@ var chin2km = angular.module("chin2km", [
 
 chin2km.run(function ($route, $rootScope, $location, AppService) {
 
-})
-
-
-
+});
