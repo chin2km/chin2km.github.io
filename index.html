@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="chin2km">
 <head>
-    <title>Chintu Kishen KM ! Da !</title>
+    <title>Chintu Kishen KM !</title>
     <!--Meta-->
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta http-equiv='Cache-control' content='no-cache' />
@@ -17,12 +17,25 @@
     <script src="js_setup/ui-bootstrap-0.14.0.js"></script>
 
     <!--CSS-->
-    <link href="css/materialize.css" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
     <link href="css/Loader.css" rel="stylesheet" />
     <link href="css/common.css" rel="stylesheet" />
+    
+     <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>   
 </head>
 <body>
+    
+    <div class="mainframe">
+        <div>
+            
+        </div>
+    </div>
+    
     <div ng-view></div>
 
     <div id="LoaderAnime" ng-show="loaderVisibility">
