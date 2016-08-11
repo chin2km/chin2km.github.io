@@ -1,4 +1,4 @@
-﻿var Filters = angular.module("chin2km")    
+var Filters = angular.module("chin2km")    
     .filter("JsonDateParser", function () {
         return function(value) {
 

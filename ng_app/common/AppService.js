@@ -1,4 +1,4 @@
-﻿var AppService = angular.module('chin2km')
+var AppService = angular.module('chin2km')
 .factory('AppService', function ($rootScope, $location) {
 
 

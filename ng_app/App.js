@@ -1,4 +1,4 @@
-﻿/// <reference path="components/About/About.html" />
+/// <reference path="components/About/About.html" />
 var chin2km = angular.module("chin2km", [
                 'ngRoute',
                 'chin2km.About',

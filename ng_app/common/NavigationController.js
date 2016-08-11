@@ -1,4 +1,4 @@
-﻿var NavigationController = angular.module("chin2km")
+var NavigationController = angular.module("chin2km")
 .controller("NavigationController", function ($scope, $routeParams, $location, AppService) {
 
 

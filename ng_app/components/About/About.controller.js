@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     "use strict";
     angular.module('chin2km.About.controllers', [])
             .controller('AboutController', AboutController);

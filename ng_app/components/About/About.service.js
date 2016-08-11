@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     angular.module('chin2km.About.services',[])
            .factory('AboutService', AboutService);
 
