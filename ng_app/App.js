@@ -1,4 +1,3 @@
-/// <reference path="components/About/About.html" />
 var chin2km = angular.module("chin2km", [
                 'ngRoute',
                 'chin2km.About',
@@ -10,6 +9,8 @@ var chin2km = angular.module("chin2km", [
                             redirectTo: '/About'
                         });
                   }]);
+
+
 
 chin2km.run(function ($route, $rootScope, $location, AppService) {
 
