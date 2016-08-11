@@ -50,9 +50,9 @@ label {
     z-index: 5;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){  }
+@media only screen and (max-width: 479px){ #container>header{height: 45px;} }
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){  }
+@media only screen and (min-width: 480px) and (max-width: 767px){ #container>header{height: 45px;} }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px){  }
 /* TABLET LANDSCAPE / DESKTOP */
@@ -93,16 +93,22 @@ header {
     color: #dadada;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){  }
+@media only screen and (max-width: 479px){ #container>header hgroup{
+    padding-left: 69px;
+    line-height: 45px;
+} }
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){  }
+@media only screen and (min-width: 480px) and (max-width: 767px){ #container>header hgroup{
+    padding-left: 69px;
+    line-height: 45px;
+} }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px){  }
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 992px) and (max-width: 1200px){  }
 
 
-#container>header hgroup:before {
+#container>header hgroup logo {
     background: url(/Images/icon_color.png);
     content: '';
     height: 80px;
@@ -114,10 +120,14 @@ header {
     background-size: 100%;
     box-shadow: 0px 0px 10px #000000;
 }
+#container>header hgroup logo:hover {
+    background: url(/Images/icon_gray.png);
+    background-size: 100%;
+}
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){  }
+@media only screen and (max-width: 479px){ #container>header hgroup logo{height: 60px;width: 60px;} }
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){  }
+@media only screen and (min-width: 480px) and (max-width: 767px){ #container>header hgroup logo{height: 60px;width: 60px;} }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px){  }
 /* TABLET LANDSCAPE / DESKTOP */
