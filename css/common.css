@@ -1,7 +1,3 @@
-[hidden] {
-    display: none
-}
-
 html {
     height: 100%;
     font-size: 100%;
@@ -17,11 +13,6 @@ body {
     line-height: 1.231
 }
 
-body,button,input,select,textarea {
-    font-family: sans-serif;
-    color: #222
-}
-
 body:before {
     content: "";
     height: 100%;
@@ -30,51 +21,30 @@ body:before {
     margin-top: -32767px
 }
 
-nav ul,nav ol {
-    list-style: none;
-    list-style-image: none;
-    margin: 0;
-    padding: 0
-}
+@media only screen and (max-width: 320px) {
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0
+}
+@media only screen and (max-width: 730px) {
+
+}
+@media only screen and (max-width: 1150px) {
+
 }
 
 label {
     cursor: pointer
 }
 
-
-button,input,select,textarea {
-    font-size: 100%;
-    margin: 0;
-    vertical-align: baseline;
-    *vertical-align: middle
-}
-
-button,input {
-    line-height: normal;
-    *overflow: visible
-}
-
 #container {}
 
 #container>header {
-    padding: 0
+    padding: 0;
+    position:fixed
 }
 
 #main {
     overflow: auto;
     padding: 0
-}
-
-body>footer {
-    padding: 0 10px;
-    position: relative;
-    clear: both
 }
 
 .pagewidth {
@@ -194,7 +164,6 @@ a:focus {
 .portfolio {
     position: relative;
     width: 100%;
-    background: #9E9E9E;
 }
 
 .portfolio article {
@@ -295,7 +264,7 @@ a:focus {
 
 .portfolio-single .showcase {
     float: left;
-    width: 630px
+    width: 730px
 }
 
 .portfolio-single .showcase p {
@@ -421,7 +390,6 @@ a:focus {
     .portfolio {
         margin: 0 auto;
         width: 730px;
-        background: #dadada;
     }
 
     .portfolio article:nth-child(3n+1) {
@@ -447,20 +415,20 @@ a:focus {
     .portfolio-single .summary {
         float: none;
         margin: 0 auto;
-        width: 630px
+        width: 730px
     }
 
 
 
 }
 
-@media only screen and (max-width: 630px) {
+@media only screen and (max-width: 730px) {
     #container>header {
-        position:relative
+        position: fixed;
     }
 
     #container>.main {
-        padding: 30px 0 30px;
+        padding: 100px 0 30px;
     }
 
     #container>header hgroup h1 {
@@ -488,7 +456,8 @@ a:focus {
         padding: 0 0 10px 0;
         position: relative;
         width: 100%;
-        height: auto
+        height: 150px;
+        background: #dadada;
     }
 
     .portfolio article:hover {
@@ -499,7 +468,9 @@ a:focus {
 
     .portfolio article:nth-child(3n+1) {
         clear: left;
-        margin-left: 0
+        margin-left: 0;
+        height: 150px;
+        margin-bottom: 10px;
     }
 
     .portfolio article:last-child {
@@ -604,7 +575,7 @@ a:focus {
 }
 
 
-/*@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 320px) {
     #container>header nav {
         position:absolute;
         top: 19px;
@@ -628,37 +599,13 @@ a:focus {
         font-style: italic;
         line-height: 16px
     }
-}*/
+}
 
-/*@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (max--moz-device-pixel-ratio:2) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (max--moz-device-pixel-ratio:2) {
     #container>header hgroup:before {
         background:#d9593d url(img/icon-glasses@2x.png) center 30px no-repeat;
         background-size: 82px 37px
     }
 
-    .blog .content article header .comment-count {
-        background: url(img/icon-comments@2x.png) 0 0 no-repeat;
-        background-size: 16px 32px
-    }
-
-    .blog .content .subset-title .category {
-        background: url(img/icon-tags@2x.png) no-repeat;
-        background-size: 16px 32px
-    }
-
-    .blog .content article header .categories {
-        background: url(img/icon-tags@2x.png) no-repeat;
-        background-size: 16px 32px
-    }
-
-    .blog .sidebar .ct .subscribe {
-        background: url(img/icon-rss@2x.png) 0 0 no-repeat;
-        background-size: 16px 32px
-    }
-
-    .blog .content article .post-body .share {
-        background: url(img/icon-heart@2x.png) 0 0 no-repeat;
-        background-size: 16px 120px
-    }
-}*/
+}
 
