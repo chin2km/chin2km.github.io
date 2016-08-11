@@ -72,7 +72,7 @@ label {
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ }
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){ .pagewidth {width: 768px; } }
+@media only screen and (min-width: 768px) and (max-width: 991px){ }
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 992px) { .pagewidth {width: 1200px; } }
 
