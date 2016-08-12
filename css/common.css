@@ -224,6 +224,7 @@ header {
     float: left;
     background: #000 url(/Images/BGs/bg5.jpg) 0px;
     background-size: 110% 110%;
+    -webkit-filter: grayscale();
 }
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ .portfolio article header{
@@ -233,14 +234,15 @@ header {
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article header{
     border: solid 7px rgba(0,0,0, 0.7);
+    -webkit-filter: none;
 } }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px){ .portfolio article header{
     border: solid 7px rgba(0,0,0, 0.7);
+    -webkit-filter: none;
 } }
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 992px) and (max-width: 1200px){ .portfolio article header{
-    -webkit-filter: grayscale();
 } }
 
 
