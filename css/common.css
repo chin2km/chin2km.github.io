@@ -425,7 +425,7 @@ header {
     top: 50%;
 } }
 @media only screen and (max-width: 5000px){ .portfolio article:hover .details{
-    top: 0%;
+    top: 25%;
 } }
 
 .clearfix:before,.clearfix:after {
