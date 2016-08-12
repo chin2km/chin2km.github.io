@@ -403,6 +403,17 @@ header {
     top: 100%;
     opacity: 0.5;
 }
+.portfolio article .details h4{
+    text-align: center;
+    font-size: 35px;
+    margin: 10px 0px;
+}
+.portfolio article .details h5{
+    text-align: center;
+    font-size: 20px;
+    margin:0px 20px
+}
+
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ .portfolio article .details{
     top: 0px;
