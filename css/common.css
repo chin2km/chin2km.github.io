@@ -35,12 +35,12 @@ body:before {
     transition: all 0.5s ease;
     transition-property: background,color;
 }
+
 .black-font{
     color:#000!important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
-
 .white-font{
     color:#FFF!important;
     transition: all 0.5s ease;
@@ -373,7 +373,6 @@ header {
     -webkit-filter: grayscale();
     background: #000 url(/Images/BGs/bg2.jpg) 0px;
     background-size: 110% 110%;
-    transition: all 0.5s ease;
 }
 
 /* SMARTPHONES PORTRAIT */
@@ -408,6 +407,7 @@ header {
 @media only screen and (max-width: 479px){ .portfolio article .details{
     top: 0px;
     left: 137px;
+    background: rgba(0, 0, 0, 0.05);
 } }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article .details{
