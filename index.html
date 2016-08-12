@@ -38,15 +38,17 @@
 </head>
 <body>
 
-    <div id="container">
-        <header>
+    <div id="container" ng-controller="NavigationController">
+        <header ng-class="chin2kmThemes.allThemes[chin2kmThemes.activeTheme].bg" title={{chin2kmThemes.allThemes[chin2kmThemes.activeTheme].bg}}>
             <div class="pagewidth">
 
                 <a href="">
                     <hgroup>
-                        <logo> 
+                        <logo>
                             <div class="theme-panel">
-                                
+                                <div class="theme-rect" ng-repeat="(key, value) in chin2kmThemes.allThemes" ng-click="setTheme(key)" ng-class="chin2kmThemes.allThemes[key].bg">
+                                    <i class="material-icons" ng-if="chin2kmThemes.activeTheme==key">done</i>
+                                </div>
                             </div>
                         </logo>
                         CHIN2KM.COM
@@ -83,6 +85,7 @@
 
     <script src="ng_app/App.js"></script>
     <script src="ng_app/common/AppService.js"></script>
+    <script src="ng_app/common/Constants.js"></script>
     <script src="ng_app/common/Directives.js"></script>
     <script src="ng_app/common/NavigationController.js"></script>
     <script src="ng_app/common/Filters.js"></script>

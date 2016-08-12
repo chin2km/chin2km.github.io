@@ -1,72 +1,38 @@
 var NavigationController = angular.module("chin2km")
-.controller("NavigationController", function ($scope, $routeParams, $location, AppService) {
+.controller('NavigationController', NavigationController);
 
+NavigationController.$inject = ['$rootScope', '$scope', '$location', '$timeout', 'AppService', 'chin2kmThemes'];
 
-    $scope.navigateTo = function myfunction(view) {
+function NavigationController($rootScope, $scope, $location, $timeout, AppService, chin2kmThemes) {
+
+    $scope.chin2kmThemes = chin2kmThemes;
+
+    $scope.navigateTo = function (view) {
         window.scrollTo(0, 0);
         $location.url('/' + view)
     }
-    window.scrollTo(0, 0);
+
+
+    $scope.setTheme = function (theme) {
+        $scope.chin2kmThemes.activeTheme = theme;
+        window.localStorage.setItem("chin2km_theme", theme);
+    }
+
     //Setting active tab Style
     switch ($location.$$path) {
         case '/works':
             $scope.worksClass = "active";
-            $scope.AdminClass = "";
-            $scope.CreditsClass = "";
-            $scope.DashboardClass = "";
-            $scope.ForumClass = "";
-            $scope.ToolsClass = "";
+            $scope.meClass = "";
             break;
-        case '/Admin':
+
+        case '/me':
             $scope.worksClass = "";
-            $scope.AdminClass = "active";
-            $scope.CreditsClass = "";
-            $scope.DashboardClass = "";
-            $scope.ForumClass = "";
-            $scope.ToolsClass = "";
-            break;
-        case '/Credits':
-            $scope.worksClass = "";
-            $scope.AdminClass = "";
-            $scope.CreditsClass = "active";
-            $scope.DashboardClass = "";
-            $scope.ForumClass = "";
-            $scope.ToolsClass = "";
-            break;
-        case '/Dashboard':
-            $scope.worksClass = "";
-            $scope.AdminClass = "";
-            $scope.CreditsClass = "";
-            $scope.DashboardClass = "active";
-            $scope.ForumClass = "";
-            $scope.ToolsClass = "";
-            break;
-        case '/Forum':
-            $scope.worksClass = "";
-            $scope.AdminClass = "";
-            $scope.CreditsClass = "";
-            $scope.DashboardClass = "";
-            $scope.ForumClass = "active";
-            $scope.ToolsClass = "";
-            break;
-        case '/Personalize':
-            $scope.worksClass = "";
-            $scope.AdminClass = "";
-            $scope.CreditsClass = "";
-            $scope.DashboardClass = "";
-            $scope.ForumClass = "";
-            $scope.ToolsClass = "active";
+            $scope.meClass = "active";
             break;
         default:
             $scope.worksClass = "active";
-            $scope.AdminClass = "";
-            $scope.CreditsClass = "";
-            $scope.DashboardClass = "";
-            $scope.ForumClass = "";
-            $scope.ToolsClass = "";
+            $scope.meClass = "";
             break;
     }
 
-    AppService.ResetRipples();
-
-})
+}
