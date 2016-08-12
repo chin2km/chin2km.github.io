@@ -14,6 +14,8 @@ body {
     line-height: 1.231;
     background: #FFF url("http://www.gainesvilleconnect.com/images/footer-patterns/footer-pattern-03.png") fixed;
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0px 49px;
 }
 
 body:before {
@@ -229,9 +231,13 @@ header {
     height: 130px;
 } }
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article header{} }
+@media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article header{
+    border: solid 7px rgba(0,0,0, 0.7);
+} }
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){ .portfolio article header{} }
+@media only screen and (min-width: 768px) and (max-width: 991px){ .portfolio article header{
+    border: solid 7px rgba(0,0,0, 0.7);
+} }
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 992px) and (max-width: 1200px){ .portfolio article header{
     -webkit-filter: grayscale();
