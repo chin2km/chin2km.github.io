@@ -222,10 +222,11 @@ header {
     border: solid 7px rgba(189, 189, 189, 0.7);
     border-radius: 500px;
     float: left;
-    background: #000 url(/Images/BGs/bg5.jpg) 0px;
-    background-size: 110% 110%;
     -webkit-filter: grayscale();
+    background: #000 url(/Images/BGs/bg2.jpg) 0px;
+    background-size: 110% 110%;
 }
+
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ .portfolio article header{
     width: 130px;
