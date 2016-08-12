@@ -180,7 +180,6 @@ header {
 .portfolio article {
     position: relative;
     border-radius: 350px;
-    background: #f9f9f9;
     margin: 2%;
     float: left;
     overflow: hidden;
@@ -209,6 +208,7 @@ header {
 
 .portfolio article:hover header {
     border: solid 7px rgba(0,0,0, 0.7);
+    -webkit-filter: none;
 }
 
 
@@ -220,18 +220,22 @@ header {
     border: solid 7px rgba(189, 189, 189, 0.7);
     border-radius: 500px;
     float: left;
+    background: #000 url(/Images/BGs/bg5.jpg) 0px;
+    background-size: 110% 110%;
 }
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ .portfolio article header{
-    width: 200px;
-    height: 200px;
+    width: 130px;
+    height: 130px;
 } }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article header{} }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px){ .portfolio article header{} }
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){ .portfolio article header{} }
+@media only screen and (min-width: 992px) and (max-width: 1200px){ .portfolio article header{
+    -webkit-filter: grayscale();
+} }
 
 
 .portfolio article .details{
@@ -245,7 +249,8 @@ header {
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ .portfolio article .details{
     top: 0px;
-    left: 200px;
+    left: 137px;
+    background: rgba(0, 0, 0, 0.05);
 } }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article .details{
