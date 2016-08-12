@@ -1,11 +1,11 @@
 (function () {
     "use strict";
-    angular.module('chin2km.About.controllers', [])
-            .controller('AboutController', AboutController);
+    angular.module('chin2km.works.controllers', [])
+            .controller('worksController', worksController);
 
-    AboutController.$inject = ['$rootScope', '$scope', '$route', '$location','$timeout', '$interval', 'AppService'];
+    worksController.$inject = ['$rootScope', '$scope', '$route', '$location','$timeout', '$interval', 'AppService'];
 
-    function AboutController($rootScope, $scope, $route, $location,$timeout, $interval, AppService) {
+    function worksController($rootScope, $scope, $route, $location,$timeout, $interval, AppService) {
         var _this = this;
         _this.notifications = [];
         _this.AppService=AppService;

@@ -9,8 +9,8 @@ var NavigationController = angular.module("chin2km")
     window.scrollTo(0, 0);
     //Setting active tab Style
     switch ($location.$$path) {
-        case '/About':
-            $scope.AboutClass = "active";
+        case '/works':
+            $scope.worksClass = "active";
             $scope.AdminClass = "";
             $scope.CreditsClass = "";
             $scope.DashboardClass = "";
@@ -18,7 +18,7 @@ var NavigationController = angular.module("chin2km")
             $scope.ToolsClass = "";
             break;
         case '/Admin':
-            $scope.AboutClass = "";
+            $scope.worksClass = "";
             $scope.AdminClass = "active";
             $scope.CreditsClass = "";
             $scope.DashboardClass = "";
@@ -26,7 +26,7 @@ var NavigationController = angular.module("chin2km")
             $scope.ToolsClass = "";
             break;
         case '/Credits':
-            $scope.AboutClass = "";
+            $scope.worksClass = "";
             $scope.AdminClass = "";
             $scope.CreditsClass = "active";
             $scope.DashboardClass = "";
@@ -34,7 +34,7 @@ var NavigationController = angular.module("chin2km")
             $scope.ToolsClass = "";
             break;
         case '/Dashboard':
-            $scope.AboutClass = "";
+            $scope.worksClass = "";
             $scope.AdminClass = "";
             $scope.CreditsClass = "";
             $scope.DashboardClass = "active";
@@ -42,7 +42,7 @@ var NavigationController = angular.module("chin2km")
             $scope.ToolsClass = "";
             break;
         case '/Forum':
-            $scope.AboutClass = "";
+            $scope.worksClass = "";
             $scope.AdminClass = "";
             $scope.CreditsClass = "";
             $scope.DashboardClass = "";
@@ -50,7 +50,7 @@ var NavigationController = angular.module("chin2km")
             $scope.ToolsClass = "";
             break;
         case '/Personalize':
-            $scope.AboutClass = "";
+            $scope.worksClass = "";
             $scope.AdminClass = "";
             $scope.CreditsClass = "";
             $scope.DashboardClass = "";
@@ -58,7 +58,7 @@ var NavigationController = angular.module("chin2km")
             $scope.ToolsClass = "active";
             break;
         default:
-            $scope.AboutClass = "active";
+            $scope.worksClass = "active";
             $scope.AdminClass = "";
             $scope.CreditsClass = "";
             $scope.DashboardClass = "";
