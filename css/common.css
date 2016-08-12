@@ -101,12 +101,12 @@ header {
 }
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ #container>header hgroup{
-    padding-left: 69px;
+    padding-left: 79px;
     line-height: 45px;
 } }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ #container>header hgroup{
-    padding-left: 69px;
+    padding-left: 79px;
     line-height: 45px;
 } }
 /* TABLETS PORTRAIT */
