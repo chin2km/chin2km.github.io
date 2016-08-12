@@ -12,6 +12,9 @@ function NavigationController($rootScope, $scope, $location, $timeout, AppServic
         $location.url('/' + view)
     }
 
+    $scope.openHamburger = function () {
+        document.getElementById("tray").style.display = "block";
+    }
 
     $scope.setTheme = function (theme) {
         $scope.chin2kmThemes.activeTheme = theme;

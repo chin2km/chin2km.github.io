@@ -27,7 +27,7 @@ body:before {
     margin-top: -32767px
 }
 
-h1,h2,h3,h4,h5,span{
+h1,h2,h3,h4,h5,span,i{
     cursor:default !important
 }
 
@@ -185,8 +185,6 @@ label {
 #container>header {
     padding: 0;
     position:fixed;
-    #FFF
-    url("http: //www.gainesvilleconnect.com/images/footer-patterns/footer-pattern-03.png") fixed;
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.27);
     height: 60px;
     position: fixed;
@@ -316,14 +314,18 @@ margin-right: 35px;
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ 
     #container>header hgroup h3:nth-child(3n){display:none}
+    #container>header hgroup h3{font-size: 25px;margin-right: 0px;}
+
 }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){
         #container>header hgroup h3:nth-child(3n){display:none}
+            #container>header hgroup h3{font-size: 25px;}
 }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px){
         #container>header hgroup h3:nth-child(3n){display:none}
+            #container>header hgroup h3{font-size: 25px;}
 }
 
 
@@ -347,15 +349,8 @@ margin-right: 35px;
     margin-left: -5px;
 }
 #container>header nav .big-display a:hover {
-
-opacity: 0.7;
-
-background: rgba(0, 0, 0, 0.31);
-}
-#container>header nav .big-display a img {
-   background: url(/Images/me.png);
-   height:50px;width:50px;
-   border-radius:100px
+    opacity: 0.7;
+    background: rgba(0, 0, 0, 0.31);
 }
 
 #container>header nav .small-display {
@@ -367,9 +362,9 @@ background: rgba(0, 0, 0, 0.31);
     color: white;
     line-height: 2em;
     padding: 0px 10px;
-    margin-right: 25px;
+    margin-right: 0px;
 }
-#container>header nav .small-display .tray{
+#container>header nav .small-display #tray{
     display:none;
 }
 
@@ -389,35 +384,38 @@ background: rgba(0, 0, 0, 0.31);
 
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){
-    #container>header nav .big-display{
-        display:none;
-    }
-    #container>header nav .small-display {
-    display:block;
-    }
+
+    #container>header nav .big-display a {
+    font-size: 30px;
+    color: black;
+    line-height: 1em;
+    border-right: solid 2px rgba(218, 218, 218, 0.4);
+    padding: 0px 10px;
+    border-left: solid 2px rgba(218, 218, 218, 0.39);
+    margin-left: -5px;
+}
 
 }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ 
-    #container>header nav .big-display{
-        display:none;
-    }
-        #container>header nav .small-display {
-    display:block;
-    }
+    #container>header nav .big-display a {
+    font-size: 24px;
+    color: white;
+    line-height: 2em;
+    border-right: solid 2px rgba(218, 218, 218, 0.4);
+    padding: 0px 10px;
+    border-left: solid 2px rgba(218, 218, 218, 0.39);
+    margin-left: -5px;
+}
 
 }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px){ 
-    #container>header nav .small-display {
-        display:none;
-    }
+
 }
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (min-width: 992px) and (max-width: 1200px){
-    #container>header nav .small-display {
-        display:none;
-    }
+
 }
 
 
@@ -455,7 +453,7 @@ background: rgba(0, 0, 0, 0.31);
     box-shadow: 2px 2px 10px #8c8c8c;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ .portfolio article{width:100%;height: 153px;border-radius: 0px;box-shadow: none;border: none;border-bottom: solid 1px #dadada;} }
+@media only screen and (max-width: 479px){ .portfolio article{width:100%;height: 123px;border-radius: 0px;box-shadow: none;border: none;border-bottom: solid 1px #dadada;} }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article{width: 220px;height: 220px;} }
 /* TABLETS PORTRAIT */
@@ -489,8 +487,8 @@ background: rgba(0, 0, 0, 0.31);
 
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ .portfolio article header{
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
 } }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article header{
@@ -520,11 +518,11 @@ background: rgba(0, 0, 0, 0.31);
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ .portfolio article .details{
     top: 0px;
-    left: 157px;
+    left: 120px;
     opacity: 0.2;
     border-radius: 5px;
-    width: calc(100% - 161px);
-    height: 96%;
+    width: calc(100% - 130px);
+    height: 93%;
 } }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article .details{
@@ -544,12 +542,12 @@ background: rgba(0, 0, 0, 0.31);
 } }
 
 
-.portfolio article .details h4{text-align: center;font-size: 30px;margin: 10px 0px;}
+.portfolio article .details h4{text-align: center;font-size: 40px;margin: 10px 0px;}
 .portfolio article .details h5{text-align: center;font-size: 20px;margin:0px 20px;}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ 
-.portfolio article .details h4{text-align: center;font-size: 35px;margin: 10px 0px;}
-.portfolio article .details h5{text-align: center;font-size: 20px;margin:0px 20px;}
+@media only screen and (max-width: 767px){ 
+.portfolio article .details h4{text-align: center;font-size: 22px;margin: 10px 0px;}
+.portfolio article .details h5{text-align: center;font-size: 15px;margin:0px 20px;}
 }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px){ 
@@ -560,10 +558,6 @@ background: rgba(0, 0, 0, 0.31);
 @media only screen and (min-width: 992px) and (max-width: 1200px){ 
 .portfolio article .details h4{text-align: center;font-size: 35px;margin: 10px 0px;}
 .portfolio article .details h5{text-align: center;font-size: 20px;margin:0px 20px;}
-}
-@media only screen and (max-width: 5000px){ 
-.portfolio article .details h4{text-align: center;font-size: 35px;margin: 10px 0px;}
-.portfolio article .details h5{text-align: center;font-size: 18px;margin:0px 20px;}
 }
 
 
