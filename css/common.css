@@ -17,146 +17,156 @@ body {
     background-position: 0px 49px;
 }
 
-body:before {
-    content: "";
-    height: 100%;
-    float: left;
-    width: 0;
-    margin-top: -32767px
-}
+    body:before {
+        content: "";
+        height: 100%;
+        float: left;
+        width: 0;
+        margin-top: -32767px;
+    }
 
-h1,h2,h3,h4,h5,span,i{
-    cursor:default !important
+h1, h2, h3, h4, h5, span, i {
+    cursor: default !important;
 }
 
 /*THEMES*/
 
-.black-bg{
-    background:#000 !important;
-    color:white !important;
+.black-bg {
+    background: #000 !important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
-.black-font{
-    color:#000!important;
+.black-font {
+    color: #000 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
-.white-font{
-    color:#FFF!important;
+
+.white-font {
+    color: #FFF !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
-.white-bg{
-    background:#FFF!important;
+
+.white-bg {
+    background: #FFF !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
 
-.red-bg{
+.red-bg {
     background: #E50F2E !important;
-    color:white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
-}
-.red-font{
-    color:#2196F3!important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
-.orange-bg{
+.red-font {
+    color: #2196F3 !important;
+    transition: all 0.5s ease;
+    transition-property: background,color;
+}
+
+.orange-bg {
     background: #EC8147 !important;
-    color:white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
-}
-.orange-font{
-    color:#2196F3!important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
+.orange-font {
+    color: #2196F3 !important;
+    transition: all 0.5s ease;
+    transition-property: background,color;
+}
 
 
-.yellow-bg{
+
+.yellow-bg {
     background: #FFCB43 !important;
-    color:white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
-}
-.yellow-font{
-    color:#2196F3!important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
+.yellow-font {
+    color: #2196F3 !important;
+    transition: all 0.5s ease;
+    transition-property: background,color;
+}
 
 
-.pink-bg{
+
+.pink-bg {
     background: #99227C !important;
-    color:white !important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
-.pink-font{
-    color:#2196F3!important;
+
+.pink-font {
+    color: #2196F3 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
 
-.green-bg{
+.green-bg {
     background: #67B150 !important;
-    color:white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
-}
-.green-font{
-    color:#2196F3!important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
+.green-font {
+    color: #2196F3 !important;
+    transition: all 0.5s ease;
+    transition-property: background,color;
+}
 
 
-.purple-bg{
+
+.purple-bg {
     background: #633392 !important;
-    color:white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
-}
-.purple-font{
-    color:#2196F3!important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
+.purple-font {
+    color: #2196F3 !important;
+    transition: all 0.5s ease;
+    transition-property: background,color;
+}
 
 
-.blue-bg{
+
+.blue-bg {
     background: #006BB5 !important;
-    color:white !important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
-.blue-font{
-    color:#2196F3!important;
+
+.blue-font {
+    color: #2196F3 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
 
 
-.teal-bg{
+.teal-bg {
     background: #0BA2A0 !important;
-    color:white !important;
+    color: white !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
-.teal-font{
-    color:#2196F3!important;
+
+.teal-font {
+    color: #2196F3 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -164,25 +174,29 @@ h1,h2,h3,h4,h5,span,i{
 
 
 label {
-    cursor: pointer
+    cursor: pointer;
 }
 
 #container {
     position: relative;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){  }
+@media only screen and (max-width: 479px) {
+}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){  }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){  }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){  }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
 
 
-#container>header {
+#container > header {
     padding: 0;
-    position:fixed;
+    position: fixed;
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.27);
     height: 60px;
     position: fixed;
@@ -190,13 +204,23 @@ label {
     background-size: 22% 50%;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ #container>header{height: 45px;} }
+@media only screen and (max-width: 479px) {
+    #container > header {
+        height: 45px;
+    }
+}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ #container>header{height: 45px;} }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #container > header {
+        height: 45px;
+    }
+}
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){  }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){  }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
 
 
 
@@ -208,22 +232,38 @@ label {
     position: relative;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ .pagewidth {width: 90%; } }
+@media only screen and (max-width: 479px) {
+    .pagewidth {
+        width: 90%;
+    }
+}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ .pagewidth {width: 480px;}}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .pagewidth {
+        width: 480px;
+    }
+}
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){ .pagewidth {width: 638px;} }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .pagewidth {
+        width: 638px;
+    }
+}
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) { .pagewidth {width: 992px; } }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .pagewidth {
+        width: 992px;
+    }
+}
 
 header {
     float: left;
     position: relative;
-    width: 100%
+    width: 100%;
 }
 
 
-#container>header hgroup {
+#container > header hgroup {
     float: left;
     line-height: 60px;
     height: 60px;
@@ -233,22 +273,28 @@ header {
     color: #dadada;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ #container>header hgroup{
-    padding-left: 79px;
-    line-height: 45px;
-} }
+@media only screen and (max-width: 479px) {
+    #container > header hgroup {
+        padding-left: 79px;
+        line-height: 45px;
+    }
+}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ #container>header hgroup{
-    padding-left: 79px;
-    line-height: 45px;
-} }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #container > header hgroup {
+        padding-left: 79px;
+        line-height: 45px;
+    }
+}
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){  }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){  }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
 
 
-#container>header hgroup logo {
+#container > header hgroup logo {
     height: 80px;
     background: url(/Images/icon_color.png);
     padding: 5px;
@@ -259,20 +305,33 @@ header {
     background-size: 100%;
     box-shadow: 0px 0px 10px #000000;
 }
-#container>header hgroup logo:hover {
-    background: url(/Images/icon_gray.png);
-    background-size: 100%;
-}
-/* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ #container>header hgroup logo{height: 60px;width: 60px;} }
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ #container>header hgroup logo{height: 60px;width: 60px;} }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){  }
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){  }
 
-#container>header hgroup logo .theme-panel{
+    #container > header hgroup logo:hover {
+        background: url(/Images/icon_gray.png);
+        background-size: 100%;
+    }
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 479px) {
+    #container > header hgroup logo {
+        height: 60px;
+        width: 60px;
+    }
+}
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #container > header hgroup logo {
+        height: 60px;
+        width: 60px;
+    }
+}
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+#container > header hgroup logo .theme-panel {
     transition: width 0.2s ease-out,height 0.2s ease-out;
     position: absolute;
     width: 100%;
@@ -282,138 +341,161 @@ header {
     box-shadow: 2px 2px 10px #8c8c8c;
     opacity: 0;
 }
-#container>header hgroup logo:hover .theme-panel {width: 200%;height: 200%;opacity: 1;top: 100%;left: 0;}
 
-#container>header hgroup logo:hover .theme-panel .theme-rect{
-    position:initial;
-    width: 33.3%;
-    height: 33.3%;
-    float:left;
-    transition:all 0.2s ease-out;
-}
-#container>header hgroup logo:hover .theme-panel .theme-rect:hover{
-    transform:scale(1.1)
-}
-#container>header hgroup logo:hover .theme-panel .theme-rect i{
-    width: 15px;
-    margin-left: 30%;
+#container > header hgroup logo:hover .theme-panel {
+    width: 200%;
+    height: 200%;
+    opacity: 1;
+    top: 100%;
+    left: 0;
 }
 
-#container>header hgroup h3{
-margin: -1px 0px;
-float: left;
-margin-right: 35px;
+    #container > header hgroup logo:hover .theme-panel .theme-rect {
+        position: initial;
+        width: 33.3%;
+        height: 33.3%;
+        float: left;
+        transition: all 0.2s ease-out;
+    }
+
+        #container > header hgroup logo:hover .theme-panel .theme-rect:hover {
+            transform: scale(1.1);
+        }
+
+        #container > header hgroup logo:hover .theme-panel .theme-rect i {
+            width: 15px;
+            margin-left: 30%;
+        }
+
+#container > header hgroup h3 {
+    margin: -1px 0px;
+    float: left;
+    margin-right: 35px;
 }
 
-#container>header hgroup h3:nth-child(3n){
-    color: #544F4F;
-    font-size: 25px;
-}
+    #container > header hgroup h3:nth-child(3n) {
+        color: #544F4F;
+        font-size: 25px;
+    }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ 
-    #container>header hgroup h3:nth-child(3n){display:none}
-    #container>header hgroup h3{font-size: 25px;margin-right: 0px;}
+@media only screen and (max-width: 479px) {
+    #container > header hgroup h3:nth-child(3n) {
+        display: none;
+    }
 
+    #container > header hgroup h3 {
+        font-size: 25px;
+        margin-right: 0px;
+    }
 }
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){
-        #container>header hgroup h3:nth-child(3n){display:none}
-            #container>header hgroup h3{font-size: 25px;}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #container > header hgroup h3:nth-child(3n) {
+        display: none;
+    }
+
+    #container > header hgroup h3 {
+        font-size: 25px;
+    }
 }
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){
-        #container>header hgroup h3:nth-child(3n){display:none}
-            #container>header hgroup h3{font-size: 25px;}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    #container > header hgroup h3:nth-child(3n) {
+        display: none;
+    }
+
+    #container > header hgroup h3 {
+        font-size: 25px;
+    }
 }
 
 
 
-#container>header nav {
+#container > header nav {
     float: right;
     position: relative;
 }
 
-#container>header nav .big-display {
-    height: 60px;
-    vertical-align: middle;
-}
-#container>header nav .big-display a {
-    font-size: 30px;
-    color: white;
-    line-height: 2em;
-    border-right: solid 2px rgba(218, 218, 218, 0.4);
-    padding: 0px 10px;
-    border-left: solid 2px rgba(218, 218, 218, 0.39);
-    margin-left: -5px;
-}
-#container>header nav .big-display a:hover {
-    opacity: 0.7;
-    background: rgba(0, 0, 0, 0.31);
-}
+    #container > header nav .big-display {
+        height: 60px;
+        vertical-align: middle;
+    }
 
-#container>header nav .small-display {
-    display:none;
-}
+        #container > header nav .big-display a {
+            font-size: 30px;
+            color: white;
+            line-height: 2em;
+            border-right: solid 2px rgba(218, 218, 218, 0.4);
+            padding: 0px 10px;
+            border-left: solid 2px rgba(218, 218, 218, 0.39);
+            margin-left: -5px;
+        }
 
-#container>header nav .small-display i{
-    font-size: 25px;
-    color: white;
-    line-height: 2em;
-    padding: 0px 10px;
-    margin-right: 0px;
-}
-#container>header nav .small-display #tray{
-    display:none;
-}
+            #container > header nav .big-display a:hover {
+                opacity: 0.7;
+                background: rgba(0, 0, 0, 0.31);
+            }
 
-#container>header nav .small-display a {
+    #container > header nav .small-display {
+        display: none;
+    }
 
-}
+        #container > header nav .small-display i {
+            font-size: 25px;
+            color: white;
+            line-height: 2em;
+            padding: 0px 10px;
+            margin-right: 0px;
+        }
 
-#container>header nav .small-display a:hover {
+        #container > header nav .small-display #tray {
+            display: none;
+        }
 
-}
-#container>header nav .small-display a img {
-   background: url(/Images/me.png);
-   height:50px;width:50px;
-   border-radius:100px
-}
+        #container > header nav .small-display a {
+        }
+
+            #container > header nav .small-display a:hover {
+            }
+
+            #container > header nav .small-display a img {
+                background: url(/Images/me.png);
+                height: 50px;
+                width: 50px;
+                border-radius: 100px;
+            }
 
 
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){
+@media only screen and (max-width: 479px) {
 
-    #container>header nav .big-display a {
-    font-size: 30px;
-    color: black;
-    line-height: 1em;
-    border-right: solid 2px rgba(218, 218, 218, 0.4);
-    padding: 0px 10px;
-    border-left: solid 2px rgba(218, 218, 218, 0.39);
-    margin-left: -5px;
-}
-
+    #container > header nav .big-display a {
+        font-size: 30px;
+        color: black;
+        line-height: 1em;
+        border-right: solid 2px rgba(218, 218, 218, 0.4);
+        padding: 0px 10px;
+        border-left: solid 2px rgba(218, 218, 218, 0.39);
+        margin-left: -5px;
+    }
 }
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ 
-    #container>header nav .big-display a {
-    font-size: 24px;
-    color: white;
-    line-height: 2em;
-    border-right: solid 2px rgba(218, 218, 218, 0.4);
-    padding: 0px 10px;
-    border-left: solid 2px rgba(218, 218, 218, 0.39);
-    margin-left: -5px;
-}
-
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    #container > header nav .big-display a {
+        font-size: 24px;
+        color: white;
+        line-height: 2em;
+        border-right: solid 2px rgba(218, 218, 218, 0.4);
+        padding: 0px 10px;
+        border-left: solid 2px rgba(218, 218, 218, 0.39);
+        margin-left: -5px;
+    }
 }
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){ 
-
+@media only screen and (min-width: 768px) and (max-width: 991px) {
 }
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){
-
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
 }
 
 
@@ -427,13 +509,17 @@ margin-right: 35px;
     padding-top: 100px;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){  }
+@media only screen and (max-width: 479px) {
+}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){  }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){  }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){  }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
 
 .portfolio article {
     position: relative;
@@ -451,13 +537,37 @@ margin-right: 35px;
     box-shadow: 2px 2px 10px #8c8c8c;
 }
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ .portfolio article{width:100%;height: 123px;border-radius: 0px;box-shadow: none;border: none;border-bottom: solid 1px #dadada;} }
+@media only screen and (max-width: 479px) {
+    .portfolio article {
+        width: 100%;
+        height: 123px;
+        border-radius: 0px;
+        box-shadow: none;
+        border: none;
+        border-bottom: solid 1px #dadada;
+    }
+}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article{width: 220px;height: 220px;} }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .portfolio article {
+        width: 220px;
+        height: 220px;
+    }
+}
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){ .portfolio article{width: 290px;height: 290px;} }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .portfolio article {
+        width: 290px;
+        height: 290px;
+    }
+}
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){ .portfolio article{width: 290px;height: 290px;} }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .portfolio article {
+        width: 290px;
+        height: 290px;
+    }
+}
 
 /*.portfolio article:nth-child(3n+1) {
     clear: left;
@@ -467,49 +577,66 @@ margin-right: 35px;
 .portfolio article:hover header {
     border: solid 7px rgba(0,0,0, 0.7);
 }
-.portfolio article:hover header:hover img {
-    -webkit-filter: none;
-}
+
+    .portfolio article:hover header img {
+        -webkit-filter: none;
+    }
 
 
 
-.portfolio article header{
+.portfolio article header {
     width: calc(100% - 14px);
     height: calc(100% - 14px);
     border: solid 7px rgba(189, 189, 189, 0.7);
     border-radius: 500px;
     float: left;
 }
-.portfolio article header img{
+
+    .portfolio article header img {
         width: calc(100%);
-    height: calc(100%);
+        height: calc(100%);
         border-radius: 500px;
-    -webkit-filter: grayscale();
-    background-size: 100%;
-}
+        -webkit-filter: grayscale();
+        background-size: 100%;
+    }
+
 
 
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ .portfolio article header{
-    width: 100px;
-    height: 100px;
-} }
+@media only screen and (max-width: 479px) {
+    .portfolio article header {
+        width: 100px;
+        height: 100px;
+    }
+}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article header{
-    border: solid 7px rgba(0,0,0, 0.7);
-    -webkit-filter: none;
-} }
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .portfolio article header {
+        border: solid 7px rgba(0,0,0, 0.7);
+    }
+
+        .portfolio article header img {
+            -webkit-filter: none;
+        }
+}
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){ .portfolio article header{
-    border: solid 7px rgba(0,0,0, 0.7);
-    -webkit-filter: none;
-} }
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .portfolio article header {
+        border: solid 7px rgba(0,0,0, 0.7);
+    }
+
+        .portfolio article header img {
+            -webkit-filter: none;
+        }
+}
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){ .portfolio article header{
-} }
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .portfolio article header {
+    }
+}
 
 
-.portfolio article .details{
+.portfolio article .details {
     transition: all 0.2s ease-in;
     width: 100%;
     height: calc(75%);
@@ -520,67 +647,113 @@ margin-right: 35px;
 
 
 /* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px){ .portfolio article .details{
-    top: 0px;
-    left: 120px;
-    opacity: 0.2;
-    border-radius: 5px;
-    width: calc(100% - 130px);
-    height: 93%;
-} }
+@media only screen and (max-width: 479px) {
+    .portfolio article .details {
+        top: 0px;
+        left: 120px;
+        opacity: 0.2;
+        border-radius: 5px;
+        width: calc(100% - 130px);
+        height: 93%;
+    }
+}
 /* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px){ .portfolio article .details{
-    top: 25%;
-} }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){ .portfolio article .details{
-    top: 25%;
-} }
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){ .portfolio article:hover .details{
-    top: 25%;
-} }
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and  (max-width: 5000px){ .portfolio article:hover .details{
-    top: 25%;
-} }
-
-
-.portfolio article .details h4{text-align: center;font-size: 40px;margin: 10px 0px;}
-.portfolio article .details h5{text-align: center;font-size: 20px;margin:0px 20px;}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (max-width: 767px){ 
-.portfolio article .details h4{text-align: center;font-size: 22px;margin: 10px 0px;}
-.portfolio article .details h5{text-align: center;font-size: 15px;margin:0px 20px;}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .portfolio article .details {
+        top: 25%;
+    }
 }
 /* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px){ 
-.portfolio article .details h4{text-align: center;font-size: 35px;margin: 10px 0px;}
-.portfolio article .details h5{text-align: center;font-size: 20px;margin:0px 20px;}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .portfolio article .details {
+        top: 25%;
+    }
 }
 /* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px){ 
-.portfolio article .details h4{text-align: center;font-size: 35px;margin: 10px 0px;}
-.portfolio article .details h5{text-align: center;font-size: 20px;margin:0px 20px;}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .portfolio article:hover .details {
+        top: 25%;
+    }
+}
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (max-width: 5000px) {
+    .portfolio article:hover .details {
+        top: 25%;
+    }
 }
 
 
-.clearfix:before,.clearfix:after {
+.portfolio article .details h4 {
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 0px;
+}
+
+.portfolio article .details h5 {
+    text-align: center;
+    font-size: 20px;
+    margin: 0px 20px;
+}
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (max-width: 767px) {
+    .portfolio article .details h4 {
+        text-align: center;
+        font-size: 22px;
+        margin: 10px 0px;
+    }
+
+    .portfolio article .details h5 {
+        text-align: center;
+        font-size: 15px;
+        margin: 0px 20px;
+    }
+}
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .portfolio article .details h4 {
+        text-align: center;
+        font-size: 35px;
+        margin: 10px 0px;
+    }
+
+    .portfolio article .details h5 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0px 20px;
+    }
+}
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .portfolio article .details h4 {
+        text-align: center;
+        font-size: 35px;
+        margin: 10px 0px;
+    }
+
+    .portfolio article .details h5 {
+        text-align: center;
+        font-size: 20px;
+        margin: 0px 20px;
+    }
+}
+
+
+.clearfix:before, .clearfix:after {
     content: "";
-    display: table
+    display: table;
 }
 
 .clearfix:after {
-    clear: both
+    clear: both;
 }
 
 .clearfix {
-    zoom:1}
+    zoom: 1;
+}
 
 
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (max--moz-device-pixel-ratio:2) {
-
 }
 
 
@@ -591,7 +764,7 @@ margin-right: 35px;
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     -webkit-border-radius: 10px;
     border-radius: 10px;
 }
@@ -599,9 +772,10 @@ margin-right: 35px;
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    background: #d4d4d4 ; 
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    background: #d4d4d4;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
-::-webkit-scrollbar-thumb:window-inactive {
-    background: #d4d4d4
-}
+
+    ::-webkit-scrollbar-thumb:window-inactive {
+        background: #d4d4d4;
+    }
