@@ -466,9 +466,10 @@ margin-right: 35px;
 
 .portfolio article:hover header {
     border: solid 7px rgba(0,0,0, 0.7);
+}
+.portfolio article:hover header:hover img {
     -webkit-filter: none;
 }
-
 
 
 
@@ -478,10 +479,15 @@ margin-right: 35px;
     border: solid 7px rgba(189, 189, 189, 0.7);
     border-radius: 500px;
     float: left;
-    -webkit-filter: grayscale();
-    background: #000 url(/Images/BGs/bg2.jpg) 0px;
-    background-size: 110% 110%;
 }
+.portfolio article header img{
+        width: calc(100%);
+    height: calc(100%);
+        border-radius: 500px;
+    -webkit-filter: grayscale();
+    background-size: 100%;
+}
+
 
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px){ .portfolio article header{

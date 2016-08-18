@@ -1,9 +1,10 @@
 <div class="portfolio" ng-click="worksVM.AppService.LoadTimer(3000);">
 
 
-
     <article ng-repeat="work in worksVM.allWorks">
-        <header ng-class="chin2kmThemes.allThemes[chin2kmThemes.activeTheme].font"></header>
+        <header ng-class="chin2kmThemes.allThemes[chin2kmThemes.activeTheme].font">
+            <img src="ng_app/components/works/Partials/{{::work.name}}/logo.png" />
+        </header>
         <div class="details" ng-class="chin2kmThemes.allThemes[chin2kmThemes.activeTheme].bg">
             <h4>{{::work.name}}</h4>
             <h5>{{::work.description}}</h5>
