@@ -13,9 +13,7 @@ body {
     margin: 0;
     font-size: 13px;
     line-height: 1.231;
-    background: #FFF url("http://www.gainesvilleconnect.com/images/footer-patterns/footer-pattern-03.png") fixed;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background: #FFF url(/Images/pattern.png) fixed;
     background-position: 0px 49px;
 }
 
