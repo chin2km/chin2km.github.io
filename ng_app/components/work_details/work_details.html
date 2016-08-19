@@ -6,7 +6,7 @@
     <div class="work-details-page">
 
         <div class="img-container">
-            <img ng-cloak ng-repeat="i in work_detailsVM.arrr" ng-src="ng_app/components/work_details/Partials/{{work_detailsVM.activeWork.name}}/Images/{{i.index}}.png" onerror="var _this = this; window.setTimeout(function () { _this.style.display = 'none' }, 1000)" />
+            <img ng-cloak ng-repeat="i in work_detailsVM.arrr" ng-src="ng_app/components/work_details/Partials/{{work_detailsVM.activeWork.name}}/Images/{{i.index}}.png" onerror="var _this = this; window.setTimeout(function () { _this.style.display = 'none' }, 300)" />
         </div>
         <div class="work-header">
             <h2 class="work-name">{{work_detailsVM.activeWork.name}}</h2>
