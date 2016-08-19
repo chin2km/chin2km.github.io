@@ -9,9 +9,8 @@
         var _this = this;
         _this.notifications = [];
         _this.AppService=AppService;
-        $timeout(function () {
-            _this.notifications.push({ message: "Please feel free to report the bugs to the developer. Help us improve your experience!", status: "success" });
-        }, 8000);
+
+        window.scrollTo(0,0);       
 
         (function() {            
             AppService.LoadTimer(3000);

@@ -12,8 +12,7 @@
         (function() {            
             AppService.LoadTimer(1500);
         })();
-
-        
+        window.scrollTo(0,0);       
         AppService.fetchData().then(function (data) {
             try {
                 _this.activeWork = data.filter(function (d) {

@@ -472,12 +472,12 @@ header {
 @media only screen and (max-width: 479px) {
 
     #container > header nav .big-display a {
-        font-size: 30px;
-        color: black;
+        font-size: 26px;
+        color: #1d1b1b;
         line-height: 1em;
-        border-right: solid 2px rgba(218, 218, 218, 0.4);
+        border-right: solid 2px rgba(84, 84, 84, 0.4);
         padding: 0px 10px;
-        border-left: solid 2px rgba(218, 218, 218, 0.39);
+        border-left: solid 2px rgba(105, 105, 105, 0.39);
         margin-left: -5px;
         background: rgba(0, 0, 0, 0.31);
     }
@@ -691,7 +691,7 @@ header {
 
 .portfolio article .details h4 {
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
     margin: 10px 0px;
 }
 
@@ -911,7 +911,11 @@ header {
 .work-details-container .work-header .work-detailed-decription{
 
 }
+.work-details-container .work-header .view-website{transition: all 0.1s ease-out;background: #006bb5;padding: 5px 20px;border-radius: 5px;color: #d4d4d4;font-weight: bold;} 
+.work-details-container .work-header .view-website:hover{
 
+box-shadow: 1px 4px 5px rgba(0,0,0, 0.7);
+} 
 
 
 .about-container {
@@ -1117,3 +1121,10 @@ footer{
     ::-webkit-scrollbar-thumb:window-inactive {
         background: #d4d4d4;
     }
+
+    .my-preloads{
+        width: 0px;
+        height: 0px;
+        display: inline;
+        background-image: url(/Images/icon_gray.png);
+}

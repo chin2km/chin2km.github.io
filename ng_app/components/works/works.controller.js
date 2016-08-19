@@ -13,6 +13,7 @@
             AppService.LoadTimer(1500);
         })();
 
+        window.scrollTo(0,0);       
 
 
         AppService.fetchData().then(function (data) {

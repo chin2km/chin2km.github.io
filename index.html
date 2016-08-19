@@ -28,7 +28,7 @@
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
     <link href="css/Loader.css" rel="stylesheet" />
     <link href="css/common.css" rel="stylesheet" />
-
+    
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
@@ -36,14 +36,14 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body oncontextmenu="return false">
-
+<body>
+    <div class="my-preloads"> </div>
     <div id="container" ng-controller="NavigationController">
         <header ng-class="chin2kmThemes.allThemes[chin2kmThemes.activeTheme].bg" >
             <div class="pagewidth">
 
                 <a href="">
-                    <hgroup>
+                    <hgroup oncontextmenu="return false">
                         <logo>
                             <div class="theme-panel">
                                 <div class="theme-rect" ng-repeat="(key, value) in chin2kmThemes.allThemes" ng-click="setTheme(key)" ng-class="chin2kmThemes.allThemes[key].bg">
@@ -133,7 +133,7 @@
     <script src="ng_app/components/about/about.module.js"></script>
 
     <script language="javascript">
-        document.onmousedown=disableclick;
+        //document.onmousedown=disableclick;
         function disableclick(event)
         {
           if(event.button==2)
