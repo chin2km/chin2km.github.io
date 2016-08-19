@@ -649,7 +649,9 @@ header {
     top: 100%;
     opacity: 0.7;
 }
-
+    .portfolio article:hover .details {
+        top: 25%;
+    }
 
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px) {
@@ -662,12 +664,16 @@ header {
         height: 93%;
         background: transparent !important;
     }
+            .portfolio article:hover .details {
+        top: 0%;
+    }
 }
 /* SMARTPHONES LANDSCAPE */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .portfolio article .details {
         top: 25%;
     }
+
 }
 /* TABLETS PORTRAIT */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -683,9 +689,7 @@ header {
 }
 /* TABLET LANDSCAPE / DESKTOP */
 @media only screen and (max-width: 5000px) {
-    .portfolio article:hover .details {
-        top: 25%;
-    }
+
 }
 
 
@@ -701,20 +705,38 @@ header {
     margin: 0px 20px;
     font-style: italic;
 }
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (max-width: 767px) {
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 479px) {
     .portfolio article .details h4 {
         text-align: center;
         font-size: 24px;
         margin: 10px 0px;
-        color: #7b7b7b;
+        color: #696969;
     }
 
     .portfolio article .details h5 {
         text-align: center;
         font-size: 15px;
         margin: 0px 20px;
-        color: #616161;
+        color: #2d2d2d;
+        font-style: italic;
+    }
+}
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .portfolio article .details h4 {
+        text-align: center;
+        font-size: 24px;
+        margin: 10px 0px;
+        color: #ffffff;
+    }
+
+    .portfolio article .details h5 {
+        text-align: center;
+        font-size: 15px;
+        margin: 0px 20px;
+        color: #ffffff;
         font-style: italic;
     }
 }
