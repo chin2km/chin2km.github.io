@@ -13,7 +13,7 @@
         $routeProvider.when('/works/:name', {
             controller: 'work_detailsController',
             controllerAs: 'work_detailsVM',
-            templateUrl: 'ng_app/components/work_details/work_details.html?v=11.000',
+            templateUrl: 'ng_app/components/work_details/work_details.html',
             //resolve: {}
         });
     }

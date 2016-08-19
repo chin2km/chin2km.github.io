@@ -1,5 +1,5 @@
 var AppService = angular.module('chin2km')
-.factory('AppService', function ($rootScope, $location) {
+.factory('AppService', function ($rootScope, $http, $location, $timeout) {
 
 
     return {
@@ -54,9 +54,13 @@ var AppService = angular.module('chin2km')
                 }, time);
             })();
         },
-        ResetRipples: function (selector) {
-            SetRippleEffectHandle(selector);
+        fetchData: function (callback) {
+            return $timeout(function () {
+                return $http.get("ng_app/common/catalog.htm").then(function (response) {
+                    return response.data;
+                });
+            }, 30);
         }
 
     };
-});
+})

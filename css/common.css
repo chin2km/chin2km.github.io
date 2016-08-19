@@ -200,7 +200,7 @@ label {
     box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.27);
     height: 60px;
     position: fixed;
-    z-index: 5;
+    z-index: 999;
     background-size: 22% 50%;
 }
 /* SMARTPHONES PORTRAIT */
@@ -750,6 +750,165 @@ header {
 .clearfix {
     zoom: 1;
 }
+
+
+
+
+
+.work-details-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+}
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 479px) {
+}
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+
+
+.work-details-container .img-container {
+  position: relative;
+  width: 50%;
+  float:left;
+}
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 479px) {
+
+.work-details-container .img-container {
+  width: 100%;
+  float:left;
+}
+
+}
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+    .work-details-container .img-container {
+  width: 100%;
+  float:left;
+}
+
+}
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+}
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+}
+
+
+
+.work-details-container .img-container img {
+  position: relative;
+  top: 0;
+  left: 0;
+  border: 5px solid #f3f3f3;
+  box-shadow: 1px 1px 2px #666;
+  width: 80%;
+  margin:0px auto;
+  display:block;
+  transition: all .3s ease-in-out;
+}
+
+.work-details-container .img-container img:hover {
+    z-index:101 !important;
+    height:110%;
+    transform: rotate(0deg)  scale(1.4) !important;
+}
+
+.work-details-container .img-container img:nth-child(1):hover {
+    z-index:1000 !important;
+}
+
+.work-details-container .img-container img:nth-child(1) {
+    z-index:100;
+    transform: rotate(-6deg) ;
+}
+
+.work-details-container .img-container img:nth-child(2) {
+    z-index:99;
+    transform: rotate(8deg) ;
+}
+
+.work-details-container .img-container img:nth-child(3) {
+    z-index:98;
+    transform: rotate(-8deg) ;
+}
+
+.work-details-container .img-container img:nth-child(4) {
+    z-index:97;
+    transform: rotate(12deg) ;
+}
+
+.work-details-container .img-container img:nth-child(5) {
+    z-index:96;
+    transform: rotate(-16deg) ;
+}
+
+.work-details-container .img-container img:nth-child(6) {
+    z-index:95;
+    transform: rotate(18deg) ;
+}
+
+
+
+.work-details-container .work-header{
+  position: relative;
+  width: 50%;
+  margin: 80px auto;
+  float:right;
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 479px) {
+
+.work-details-container .work-header{
+  width: 100%;
+  float:left;
+}
+
+}
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+.work-details-container .work-header {
+  width: 100%;
+  float:left;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
