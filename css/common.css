@@ -945,14 +945,14 @@ padding-bottom: 20px;
 
 
 
-.about-container .about-me {
+ .about-me {
 
 /* position: relative; */
 
 padding: 0px 20px;
 }
 
-.about-container .about-me:before {
+.about-me:before {
     content: ' ';
     display: block;
     position: absolute;
@@ -973,12 +973,12 @@ padding: 0px 20px;
 }
 
 
-.about-container .about-me h4 {font-size: 20px;text-align: justify;font-style: italic;color: #313131;}
-.about-container .about-me h4 a {color: rgba(0, 123, 148, 0.84);}
+.about-me h4 {font-size: 20px;text-align: justify;font-style: italic;color: #313131;}
+.about-me h4 a {color: rgba(0, 123, 148, 0.84);}
 
 
 
-.about-container .about-me h5 {
+ .about-me h5 {
 font-size: 20px;
 }
 
