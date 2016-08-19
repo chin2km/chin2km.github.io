@@ -509,6 +509,7 @@ header {
     width: 100%;
     height: 100px;
     padding-top: 100px;
+    min-height: 750px;
 }
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px) {
@@ -781,6 +782,7 @@ header {
   position: relative;
   width: 50%;
   float:left;
+  min-height: 757px;
 }
 /* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px) {
