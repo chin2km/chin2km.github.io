@@ -36,7 +36,7 @@
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body>
+<body oncontextmenu="return false">
 
     <div id="container" ng-controller="NavigationController">
         <header ng-class="chin2kmThemes.allThemes[chin2kmThemes.activeTheme].bg" >
@@ -132,6 +132,15 @@
     <script src="ng_app/components/about/about.controller.js"></script>
     <script src="ng_app/components/about/about.module.js"></script>
 
-
+    <script language="javascript">
+        document.onmousedown=disableclick;
+        function disableclick(event)
+        {
+          if(event.button==2)
+           {
+             return false;    
+           }
+        }
+    </script>
 </body>
 </html>
