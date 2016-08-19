@@ -65,7 +65,7 @@ h1, h2, h3, h4, h5, span, i {
 }
 
 .red-font {
-    color: #2196F3 !important;
+    color: #E50F2E !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, span, i {
 }
 
 .orange-font {
-    color: #2196F3 !important;
+    color: #EC8147 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -93,7 +93,7 @@ h1, h2, h3, h4, h5, span, i {
 }
 
 .yellow-font {
-    color: #2196F3 !important;
+    color: #FFCB43 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, span, i {
 }
 
 .pink-font {
-    color: #2196F3 !important;
+    color: #99227C !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -122,7 +122,7 @@ h1, h2, h3, h4, h5, span, i {
 }
 
 .green-font {
-    color: #2196F3 !important;
+    color: #67B150 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -137,7 +137,7 @@ h1, h2, h3, h4, h5, span, i {
 }
 
 .purple-font {
-    color: #2196F3 !important;
+    color: #633392 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -152,7 +152,7 @@ h1, h2, h3, h4, h5, span, i {
 }
 
 .blue-font {
-    color: #2196F3 !important;
+    color: #006BB5 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -166,7 +166,7 @@ h1, h2, h3, h4, h5, span, i {
 }
 
 .teal-font {
-    color: #2196F3 !important;
+    color: #0BA2A0 !important;
     transition: all 0.5s ease;
     transition-property: background,color;
 }
@@ -903,21 +903,139 @@ header {
 
 
 
+.about-container {
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+}
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 479px) {
+}
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+}
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+
+
+.about-container .intro {
+
+}
+
+.about-container .intro h3 {
+text-align: center;
+font-size: 30px;
+}
+
+.about-container .intro h2 {
+text-align: center;
+font-size: 40px;
+border-bottom: solid 1px #dadada;
+padding-bottom: 20px;
+}
+
+
+
+.about-container .about-me {
+
+}
+
+.about-container .about-me h4 {
+
+}
+
+.about-container .about-me h5 {
+font-size: 20px;
+}
+
+.about-container .me-links {
+padding-top: 15px;
+}
+
+
+
+.about-container .me-links .linker {
+    width: 16%;
+    min-height:150px;
+    background: rgba(0, 0, 0, 0.24);
+    border-radius:3px;
+    transition:all 0.2s ease-out;
+    margin: 2%;
+    float:left;
+    position: relative;
+}
+/* SMARTPHONES PORTRAIT */
+@media only screen and (max-width: 479px) {
+
+    .about-container .me-links .linker {
+        width: 46%;
+        margin: 2%;
+    }
+}
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+        .about-container .me-links .linker {
+        width: 46%;
+        margin: 2%;
+    }
+
+}
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .about-container .me-links .linker {
+        width: 21%;
+        margin: 2%;
+    }
+
+}
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
+
+.about-container .me-links .linker .fa {
+    width: 30px;
+    height: 30px;
+    position:absolute;
+    bottom:0;
+    right:0;
+    left:0;
+    top:0;
+    margin:auto;
+    transform: scale(1.3);
+}
+.about-container .me-links .linker .material-icons {
+    opacity:0;
+    transition:all 0.2s ease-out;
+    font-size: 70px;
+    right: 0px;
+    position: absolute;
+    color: white;
+}
+.about-container .me-links .linker:hover .material-icons {
+    opacity:1;
+}
 
 
 
 
+.about-container .me-links .linker:hover {
+    background: rgba(0, 0, 0, 0.61);
+}
 
+.about-container .me-links .linker h4 {
 
+}
 
+.about-container .me-links .linker h5 {
 
-
-
-
-
-
-
-
+}
 
 
 
