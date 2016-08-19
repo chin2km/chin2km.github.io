@@ -855,13 +855,12 @@ header {
 }
 
 .work-details-container .img-container img:hover {
-    z-index:101 !important;
+    z-index:1000 !important;
     height:110%;
     transform: rotate(0deg)  scale(1.4) !important;
 }
 
 .work-details-container .img-container img:nth-child(1):hover {
-    z-index:1000 !important;
 }
 
 .work-details-container .img-container img:nth-child(1) {
