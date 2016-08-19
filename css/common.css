@@ -866,7 +866,7 @@ header {
 .work-details-container .work-header{
   position: relative;
   width: 50%;
-  margin: 80px auto;
+  margin: 0px auto;
   float:right;
 }
 
@@ -889,6 +889,17 @@ header {
 
 }
 
+.work-details-container .work-header .work-name{
+    font-size: 40px;
+}
+.work-details-container .work-header .work-description{
+    font-size: 23px;
+    font-style: italic;
+    color: #C1C1C1;
+}
+.work-details-container .work-header .work-detailed-decription{
+
+}
 
 
 
