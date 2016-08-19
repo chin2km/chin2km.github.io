@@ -13,7 +13,7 @@
         window.scrollTo(0,0);       
 
         (function() {            
-            AppService.LoadTimer(3000);
+            AppService.LoadTimer(1500);
         })();
 
     }
