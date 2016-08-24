@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="chin2km">
 <head>
-    <title>Chintu Kishen KM - UI/UX Designer / Developer /Web /Desktop /Javascript /HTML /CSS /.Net /WPF /C# </title>
+    <title>Its raining designs</title>
     <!--Meta-->
     <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
     <meta http-equiv='Cache-control' content='no-cache' />
@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
     <link rel="shortcut icon" type="image/x-icon" href="Images/icon_color.png" />
 
-    <meta name="application-name" content="Chintu Kishen KM" />
+    <meta name="application-name" content="Its raining designs" />
     <meta name="msapplication-square70x70logo" content="small.jpg" />
     <meta name="msapplication-square150x150logo" content="medium.jpg" />
     <meta name="msapplication-wide310x150logo" content="wide.jpg" />
@@ -26,6 +26,7 @@
 
     <!--CSS-->
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
+    <link href="css/weather.css" rel="stylesheet" type="text/css"/>
     <link href="css/Loader.css" rel="stylesheet" />
     <link href="css/common.css" rel="stylesheet" />
     
@@ -39,6 +40,9 @@
 <body>
     <div class="my-preloads"> </div>
     <div id="container" ng-controller="NavigationController">
+        <div class="weather rain" style="position: absolute;width: 100%;height: 100%;z-index: 0;"></div>
+
+        
         <header ng-class="chin2kmThemes.allThemes[chin2kmThemes.activeTheme].bg" >
             <div class="pagewidth">
 
@@ -52,7 +56,7 @@
                             </div>
                         </logo>
 
-                        <a href="/#/works"><h3>CHIN2KM.com</h3></a>
+                        <a href="/#/works"><h3>Its raining designs</h3></a>
                         <h3>Developer/Designer</h3>
                     </hgroup>
                 </a>
