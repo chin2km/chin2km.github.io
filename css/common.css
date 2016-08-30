@@ -711,15 +711,16 @@ header {
         text-align: center;
         font-size: 24px;
         margin: 10px 0px;
-        color: #696969;
+        color: #F3F3F3;
     }
 
     .portfolio article .details h5 {
         text-align: center;
         font-size: 15px;
         margin: 0px 20px;
-        color: #2d2d2d;
+        color: #909090;
         font-style: italic;
+        text-shadow: 1px 1px 2px #000000;
     }
 }
 
