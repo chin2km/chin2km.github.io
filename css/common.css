@@ -13,8 +13,8 @@ body {
     margin: 0;
     font-size: 13px;
     line-height: 1.231;
-    background: #FFF url(/Images/pattern.png) fixed;
-    background-position: 0px 49px;
+    background: #FFF url(/Images/bgg.jpg) fixed;
+    background-size: 100% 100%
 }
 
     body:before {

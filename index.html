@@ -46,20 +46,18 @@
         <header ng-class="chin2kmThemes.allThemes[chin2kmThemes.activeTheme].bg" >
             <div class="pagewidth">
 
-                <a href="">
-                    <hgroup oncontextmenu="return false">
-                        <logo>
-                            <div class="theme-panel">
-                                <div class="theme-rect" ng-repeat="(key, value) in chin2kmThemes.allThemes" ng-click="setTheme(key)" ng-class="chin2kmThemes.allThemes[key].bg">
-                                    <i class="material-icons" ng-if="chin2kmThemes.activeTheme==key">done</i>
-                                </div>
+                <hgroup oncontextmenu="return false">
+                    <logo>
+                        <div class="theme-panel">
+                            <div class="theme-rect" ng-repeat="(key, value) in chin2kmThemes.allThemes" ng-click="setTheme(key)" ng-class="chin2kmThemes.allThemes[key].bg">
+                                <i class="material-icons" ng-if="chin2kmThemes.activeTheme==key">done</i>
                             </div>
-                        </logo>
+                        </div>
+                    </logo>
 
-                        <a href="/#/works"><h3>Its raining designs</h3></a>
-                        <h3>Developer/Designer</h3>
-                    </hgroup>
-                </a>
+                    <a href="/#/works"><h3>Its raining designs</h3></a>
+                    <h3>Developer/Designer</h3>
+                </hgroup>
                 <nav>
                     <div class="big-display">
                         <a href="/#/works">WORKS</a>
