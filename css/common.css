@@ -2,302 +2,254 @@ html {
     height: 100%;
     font-size: 100%;
     overflow-y: scroll;
-    font-family: 'Cairo', sans-serif !important;
+    font-family: 'Cairo',sans-serif!important;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
 }
-
-
-
-
 
 body {
     height: 100%;
     margin: 0;
     font-size: 13px;
     line-height: 1.231;
-    background: #FFF url(/Images/bgg.jpg) fixed;
+    background: #fff url(/Images/bgg.jpg) fixed;
     background-size: 100% 100%
 }
 
-    body:before {
-        content: "";
-        height: 100%;
-        float: left;
-        width: 0;
-        margin-top: -32767px;
-    }
-
-h1, h2, h3, h4, h5, span, i {
-    cursor: default !important;
+body:before {
+    content: "";
+    height: 100%;
+    float: left;
+    width: 0;
+    margin-top: -32767px
 }
 
-/*THEMES*/
+h1,h2,h3,h4,h5,span,i {
+    cursor: default!important
+}
 
 .black-bg {
-    background: #000 !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #000!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .black-font {
-    color: #000 !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #000!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .white-font {
-    color: #FFF !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .white-bg {
-    background: #FFF !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
-
 .red-bg {
-    background: #E50F2E !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #e50f2e!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .red-font {
-    color: #E50F2E !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #e50f2e!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .orange-bg {
-    background: #EC8147 !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #ec8147!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .orange-font {
-    color: #EC8147 !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #ec8147!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
-
-
 .yellow-bg {
-    background: #FFCB43 !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #ffcb43!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .yellow-font {
-    color: #FFCB43 !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #ffcb43!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
-
-
 .pink-bg {
-    background: #99227C !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #99227c!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .pink-font {
-    color: #99227C !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #99227c!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
-
 .green-bg {
-    background: #67B150 !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #67b150!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .green-font {
-    color: #67B150 !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #67b150!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
-
-
 .purple-bg {
-    background: #633392 !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #633392!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .purple-font {
-    color: #633392 !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #633392!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
-
-
 .blue-bg {
-    background: #006BB5 !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #006bb5!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .blue-font {
-    color: #006BB5 !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #006bb5!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
-
 .teal-bg {
-    background: #0BA2A0 !important;
-    color: white !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    background: #0ba2a0!important;
+    color: #fff!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
 .teal-font {
-    color: #0BA2A0 !important;
-    transition: all 0.5s ease;
-    transition-property: background,color;
+    color: #0ba2a0!important;
+    transition: all .5s ease;
+    transition-property: background , color
 }
 
-
-
 label {
-    cursor: pointer;
+    cursor: pointer
 }
 
 #container {
-    position: relative;
-}
-/* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px) {
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    position: relative
 }
 
-
-#container > header {
+#container>header {
     padding: 0;
     position: fixed;
-    box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.27);
+    box-shadow: 0 5px 6px rgba(0,0,0,.27);
     height: 60px;
     position: fixed;
     z-index: 999;
-    background-size: 22% 50%;
+    background-size: 22% 50%
 }
-/* SMARTPHONES PORTRAIT */
+
 @media only screen and (max-width: 479px) {
-    #container > header {
-        height: 45px;
+    #container>header {
+        height:45px
     }
 }
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    #container > header {
-        height: 45px;
+
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    #container>header {
+        height:45px
     }
 }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-}
-
-
 
 .pagewidth {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     width: 1020px;
-    position: relative;
+    position: relative
 }
-/* SMARTPHONES PORTRAIT */
+
 @media only screen and (max-width: 479px) {
     .pagewidth {
-        width: 90%;
+        width:90%
     }
 }
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+@media only screen and (min-width: 480px) and (max-width:767px) {
     .pagewidth {
-        width: 480px;
+        width:480px
     }
 }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
     .pagewidth {
-        width: 638px;
+        width:638px
     }
 }
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+@media only screen and (min-width: 992px) and (max-width:1200px) {
     .pagewidth {
-        width: 992px;
+        width:992px
     }
 }
 
 header {
     float: left;
     position: relative;
-    width: 100%;
+    width: 100%
 }
 
-
-#container > header hgroup {
+#container>header hgroup {
     float: left;
     line-height: 60px;
     height: 60px;
     padding-left: 120px;
     position: relative;
     font-size: 30px;
-    color: #dadada;
+    color: #dadada
 }
-/* SMARTPHONES PORTRAIT */
+
 @media only screen and (max-width: 479px) {
-    #container > header hgroup {
-        padding-left: 79px;
-        line-height: 45px;
+    #container>header hgroup {
+        padding-left:79px;
+        line-height: 45px
     }
 }
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    #container > header hgroup {
-        padding-left: 79px;
-        line-height: 45px;
+
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    #container>header hgroup {
+        padding-left:79px;
+        line-height: 45px
     }
 }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-}
 
-
-#container > header hgroup logo {
+#container>header hgroup logo {
     height: 80px;
     background: url(/Images/icon_color.png);
     padding: 5px;
@@ -306,689 +258,584 @@ header {
     top: -2px;
     width: 80px;
     background-size: 100%;
-    box-shadow: 0px 0px 10px #000000;
+    box-shadow: 0 0 10px #000
 }
 
-    #container > header hgroup logo:hover {
-        background: url(/Images/icon_gray.png);
-        background-size: 100%;
-    }
-/* SMARTPHONES PORTRAIT */
+#container>header hgroup logo:hover {
+    background: url(/Images/icon_gray.png);
+    background-size: 100%
+}
+
 @media only screen and (max-width: 479px) {
-    #container > header hgroup logo {
-        height: 60px;
-        width: 60px;
+    #container>header hgroup logo {
+        height:60px;
+        width: 60px
     }
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    #container > header hgroup logo {
-        height: 60px;
-        width: 60px;
-    }
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
 }
 
-#container > header hgroup logo .theme-panel {
-    transition: width 0.2s ease-out,height 0.2s ease-out;
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    #container>header hgroup logo {
+        height:60px;
+        width: 60px
+    }
+}
+
+#container>header hgroup logo .theme-panel {
+    transition: width .2s ease-out , height .2s ease-out;
     position: absolute;
     width: 100%;
     height: 100%;
     background: url(/Images/chin2km.png) no-repeat;
     background-size: 100%;
     box-shadow: 2px 2px 10px #8c8c8c;
-    opacity: 0;
+    opacity: 0
 }
 
-#container > header hgroup logo:hover .theme-panel {
+#container>header hgroup logo:hover .theme-panel {
     width: 200%;
     height: 200%;
     opacity: 1;
     top: 100%;
-    left: 0;
+    left: 0
 }
 
-    #container > header hgroup logo:hover .theme-panel .theme-rect {
-        position: initial;
-        width: 33.3%;
-        height: 33.3%;
-        float: left;
-        transition: all 0.2s ease-out;
-    }
+#container>header hgroup logo:hover .theme-panel .theme-rect {
+    position: initial;
+    width: 33.3%;
+    height: 33.3%;
+    float: left;
+    transition: all .2s ease-out
+}
 
-        #container > header hgroup logo:hover .theme-panel .theme-rect:hover {
-            transform: scale(1.1);
-        }
+#container>header hgroup logo:hover .theme-panel .theme-rect:hover {
+    transform: scale(1.1)
+}
 
-        #container > header hgroup logo:hover .theme-panel .theme-rect i {
-            width: 15px;
-            margin-left: 30%;
-        }
+#container>header hgroup logo:hover .theme-panel .theme-rect i {
+    width: 15px;
+    margin-left: 30%
+}
 
-#container > header hgroup h3 {
-    margin: -1px 0px;
+#container>header hgroup h3 {
+    margin: -1px 0;
     float: left;
     margin-right: 35px;
-    color: white;
-    cursor: pointer !important;
+    color: #fff;
+    cursor: pointer!important
 }
 
-    #container > header hgroup h3:nth-child(3n) {
-        color: #7D7D7D;
-        font-size: 25px;
-    }
-/* SMARTPHONES PORTRAIT */
+#container > header hgroup h3:nth-child(3n) {
+    color: #7d7d7d;
+    font-size: 25px
+}
+
 @media only screen and (max-width: 479px) {
     #container > header hgroup h3:nth-child(3n) {
-        display: none;
+        display:none
     }
 
-    #container > header hgroup h3 {
+    #container>header hgroup h3 {
         font-size: 25px;
-        margin-right: 0px;
+        margin-right: 0
     }
 }
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+@media only screen and (min-width: 480px) and (max-width:767px) {
     #container > header hgroup h3:nth-child(3n) {
-        display: none;
+        display:none
     }
 
-    #container > header hgroup h3 {
-        font-size: 25px;
+    #container>header hgroup h3 {
+        font-size: 25px
     }
 }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
     #container > header hgroup h3:nth-child(3n) {
-        display: none;
+        display:none
     }
 
-    #container > header hgroup h3 {
-        font-size: 25px;
+    #container>header hgroup h3 {
+        font-size: 25px
     }
 }
 
-
-
-#container > header nav {
+#container>header nav {
     float: right;
-    position: relative;
+    position: relative
 }
 
-    #container > header nav .big-display {
-        height: 60px;
-        vertical-align: middle;
-    }
+#container>header nav .big-display {
+    height: 60px;
+    vertical-align: middle
+}
 
-        #container > header nav .big-display a {
-            font-size: 30px;
-            color: white;
-            line-height: 2em;
-            border-right: solid 2px rgba(218, 218, 218, 0.4);
-            padding: 0px 10px;
-            border-left: solid 2px rgba(218, 218, 218, 0.39);
-            margin-left: -5px;
-        }
+#container>header nav .big-display a {
+    font-size: 30px;
+    color: #fff;
+    line-height: 2em;
+    border-right: solid 2px rgba(218,218,218,.4);
+    padding: 0 10px;
+    border-left: solid 2px rgba(218,218,218,.39);
+    margin-left: -5px
+}
 
-            #container > header nav .big-display a:hover {
-                opacity: 0.7;
-                background: rgba(0, 0, 0, 0.31);
-            }
+#container>header nav .big-display a:hover {
+    opacity: .7;
+    background: rgba(0,0,0,.31)
+}
 
-    #container > header nav .small-display {
-        display: none;
-    }
+#container>header nav .small-display {
+    display: none
+}
 
-        #container > header nav .small-display i {
-            font-size: 25px;
-            color: white;
-            line-height: 2em;
-            padding: 0px 10px;
-            margin-right: 0px;
-        }
+#container>header nav .small-display i {
+    font-size: 25px;
+    color: #fff;
+    line-height: 2em;
+    padding: 0 10px;
+    margin-right: 0
+}
 
-        #container > header nav .small-display #tray {
-            display: none;
-        }
+#container>header nav .small-display #tray {
+    display: none
+}
 
-        #container > header nav .small-display a {
-        }
+#container>header nav .small-display a {
+}
 
-            #container > header nav .small-display a:hover {
-            }
+#container>header nav .small-display a:hover {
+}
 
-            #container > header nav .small-display a img {
-                background: url(/Images/me.png);
-                height: 50px;
-                width: 50px;
-                border-radius: 100px;
-            }
+#container>header nav .small-display a img {
+    background: url(/Images/me.png);
+    height: 50px;
+    width: 50px;
+    border-radius: 100px
+}
 
-
-/* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px) {
-
-    #container > header nav .big-display a {
-        font-size: 26px;
+    #container>header nav .big-display a {
+        font-size:26px;
         color: #1d1b1b;
         line-height: 1em;
-        border-right: solid 2px rgba(84, 84, 84, 0.4);
-        padding: 0px 10px;
-        border-left: solid 2px rgba(105, 105, 105, 0.39);
+        border-right: solid 2px rgba(84,84,84,.4);
+        padding: 0 10px;
+        border-left: solid 2px rgba(105,105,105,.39);
         margin-left: -5px;
-        background: rgba(0, 0, 0, 0.31);
+        background: rgba(0,0,0,.31)
     }
 }
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    #container > header nav .big-display a {
-        font-size: 24px;
-        color: white;
+
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    #container>header nav .big-display a {
+        font-size:24px;
+        color: #fff;
         line-height: 2em;
-        border-right: solid 2px rgba(218, 218, 218, 0.4);
-        padding: 0px 10px;
-        border-left: solid 2px rgba(218, 218, 218, 0.39);
-        margin-left: -5px;
+        border-right: solid 2px rgba(218,218,218,.4);
+        padding: 0 10px;
+        border-left: solid 2px rgba(218,218,218,.39);
+        margin-left: -5px
     }
 }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-}
-
-
-
-
 
 .portfolio {
     position: relative;
     width: 100%;
     height: 100px;
     padding-top: 100px;
-    min-height: 750px;
-}
-/* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px) {
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    min-height: 750px
 }
 
 .portfolio article {
-    cursor: pointer !important;
+    cursor: pointer!important;
     position: relative;
     border-radius: 350px;
     margin: 2%;
     float: left;
     overflow: hidden;
-    /* padding: 9px; */
     transition: all .1s ease-in;
     -webkit-transition: all .1s ease-in;
     -moz-transition: all .1s ease-in;
     -o-transition: all .1s ease-in;
     width: 290px;
     height: 290px;
-    box-shadow: 2px 2px 10px #8c8c8c;
+    box-shadow: 2px 2px 10px #8c8c8c
 }
-/* SMARTPHONES PORTRAIT */
+
 @media only screen and (max-width: 479px) {
     .portfolio article {
-        width: 100%;
+        width:100%;
         height: 123px;
-        border-radius: 0px;
+        border-radius: 0;
         box-shadow: none;
         border: none;
-        border-bottom: solid 1px #dadada;
-    }
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    .portfolio article {
-        width: 220px;
-        height: 220px;
-    }
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .portfolio article {
-        width: 290px;
-        height: 290px;
-    }
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .portfolio article {
-        width: 290px;
-        height: 290px;
+        border-bottom: solid 1px #dadada
     }
 }
 
-/*.portfolio article:nth-child(3n+1) {
-    clear: left;
-    margin-left: 0
-}*/
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    .portfolio article {
+        width:220px;
+        height: 220px
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .portfolio article {
+        width:290px;
+        height: 290px
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+    .portfolio article {
+        width:290px;
+        height: 290px
+    }
+}
 
 .portfolio article:hover header {
-    border: solid 7px rgba(0,0,0, 0.7);
+    border: solid 7px rgba(0,0,0,.7)
 }
 
-    .portfolio article:hover header img {
-        -webkit-filter: none;
-    }
-
-
+.portfolio article:hover header img {
+    -webkit-filter: none
+}
 
 .portfolio article header {
     width: calc(100% - 14px);
     height: calc(100% - 14px);
-    border: solid 7px rgba(189, 189, 189, 0.7);
+    border: solid 7px rgba(189,189,189,.7);
     border-radius: 500px;
-    float: left;
+    float: left
 }
 
-    .portfolio article header img {
-        width: calc(100%);
-        height: calc(100%);
-        border-radius: 500px;
-        -webkit-filter: grayscale();
-        background-size: 100%;
-    }
+.portfolio article header img {
+    width: calc(100%);
+    height: calc(100%);
+    border-radius: 500px;
+    -webkit-filter: grayscale();
+    background-size: 100%
+}
 
-
-
-/* SMARTPHONES PORTRAIT */
 @media only screen and (max-width: 479px) {
     .portfolio article header {
-        width: 100px;
-        height: 100px;
-    }
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    .portfolio article header {
-        border: solid 7px rgba(0,0,0, 0.7);
-    }
-
-        .portfolio article header img {
-            -webkit-filter: none;
-        }
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .portfolio article header {
-        border: solid 7px rgba(0,0,0, 0.7);
-    }
-
-        .portfolio article header img {
-            -webkit-filter: none;
-        }
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-    .portfolio article header {
+        width:100px;
+        height: 100px
     }
 }
 
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    .portfolio article header {
+        border:solid 7px rgba(0,0,0,.7)
+    }
+
+    .portfolio article header img {
+        -webkit-filter: none
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .portfolio article header {
+        border:solid 7px rgba(0,0,0,.7)
+    }
+
+    .portfolio article header img {
+        -webkit-filter: none
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+    .portfolio article header {
+    }
+}
 
 .portfolio article .details {
-    transition: all 0.2s ease-in;
+    transition: all .2s ease-in;
     width: 100%;
     height: calc(75%);
     position: absolute;
     top: 100%;
-    opacity: 0.7;
+    opacity: .7
 }
-    .portfolio article:hover .details {
-        top: 25%;
-    }
 
-/* SMARTPHONES PORTRAIT */
+.portfolio article:hover .details {
+    top: 35%;
+}
+
 @media only screen and (max-width: 479px) {
     .portfolio article .details {
-        top: 0px;
+        top:0;
         left: 120px;
-        opacity: 0.8;
+        opacity: .8;
         border-radius: 5px;
         width: calc(100% - 130px);
         height: 93%;
-        background: transparent !important;
-    }
-            .portfolio article:hover .details {
-        top: 0%;
-    }
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    .portfolio article .details {
-        top: 25%;
+        background: transparent!important
     }
 
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .portfolio article .details {
-        top: 25%;
-    }
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
     .portfolio article:hover .details {
-        top: 35%;
+        top: 0%
     }
 }
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (max-width: 5000px) {
 
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    .portfolio article .details {
+        top:25%
+    }
 }
 
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .portfolio article .details {
+        top:25%
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width:1200px) {
+    .portfolio article:hover .details {
+        top:35%
+    }
+}
 
 .portfolio article .details h4 {
     text-align: center;
     font-size: 35px;
-    margin: 10px 0px;
+    margin: 10px 0
 }
 
 .portfolio article .details h5 {
     text-align: center;
     font-size: 20px;
-    margin: 0px 20px;
-    font-style: italic;
+    margin: 0 20px;
+    font-style: italic
 }
-/* SMARTPHONES PORTRAIT */
+
 @media only screen and (max-width: 479px) {
     .portfolio article .details h4 {
-        text-align: center;
+        text-align:center;
         font-size: 24px;
-        margin: 10px 0px;
-        color: #F3F3F3;
+        margin: 10px 0;
+        color: #f3f3f3
     }
 
     .portfolio article .details h5 {
         text-align: center;
         font-size: 15px;
-        margin: 0px 20px;
+        margin: 0 20px;
         color: #909090;
         font-style: italic;
-        text-shadow: 1px 1px 2px #000000;
+        text-shadow: 1px 1px 2px #000
     }
 }
 
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+@media only screen and (min-width: 480px) and (max-width:767px) {
     .portfolio article .details h4 {
-        text-align: center;
+        text-align:center;
         font-size: 24px;
-        margin: 10px 0px;
-        color: #ffffff;
+        margin: 10px 0;
+        color: #fff
     }
 
     .portfolio article .details h5 {
         text-align: center;
         font-size: 15px;
-        margin: 0px 20px;
-        color: #ffffff;
-        font-style: italic;
+        margin: 0 20px;
+        color: #fff;
+        font-style: italic
     }
 }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
     .portfolio article .details h4 {
-        text-align: center;
+        text-align:center;
         font-size: 35px;
-        margin: 10px 0px;
+        margin: 10px 0
     }
 
     .portfolio article .details h5 {
         text-align: center;
         font-size: 20px;
-        margin: 0px 20px;
+        margin: 0 20px
     }
 }
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+@media only screen and (min-width: 992px) and (max-width:1200px) {
     .portfolio article .details h4 {
-        text-align: center;
+        text-align:center;
         font-size: 35px;
-        margin: 10px 0px;
+        margin: 10px 0
     }
 
     .portfolio article .details h5 {
         text-align: center;
         font-size: 20px;
-        margin: 0px 20px;
+        margin: 0 20px
     }
 }
 
-
-.clearfix:before, .clearfix:after {
+.clearfix:before,.clearfix:after {
     content: "";
-    display: table;
+    display: table
 }
 
 .clearfix:after {
-    clear: both;
+    clear: both
 }
 
 .clearfix {
-    zoom: 1;
-}
-
-
-
-
+    zoom:1}
 
 .work-details-container {
     position: relative;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 100px
 }
-/* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px) {
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-}
-
-
 
 .work-details-container .img-container {
-  position: relative;
-  width: 50%;
-  float:left;
-  min-height: 757px;
+    position: relative;
+    width: 50%;
+    float: left;
+    min-height: 757px
 }
-/* SMARTPHONES PORTRAIT */
+
 @media only screen and (max-width: 479px) {
-
-.work-details-container .img-container {
-  width: 100%;
-  float:left;
-}
-
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-
     .work-details-container .img-container {
-  width: 100%;
-  float:left;
+        width:100%;
+        float: left
+    }
 }
 
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    .work-details-container .img-container {
+        width:100%;
+        float: left
+    }
 }
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-
-}
-
-
 
 .work-details-container .img-container img {
-  position: relative;
-  top: 0;
-  left: 0;
-  border: 5px solid #f3f3f3;
-  box-shadow: 1px 1px 2px #666;
-  width: 80%;
-  margin:0px auto;
-  display:block;
-  transition: all .3s ease-in-out;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 5px solid #f3f3f3;
+    box-shadow: 1px 1px 2px #666;
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    transition: all .3s ease-in-out
 }
 
 .work-details-container .img-container img:hover {
-    z-index:1000 !important;
-    height:110%;
-    transform: rotate(0deg)  scale(1.4) !important;
+    z-index: 1000!important;
+    height: 110%;
+    transform: rotate(0deg) scale(1.4)!important
 }
 
 .work-details-container .img-container img:nth-child(1):hover {
 }
 
 .work-details-container .img-container img:nth-child(1) {
-    z-index:100;
-    transform: rotate(-6deg) ;
+    z-index: 100;
+    transform: rotate(-6deg)
 }
 
 .work-details-container .img-container img:nth-child(2) {
-    z-index:99;
-    transform: rotate(8deg) ;
+    z-index: 99;
+    transform: rotate(8deg)
 }
 
 .work-details-container .img-container img:nth-child(3) {
-    z-index:98;
-    transform: rotate(-8deg) ;
+    z-index: 98;
+    transform: rotate(-8deg)
 }
 
 .work-details-container .img-container img:nth-child(4) {
-    z-index:97;
-    transform: rotate(12deg) ;
+    z-index: 97;
+    transform: rotate(12deg)
 }
 
 .work-details-container .img-container img:nth-child(5) {
-    z-index:96;
-    transform: rotate(-16deg) ;
+    z-index: 96;
+    transform: rotate(-16deg)
 }
 
 .work-details-container .img-container img:nth-child(6) {
-    z-index:95;
-    transform: rotate(18deg) ;
+    z-index: 95;
+    transform: rotate(18deg)
 }
-
-
-
-.work-details-container .work-header{
-  position: relative;
-  width: 50%;
-  margin: 0px auto;
-  float:right;
-}
-
-/* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px) {
-
-.work-details-container .work-header{
-  width: 100%;
-  float:left;
-}
-
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
 
 .work-details-container .work-header {
-  width: 100%;
-  float:left;
+    position: relative;
+    width: 50%;
+    margin: 0 auto;
+    float: right
 }
 
+@media only screen and (max-width: 479px) {
+    .work-details-container .work-header {
+        width:100%;
+        float: left
+    }
 }
 
-.work-details-container .work-header .work-name{
-    font-size: 40px;
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    .work-details-container .work-header {
+        width:100%;
+        float: left
+    }
 }
-.work-details-container .work-header .work-description{
+
+.work-details-container .work-header .work-name {
+    font-size: 40px
+}
+
+.work-details-container .work-header .work-description {
     font-size: 23px;
     font-style: italic;
-    color: #C1C1C1;
+    color: #c1c1c1
 }
-.work-details-container .work-header .work-detailed-decription{
 
+.work-details-container .work-header .work-detailed-decription {
 }
-.work-details-container .work-header .view-website{transition: all 0.1s ease-out;background: #006bb5;padding: 5px 20px;border-radius: 5px;color: #d4d4d4;font-weight: bold;} 
-.work-details-container .work-header .view-website:hover{
 
-box-shadow: 1px 4px 5px rgba(0,0,0, 0.7);
-} 
+.work-details-container .work-header .view-website {
+    transition: all .1s ease-out;
+    background: #006bb5;
+    padding: 5px 20px;
+    border-radius: 5px;
+    color: #d4d4d4;
+    font-weight: bold
+}
 
+.work-details-container .work-header .view-website:hover {
+    box-shadow: 1px 4px 5px rgba(0,0,0,.7)
+}
 
 .about-container {
     position: relative;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 100px
 }
-/* SMARTPHONES PORTRAIT */
-@media only screen and (max-width: 479px) {
-}
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-}
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-}
-
-
 
 .about-container .intro {
-
-color: #FFF;
-
-text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.26);
+    color: #fff;
+    text-shadow: 1px 2px 6px rgba(0,0,0,.26)
 }
 
 .about-container .intro h3 {
-text-align: center;
-font-size: 30px;
+    text-align: center;
+    font-size: 30px
 }
 
 .about-container .intro h2 {
-text-align: center;
-font-size: 40px;
-border-bottom: solid 1px #dadada;
-padding-bottom: 20px;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: solid 1px #dadada;
+    padding-bottom: 20px
 }
 
-
-
- .about-me {
-
-/* position: relative; */
-
-padding: 0px 20px;
+.about-me {
+    padding: 0 20px
 }
 
 .about-me:before {
@@ -1000,9 +847,9 @@ padding: 0px 20px;
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.3;
-    background-color: #F7F7F7;
-    background-image: url('/Images/i.jpg');
+    opacity: .3;
+    background-color: #f7f7f7;
+    background-image: url(/Images/i.jpg);
     background-repeat: no-repeat;
     background-position: 80% 0;
     -ms-background-size: cover;
@@ -1010,151 +857,131 @@ padding: 0px 20px;
     -moz-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover;
-    border-radius: 0px 30px 30px;
+    border-radius: 0 30px 30px
 }
 
+.about-me h4 {
+    font-size: 20px;
+    text-align: justify;
+    font-style: italic;
+    color: #fff;
+    text-shadow: 1px 1px 3px #000
+}
 
-.about-me h4 {font-size: 20px;text-align: justify;font-style: italic;color: #FFFFFF;text-shadow: 1px 1px 3px #000;}
-.about-me h4 a {color: rgba(0, 123, 148, 0.84);}
+.about-me h4 a {
+    color: rgba(0,123,148,.84)
+}
 
-
-
- .about-me h5 {
-font-size: 20px;
+.about-me h5 {
+    font-size: 20px
 }
 
 .about-container .me-links {
-padding-top: 15px;
+    padding-top: 15px
 }
-
-
 
 .about-container .me-links .linker {
     width: 16%;
-    min-height:150px;
-    background: rgba(255, 255, 255, 0.44);
-    border-radius:3px;
-    transition:all 0.2s ease-out;
+    min-height: 150px;
+    background: rgba(255,255,255,.44);
+    border-radius: 3px;
+    transition: all .2s ease-out;
     margin: 2%;
-    float:left;
-    position: relative;
+    float: left;
+    position: relative
 }
-/* SMARTPHONES PORTRAIT */
+
 @media only screen and (max-width: 479px) {
-
     .about-container .me-links .linker {
-        width: 46%;
-        margin: 2%;
+        width:46%;
+        margin: 2%
     }
 }
-/* SMARTPHONES LANDSCAPE */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
 
-        .about-container .me-links .linker {
-        width: 46%;
-        margin: 2%;
-    }
-
-}
-/* TABLETS PORTRAIT */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-
+@media only screen and (min-width: 480px) and (max-width:767px) {
     .about-container .me-links .linker {
-        width: 21%;
-        margin: 2%;
+        width:46%;
+        margin: 2%
     }
-
 }
-/* TABLET LANDSCAPE / DESKTOP */
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    .about-container .me-links .linker {
+        width:21%;
+        margin: 2%
+    }
 }
 
 .about-container .me-links .linker .fa {
     width: 30px;
     height: 30px;
-    position:absolute;
-    bottom:0;
-    right:0;
-    left:0;
-    top:0;
-    margin:auto;
-    transform: scale(1.3);
-}
-.about-container .me-links .linker .material-icons {
-    opacity:0;
-    transition:all 0.2s ease-out;
-    font-size: 70px;
-    right: 0px;
     position: absolute;
-    color: white;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+    transform: scale(1.3)
 }
+
+.about-container .me-links .linker .material-icons {
+    opacity: 0;
+    transition: all .2s ease-out;
+    font-size: 70px;
+    right: 0;
+    position: absolute;
+    color: #fff
+}
+
 .about-container .me-links .linker:hover .material-icons {
-    opacity:1;
+    opacity: 1
 }
-
-
-
 
 .about-container .me-links .linker:hover {
-    background: rgba(255, 255, 255, 0.61);
+    background: rgba(255,255,255,.61)
 }
 
 .about-container .me-links .linker h4 {
-
 }
 
 .about-container .me-links .linker h5 {
-
 }
 
-
-
-footer{
+footer {
     min-height: 126px;
-    width:100%;
-    border-top: solid 10px rgba(0, 0, 0, 0.33);
-    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.27);
+    width: 100%;
+    border-top: solid 10px rgba(0,0,0,.33);
+    box-shadow: 0 -4px 6px rgba(0,0,0,.27);
     z-index: 999;
-    opacity: 0.8;
+    opacity: .8;
     padding-top: 10px;
-    margin: 32px 0px -20px 0px;
+    margin: 32px 0 -20px 0
 }
 
-
-
-
-
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2),only screen and (max--moz-device-pixel-ratio:2) {
-}
-
-
-
-/*SCROLLBAR*/
 ::-webkit-scrollbar {
-    width: 13px;
+    width: 13px
 }
 
 ::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
     -webkit-border-radius: 10px;
-    border-radius: 10px;
+    border-radius: 10px
 }
 
 ::-webkit-scrollbar-thumb {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     background: #d4d4d4;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5)
 }
 
-    ::-webkit-scrollbar-thumb:window-inactive {
-        background: #d4d4d4;
-    }
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #d4d4d4
+}
 
-    .my-preloads{
-        width: 0px;
-        height: 0px;
-        display: inline;
-        background-image: url(/Images/icon_gray.png);
+.my-preloads {
+    width: 0;
+    height: 0;
+    display: inline;
+    background-image: url(/Images/icon_gray.png)
 }
