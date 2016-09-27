@@ -317,11 +317,12 @@ header {
         width: 33.3%;
         height: 33.3%;
         float: left;
-        transition: all 0.2s ease-out;
+        
     }
 
         #container > header hgroup logo:hover .theme-panel .theme-rect:hover {
             transform: scale(1.1);
+            transition: all 0.2s ease-out;
         }
 
 #container>header hgroup logo:hover .theme-panel .theme-rect i {
