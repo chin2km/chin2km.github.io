@@ -290,15 +290,15 @@ header {
     box-shadow: 2px 2px 10px #8c8c8c;
     opacity: 0
 }
-#container > header hgroup logo .theme-panel div:nth-child(1) {transition: all 0.9s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(2) {transition: all 0.8s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px) }
-#container > header hgroup logo .theme-panel div:nth-child(3) {transition: all 0.7s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(4) {transition: all 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(9) {transition: all 0.8s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(8) {transition: all 0.7s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px) }
+#container > header hgroup logo .theme-panel div:nth-child(7) {transition: all 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(6) {transition: all 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
 #container > header hgroup logo .theme-panel div:nth-child(5) {transition: all 0.5s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(6) {transition: all 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(7) {transition: all 0.3s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(8) {transition: all 0.2s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(9) {transition: all 0.1s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(4) {transition: all 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(3) {transition: all 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(2) {transition: all 0.3s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(1) {transition: all 0.2s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
 
 
 #container>header hgroup logo:hover .theme-panel {
