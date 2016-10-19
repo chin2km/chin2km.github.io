@@ -899,12 +899,12 @@ border-bottom: solid 1px #dadada;
 .about-container .me-links .linker {
     width: 16%;
     min-height: 150px;
-    background: rgba(255,255,255,.44);
+    background: rgba(255, 255, 255, 0.64);
     border-radius: 3px;
     transition: all .2s ease-out;
     margin: 2%;
     float: left;
-    position: relative
+    position: relative;
 }
 
 @media only screen and (max-width: 479px) {
@@ -954,7 +954,7 @@ border-bottom: solid 1px #dadada;
 }
 
 .about-container .me-links .linker:hover {
-    background: rgba(255,255,255,.61)
+    background: rgba(169, 169, 169, 0.91);
 }
 
 .about-container .me-links .linker h4 {
