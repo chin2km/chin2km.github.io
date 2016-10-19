@@ -23,7 +23,6 @@
     <!--JS-->
     <script src="js_setup/Angular.js"></script>
     <script src="js_setup/Angular-Route.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <!--CSS-->
     <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet">
@@ -37,8 +36,17 @@
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+     <script language="javascript">
+            
+
+            
+            
+    </script>
+    
 </head>
-<body>
+<body onload="docLoaded()">
     
     <div class="my-preloads"> </div>
     <div id="container" ng-controller="NavigationController">
@@ -145,19 +153,23 @@
              return false;    
            }
         }
-        
-            $(document).ready(function() {
-            var movementStrength = 50;
-            var height = movementStrength / $(window).height();
-            var width = movementStrength / $(window).width();
-                $("body").mousemove(function(e){
-                          var pageX = e.pageX - ($(window).width() / 2);
-                          var pageY = e.pageY - ($(window).height() / 2);
-                          var newvalueX = width * pageX * -1 - 25;
-                          var newvalueY = height * pageY * -1 - 50;
-                          $('#top-image').css("background-position", newvalueX+"px     "+newvalueY+"px");
-                });
-            });
+
+        function docLoaded() {
+                    var movementStrength = 50;
+                    var height = movementStrength / window.innerHeight;
+                    var width = movementStrength / window.innerWidth;
+                    document.body.addEventListener('mousemove',function(e) {
+                        var pageX = e.pageX - (window.innerWidth / 2);
+                        var pageY = e.pageY - (window.innerHeight / 2);
+                        var newvalueX = width * pageX * -1 - 25;
+                        var newvalueY = height * pageY * -1 - 50;
+                        var element = document.getElementById('top-image');
+                        element.style.backgroundPosition  = newvalueX+"px "+newvalueY+"px";
+
+                    },false);
+
+        }
+            
     </script>
 </body>
 </html>
