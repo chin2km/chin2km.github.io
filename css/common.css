@@ -12,18 +12,17 @@ body {
     margin: 0;
     font-size: 13px;
     line-height: 1.231;
-    background: #2C2B33;
+    background: #2A2931;
 }
 
     #top-image {
-        background:#fff url(/Images/bgg.jpg) fixed;
+        background: url(/Images/bgg.jpg);
         position:fixed;
-        top:0;
         width:100%;
         z-index:0;
         height:100%;
         background-position: -25px -50px;
-        background-size: calc(100% + 150px) calc(100% + 150px);
+        background-size: calc(100% + 150px) calc(100% + 20px);
         background-repeat: no-repeat;
 }
     
