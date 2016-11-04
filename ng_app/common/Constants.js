@@ -1,4 +1,4 @@
-﻿var constants = angular.module("chin2km")
+var constants = angular.module("chin2km")
 .constant('chin2kmThemes', {
     activeTheme: localStorage.getItem("chin2km_theme") || 'Black',
     allThemes: {
