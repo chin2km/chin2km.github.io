@@ -15,17 +15,17 @@ body {
     background: #2A2931;
 }
 
-    #top-image {
-        background: url(/Images/bgg.jpg);
-        position:fixed;
-        width:100%;
-        z-index:0;
-        height:100%;
-        background-position: -25px -50px;
-        background-size: calc(100% + 150px) calc(100% + 20px);
-        background-repeat: no-repeat;
+#top-image {
+    background: url(/Images/bgg.jpg);
+    position:fixed;
+    width:100%;
+    z-index:0;
+    height:100%;
+    background-position: -25px -50px;
+    background-size: calc(100% + 150px) calc(100% + 20px);
+    background-repeat: no-repeat;
 }
-    
+
 
 h1,h2,h3,h4,h5,span,i {
     cursor: default!important
@@ -34,129 +34,129 @@ h1,h2,h3,h4,h5,span,i {
 .black-bg {
     background: #000!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .black-font {
     color: #000!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .white-font {
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .white-bg {
     background: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .red-bg {
     background: #e50f2e!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .red-font {
     color: #e50f2e!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .orange-bg {
     background: #ec8147!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .orange-font {
     color: #ec8147!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .yellow-bg {
     background: #ffcb43!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .yellow-font {
     color: #ffcb43!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .pink-bg {
     background: #99227c!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .pink-font {
     color: #99227c!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .green-bg {
     background: #67b150!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .green-font {
     color: #67b150!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .purple-bg {
     background: #633392!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .purple-font {
     color: #633392!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .blue-bg {
     background: #006bb5!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .blue-font {
     color: #006bb5!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .teal-bg {
     background: #0ba2a0!important;
     color: #fff!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
 .teal-font {
     color: #0ba2a0!important;
-    transition: all .5s ease;
+    transition: .5s ease;
     transition-property: background , color
 }
 
@@ -265,9 +265,9 @@ header {
 }
 
 #container>header hgroup logo:hover {
-        background: url(/Images/icon_gray.png);
+    background: url(/Images/icon_gray.png);
     background-size: 100%
-    }
+}
 
 @media only screen and (max-width: 479px) {
     #container>header hgroup logo {
@@ -288,20 +288,19 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    /* background: url(/Images/chin2km.png) no-repeat; */
     background-size: 100%;
     box-shadow: 2px 2px 10px #8c8c8c;
     opacity: 0
 }
-#container > header hgroup logo .theme-panel div:nth-child(9) {transition: all 0.8s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(8) {transition: all 0.7s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px) }
-#container > header hgroup logo .theme-panel div:nth-child(7) {transition: all 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(6) {transition: all 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(5) {transition: all 0.5s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(4) {transition: all 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(3) {transition: all 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(2) {transition: all 0.3s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(1) {transition: all 0.2s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(9) {transition: transform 0.8s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(8) {transition: transform 0.7s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px) }
+#container > header hgroup logo .theme-panel div:nth-child(7) {transition: transform 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(6) {transition: transform 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(5) {transition: transform 0.5s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(4) {transition: transform 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(3) {transition: transform 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(2) {transition: transform 0.3s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel div:nth-child(1) {transition: transform 0.2s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
 
 
 #container>header hgroup logo:hover .theme-panel {
@@ -315,23 +314,23 @@ header {
     transform: scale(1) translateY(0px)  translateX(0px);
 }
 
-    #container > header hgroup logo:hover .theme-panel .theme-rect {
-        position: initial;
-        width: 33.3%;
-        height: 33.3%;
-        float: left;
-        
-    }
+#container > header hgroup logo:hover .theme-panel .theme-rect {
+    position: initial;
+    width: 33.3%;
+    height: 33.3%;
+    float: left;
 
-        #container > header hgroup logo:hover .theme-panel .theme-rect:hover {
-            transform: scale(1.1);
-            transition: all 0.2s ease-out;
-        }
+}
+
+#container > header hgroup logo:hover .theme-panel .theme-rect:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-out;
+}
 
 #container>header hgroup logo:hover .theme-panel .theme-rect i {
-            width: 15px;
+    width: 15px;
     margin-left: 30%
-        }
+}
 
 #container>header hgroup h3 {
     margin: -1px 0;
@@ -341,10 +340,10 @@ header {
     cursor: pointer!important
 }
 
-    #container > header hgroup h3:nth-child(3n) {
+#container > header hgroup h3:nth-child(3n) {
     color: #7d7d7d;
     font-size: 25px
-    }
+}
 
 @media only screen and (max-width: 479px) {
     #container > header hgroup h3:nth-child(3n) {
@@ -383,53 +382,53 @@ header {
 }
 
 #container>header nav .big-display {
-        height: 60px;
+    height: 60px;
     vertical-align: middle
-    }
+}
 
 #container>header nav .big-display a {
-            font-size: 30px;
+    font-size: 30px;
     color: #fff;
-            line-height: 2em;
+    line-height: 2em;
     border-right: solid 2px rgba(218,218,218,.4);
     padding: 0 10px;
     border-left: solid 2px rgba(218,218,218,.39);
     margin-left: -5px
-        }
+}
 
 #container>header nav .big-display a:hover {
     opacity: .7;
     background: rgba(0,0,0,.31)
-            }
+}
 
 #container>header nav .small-display {
     display: none
-    }
+}
 
 #container>header nav .small-display i {
-            font-size: 25px;
+    font-size: 25px;
     color: #fff;
-            line-height: 2em;
+    line-height: 2em;
     padding: 0 10px;
     margin-right: 0
-        }
+}
 
 #container>header nav .small-display #tray {
     display: none
-        }
+}
 
 #container>header nav .small-display a {
-        }
+}
 
 #container>header nav .small-display a:hover {
-            }
+}
 
 #container>header nav .small-display a img {
-                background: url(/Images/me.png);
-                height: 50px;
-                width: 50px;
+    background: url(/Images/me.png);
+    height: 50px;
+    width: 50px;
     border-radius: 100px
-            }
+}
 
 @media only screen and (max-width: 479px) {
     #container>header nav .big-display a {
@@ -471,10 +470,6 @@ header {
     margin: 2%;
     float: left;
     overflow: hidden;
-    transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    -moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
     width: 290px;
     height: 290px;
     box-shadow: 2px 2px 10px #8c8c8c
@@ -516,25 +511,27 @@ header {
     border: solid 7px rgba(0,0,0,.7)
 }
 
-    .portfolio article:hover header img {
+.portfolio article:hover header img {
     -webkit-filter: none
-    }
+}
 
 .portfolio article header {
     width: calc(100% - 14px);
     height: calc(100% - 14px);
     border: solid 7px rgba(189,189,189,.7);
     border-radius: 500px;
-    float: left
+    float: left;
+    transition: 0.3s ease-in-out;
+    transition-property: border
 }
 
-    .portfolio article header img {
-        width: calc(100%);
-        height: calc(100%);
-        border-radius: 500px;
-        -webkit-filter: grayscale();
-    background-size: 100%
-    }
+.portfolio article header img {
+    width: calc(100%);
+    height: calc(100%);
+    border-radius: 500px;
+    -webkit-filter: grayscale();
+    background-size: 100%;
+}
 
 @media only screen and (max-width: 479px) {
     .portfolio article header {
@@ -548,9 +545,9 @@ header {
         border:solid 7px rgba(0,0,0,.7)
     }
 
-        .portfolio article header img {
+    .portfolio article header img {
         -webkit-filter: none
-        }
+    }
 }
 
 @media only screen and (min-width: 768px) and (max-width:991px) {
@@ -558,9 +555,9 @@ header {
         border:solid 7px rgba(0,0,0,.7)
     }
 
-        .portfolio article header img {
+    .portfolio article header img {
         -webkit-filter: none
-        }
+    }
 }
 
 @media only screen and (min-width: 992px) and (max-width:1200px) {
@@ -569,7 +566,7 @@ header {
 }
 
 .portfolio article .details {
-    transition: all .2s ease-in;
+    transition: top .3s ease-in-out;
     width: 100%;
     height: calc(75%);
     position: absolute;
@@ -577,9 +574,9 @@ header {
     opacity: .7
 }
 
-    .portfolio article:hover .details {
+.portfolio article:hover .details {
     top: 35%;
-    }
+}
 
 @media only screen and (max-width: 479px) {
     .portfolio article .details {
@@ -592,7 +589,7 @@ header {
         background: transparent!important
     }
 
-            .portfolio article:hover .details {
+    .portfolio article:hover .details {
         top: 0%
     }
 }
@@ -601,7 +598,7 @@ header {
     .portfolio article .details {
         top:25%
     }
-    }
+}
 
 @media only screen and (min-width: 768px) and (max-width:991px) {
     .portfolio article .details {
@@ -612,7 +609,7 @@ header {
 @media only screen and (min-width: 992px) and (max-width:1200px) {
     .portfolio article:hover .details {
         top:35%
-}
+    }
 }
 
 .portfolio article .details h4 {
@@ -710,33 +707,33 @@ header {
 }
 
 .work-details-container .img-container {
-  position: relative;
-  width: 50%;
+    position: relative;
+    width: 50%;
     float: left;
     min-height: 757px
 }
 
 @media only screen and (max-width: 479px) {
-.work-details-container .img-container {
+    .work-details-container .img-container {
         width:100%;
         float: left
-}
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width:767px) {
     .work-details-container .img-container {
         width:100%;
         float: left
-}
+    }
 }
 
 .work-details-container .img-container img {
-  position: relative;
-  top: 0;
-  left: 0;
-  border: 5px solid #f3f3f3;
-  box-shadow: 1px 1px 2px #666;
-  width: 80%;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 5px solid #f3f3f3;
+    box-shadow: 1px 1px 2px #666;
+    width: 80%;
     margin: 0 auto;
     display: block;
     transition: all .3s ease-in-out
@@ -782,8 +779,8 @@ header {
 }
 
 .work-details-container .work-header {
-  position: relative;
-  width: 50%;
+    position: relative;
+    width: 50%;
     margin: 0 auto;
     float: right
 }
@@ -792,11 +789,11 @@ header {
     .work-details-container .work-header {
         width:100%;
         float: left
-}
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width:767px) {
-.work-details-container .work-header {
+    .work-details-container .work-header {
         width:100%;
         float: left
     }
@@ -840,18 +837,18 @@ header {
 }
 
 .about-container .intro h3 {
-text-align: center;
+    text-align: center;
     font-size: 30px
 }
 
 .about-container .intro h2 {
-text-align: center;
-font-size: 40px;
-border-bottom: solid 1px #dadada;
+    text-align: center;
+    font-size: 40px;
+    border-bottom: solid 1px #dadada;
     padding-bottom: 20px
 }
 
- .about-me {
+.about-me {
     padding: 0 20px
 }
 
@@ -889,7 +886,7 @@ border-bottom: solid 1px #dadada;
     color: rgba(0,123,148,.84)
 }
 
- .about-me h5 {
+.about-me h5 {
     font-size: 20px
 }
 
@@ -916,7 +913,7 @@ border-bottom: solid 1px #dadada;
 }
 
 @media only screen and (min-width: 480px) and (max-width:767px) {
-        .about-container .me-links .linker {
+    .about-container .me-links .linker {
         width:46%;
         margin: 2%
     }
@@ -926,7 +923,7 @@ border-bottom: solid 1px #dadada;
     .about-container .me-links .linker {
         width:21%;
         margin: 2%
-}
+    }
 }
 
 .about-container .me-links .linker .fa {
@@ -992,13 +989,13 @@ footer {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.5)
 }
 
-    ::-webkit-scrollbar-thumb:window-inactive {
+::-webkit-scrollbar-thumb:window-inactive {
     background: #d4d4d4
-    }
+}
 
 .my-preloads {
     width: 0;
     height: 0;
-        display: inline;
+    display: inline;
     background-image: url(/Images/icon_gray.png)
 }
