@@ -60,16 +60,6 @@
     -webkit-animation-duration: 2s;
     animation-duration: 2s;
 }
-/* snow (slow, snow.png) */
-/*.weather.snow:before, .weather.snow:after {
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAEACAYAAAADRnAGAAABKklEQVR42u3cQQ7CMAwEwJj//zk9VULqDSonjmc+QNNubScgxihkzjlHV/fi3QQAAACbHjtIO0gJEMH/riWyPjAiYpfFp17L7gkAUHwAQOsCADDk4SnkLN5NAAAtb6XIXPzqX4lIAAAAxSdKZ4ldZ3UJAM6ougCgLdqOSgBIq3olAQDor5VaoeHCkAEA0Gjyc13GcQkAAAAAANjKUQelWYuJ3Rd/xN9v/fI0nfsDVKz0vrKWAP0bAAwyBhkJAAC0ZwOaBAAAmLIAOKZzOKSQADME3m81A0DxMzBJAABgnjBRSgCAolllgVF98Uf80ZKIG3yQKHfc9lUCAAAAAB6cMcDrr8On4nu47NB1fmlbEFViMDBBo/fIN7wSoKIC6Eg60uInqR2Dygu87gIbXdZS4cGX7QAAAABJRU5ErkJggg==);
-    -webkit-animation-duration: 6s;
-    animation-duration: 6s;
-}
-.weather.snow:after {
-    -webkit-animation-duration: 4.5s;
-    animation-duration: 4.5s;
-}*/
 /* animation keyframes */
 @-webkit-keyframes weather {
     from { background-position: 0 0px; }
