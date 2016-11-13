@@ -40,6 +40,14 @@ module.exports=function(grunt){
                 files:{
                     'css/main.css':'css/scss/common.scss'
                 }
+            },
+            build:{
+                options:{
+                    outputStyle:'compressed'
+                },
+                files:{
+                    'css/main.css':'css/scss/common.scss'
+                }
             }
         }
     });
@@ -49,7 +57,7 @@ module.exports=function(grunt){
     grunt.loadNpmTasks('grunt-sass');
 
     grunt.registerTask('default',['uglify:dev','sass:dev']);
-    grunt.registerTask('build',['uglify:build']);
+    grunt.registerTask('build',['uglify:build','sass:build']);
 
 };
 
