@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*Theme Colors*/
+/*MIXINS*/
 html {
   height: 100%;
   font-size: 100%;
@@ -25,6 +27,10 @@ body {
   background-position: -25px -50px;
   background-size: calc(100% + 150px) calc(100% + 20px);
   background-repeat: no-repeat;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -ms-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 
@@ -35,129 +41,209 @@ h1, h2, h3, h4, h5, span, i {
 .black-bg {
   background: #000 !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .black-font {
   color: #000 !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .white-font {
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .white-bg {
   background: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .red-bg {
   background: #e50f2e !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .red-font {
   color: #e50f2e !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .orange-bg {
   background: #ec8147 !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .orange-font {
   color: #ec8147 !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .yellow-bg {
   background: #ffcb43 !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .yellow-font {
   color: #ffcb43 !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .pink-bg {
   background: #99227c !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .pink-font {
   color: #99227c !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .green-bg {
   background: #67b150 !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .green-font {
   color: #67b150 !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .purple-bg {
   background: #633392 !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .purple-font {
   color: #633392 !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .blue-bg {
   background: #006bb5 !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .blue-font {
   color: #006bb5 !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .teal-bg {
   background: #0ba2a0 !important;
   color: #fff !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
 .teal-font {
   color: #0ba2a0 !important;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
   transition-property: background , color;
 }
 
@@ -285,58 +371,18 @@ header {
 }
 
 #container > header hgroup logo .theme-panel {
-  transition: width .2s ease-out , height .2s ease-out;
+  transition-property: width,height;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  -ms-transition: 0.2s ease-out;
+  -o-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
   position: absolute;
   width: 100%;
   height: 100%;
   background-size: 100%;
   box-shadow: 2px 2px 10px #8c8c8c;
   opacity: 0;
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(9) {
-  transition: transform 0.8s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(8) {
-  transition: transform 0.7s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(7) {
-  transition: transform 0.6s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(6) {
-  transition: transform 0.6s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(5) {
-  transition: transform 0.5s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(4) {
-  transition: transform 0.4s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(3) {
-  transition: transform 0.4s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(2) {
-  transition: transform 0.3s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
-}
-
-#container > header hgroup logo .theme-panel div:nth-child(1) {
-  transition: transform 0.2s ease-in-out;
-  transform: scale(0) translateY(-50px) translateX(-50px);
 }
 
 #container > header hgroup logo:hover .theme-panel {
@@ -347,19 +393,65 @@ header {
   left: 0;
 }
 
-#container > header hgroup logo:hover .theme-panel div {
-  transform: scale(1) translateY(0px) translateX(0px);
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(9) {
+  transition: transform 0.8s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
+}
+
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(8) {
+  transition: transform 0.7s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
+}
+
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(7) {
+  transition: transform 0.6s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
+}
+
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(6) {
+  transition: transform 0.6s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
+}
+
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(5) {
+  transition: transform 0.5s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
+}
+
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(4) {
+  transition: transform 0.4s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
+}
+
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(3) {
+  transition: transform 0.4s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
+}
+
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(2) {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
+}
+
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(1) {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(0) translateY(-50px) translateX(-50px);
 }
 
 #container > header hgroup logo:hover .theme-panel .theme-rect {
+  transform: scale(1) translateY(0px) translateX(0px);
   position: initial;
   width: 33.3%;
   height: 33.3%;
   float: left;
 }
 
-#container > header hgroup logo:hover .theme-panel .theme-rect:hover {
+#container > header hgroup logo .theme-panel .theme-rect:hover {
   transform: scale(1.1);
+  -webkit-transition: transform 0.2s ease-out;
+  -moz-transition: transform 0.2s ease-out;
+  -ms-transition: transform 0.2s ease-out;
+  -o-transition: transform 0.2s ease-out;
   transition: transform 0.2s ease-out;
 }
 
@@ -444,17 +536,6 @@ header {
   line-height: 2em;
   padding: 0 10px;
   margin-right: 0;
-}
-
-#container > header nav .small-display #tray {
-  display: none;
-}
-
-#container > header nav .small-display a img {
-  background: url(/Images/me.png);
-  height: 50px;
-  width: 50px;
-  border-radius: 100px;
 }
 
 @media only screen and (max-width: 479px) {
@@ -548,6 +629,10 @@ header {
   border: solid 7px rgba(189, 189, 189, 0.7);
   border-radius: 500px;
   float: left;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   transition-property: border;
 }
@@ -586,7 +671,11 @@ header {
 }
 
 .portfolio article .details {
-  transition: top .3s ease-in-out;
+  -webkit-transition: top 0.3s ease-in-out;
+  -moz-transition: top 0.3s ease-in-out;
+  -ms-transition: top 0.3s ease-in-out;
+  -o-transition: top 0.3s ease-in-out;
+  transition: top 0.3s ease-in-out;
   width: 100%;
   height: calc(75%);
   position: absolute;
@@ -752,7 +841,11 @@ header {
   width: 80%;
   margin: 0 auto;
   display: block;
-  transition: .3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   transition-property: height,transform,z-index;
 }
 
@@ -824,7 +917,11 @@ header {
 }
 
 .work-details-container .work-header .view-website {
-  transition: box-shadow .1s ease-out;
+  -webkit-transition: box-shadow 0.1s ease-out;
+  -moz-transition: box-shadow 0.1s ease-out;
+  -ms-transition: box-shadow 0.1s ease-out;
+  -o-transition: box-shadow 0.1s ease-out;
+  transition: box-shadow 0.1s ease-out;
   background: #006bb5;
   padding: 5px 20px;
   border-radius: 5px;
@@ -910,7 +1007,11 @@ header {
   min-height: 150px;
   background: rgba(255, 255, 255, 0.64);
   border-radius: 3px;
-  transition: background .2s ease-out;
+  -webkit-transition: background 0.2s ease-out;
+  -moz-transition: background 0.2s ease-out;
+  -ms-transition: background 0.2s ease-out;
+  -o-transition: background 0.2s ease-out;
+  transition: background 0.2s ease-out;
   margin: 2%;
   float: left;
   position: relative;
@@ -951,7 +1052,11 @@ header {
 
 .about-container .me-links .linker .material-icons {
   opacity: 0;
-  transition: opacity .2s ease-out;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -ms-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
+  transition: opacity 0.2s ease-out;
   font-size: 70px;
   right: 0;
   position: absolute;

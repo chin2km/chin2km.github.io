@@ -1,3 +1,42 @@
+/*Theme Colors*/
+$theme-red : #e50f2e;
+$theme-orange : #ec8147;
+$theme-yellow:#ffcb43;
+$theme-pink:#99227c;
+$theme-green:#67b150;
+$theme-purple: #633392;
+$theme-blue:#006bb5;
+$theme-teal:#0ba2a0;
+
+/*MIXINS*/
+@mixin css3($property, $value) {
+    @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+        #{$prefix}#{$property}: $value;
+    }
+}
+
+@mixin breakpoint($point) {
+    @if $point == smallest {
+        @media only screen and (max-width: 479px) { 
+            @content;
+        }
+    }
+    @else if $point == small {
+        @media only screen and (min-width: 480px) and (max-width:767px) {
+            @content;
+        }
+    }
+    @else if $point == medium {
+        @media only screen and (min-width: 768px) and (max-width:991px) {
+            @content;
+        }
+    }
+    @else if $point == large {
+        @media only screen and (min-width: 992px) and (max-width:1200px) {
+            @content; 
+        }
+    }
+}
 
 
 html {
@@ -26,7 +65,7 @@ body {
     background-position: -25px -50px;
     background-size: calc(100% + 150px) calc(100% + 20px);
     background-repeat: no-repeat;
-    transition: all 0.1s ease-out;
+    @include css3(transition, all 0.1s ease-out);
 }
 
 
@@ -37,129 +76,129 @@ h1,h2,h3,h4,h5,span,i {
 .black-bg {
     background: #000 !important;
     color: #fff!important;
-    transition: .5s ease;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .black-font {
-    color: #000!important;
-    transition: .5s ease;
+    color: #000 !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .white-font {
-    color: #fff!important;
-    transition: .5s ease;
+    color: #fff !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .white-bg {
     background: #fff!important;
-    transition: .5s ease;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .red-bg {
-    background: #e50f2e!important;
+    background: $theme-red !important;
     color: #fff!important;
-    transition: .5s ease;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .red-font {
-    color: #e50f2e!important;
-    transition: .5s ease;
+    color: $theme-red !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .orange-bg {
-    background: #ec8147!important;
+    background: $theme-orange !important;
     color: #fff!important;
-    transition: .5s ease;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .orange-font {
-    color: #ec8147!important;
-    transition: .5s ease;
+    color: $theme-orange !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .yellow-bg {
-    background: #ffcb43!important;
-    color: #fff!important;
-    transition: .5s ease;
+    background: $theme-yellow !important;
+    color: #fff !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .yellow-font {
-    color: #ffcb43!important;
-    transition: .5s ease;
-    transition-property: background , color
+    color: $theme-yellow!important;
+    @include css3(transition, .5s ease);
+    transition-property: background , color;
 }
 
 .pink-bg {
-    background: #99227c!important;
+    background: $theme-pink !important;
     color: #fff!important;
-    transition: .5s ease;
-    transition-property: background , color
+    @include css3(transition, .5s ease);
+    transition-property: background , color;
 }
 
 .pink-font {
-    color: #99227c!important;
-    transition: .5s ease;
-    transition-property: background , color
+    color: $theme-pink !important;
+    @include css3(transition, .5s ease);
+    transition-property: background , color;
 }
 
 .green-bg {
-    background: #67b150!important;
+    background: $theme-green !important;
     color: #fff!important;
-    transition: .5s ease;
-    transition-property: background , color
+    @include css3(transition, .5s ease);
+    transition-property: background , color;
 }
 
 .green-font {
-    color: #67b150!important;
-    transition: .5s ease;
+    color: $theme-green !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .purple-bg {
-    background: #633392!important;
+    background: $theme-purple !important;
     color: #fff!important;
-    transition: .5s ease;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .purple-font {
-    color: #633392!important;
-    transition: .5s ease;
+    color: $theme-purple !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .blue-bg {
-    background: #006bb5!important;
+    background: $theme-blue !important;
     color: #fff!important;
-    transition: .5s ease;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .blue-font {
-    color: #006bb5!important;
-    transition: .5s ease;
+    color: $theme-blue !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .teal-bg {
-    background: #0ba2a0!important;
+    background: $theme-teal!important;
     color: #fff!important;
-    transition: .5s ease;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
 .teal-font {
-    color: #0ba2a0!important;
-    transition: .5s ease;
+    color: $theme-teal !important;
+    @include css3(transition, .5s ease);
     transition-property: background , color
 }
 
@@ -171,58 +210,56 @@ label {
     position: relative
 }
 
-#container>header {
-    padding: 0;
-    position: fixed;
-    box-shadow: 0 5px 6px rgba(0,0,0,.27);
-    height: 60px;
-    position: fixed;
-    z-index: 999;
-    background-size: 22% 50%
-}
+#container{
+    > header {
+        padding: 0;
+        position: fixed;
+        box-shadow: 0 5px 6px rgba(0,0,0,.27);
+        height: 60px;
+        position: fixed;
+        z-index: 999;
+        background-size: 22% 50%
+    }
+    @include breakpoint(smallest) {
+        > header {
+            height:45px
+        }
+    }
 
-@media only screen and (max-width: 479px) {
-    #container>header {
-        height:45px
+    @include breakpoint(small) {
+        > header {
+            height:45px
+        }
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
-    #container>header {
-        height:45px
-    }
-}
+
+
+
 
 .pagewidth {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
     width: 1020px;
-    position: relative
-}
+    position: relative;
 
-@media only screen and (max-width: 479px) {
-    .pagewidth {
-        width:90%
+    @include breakpoint(smallest) {
+        width:90%;
     }
-}
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
-    .pagewidth {
-        width:480px
+    @include breakpoint(small) {
+        width:480px;
     }
-}
 
-@media only screen and (min-width: 768px) and (max-width:991px) {
-    .pagewidth {
-        width:638px
+    @include breakpoint(medium) {
+        width:638px;
     }
-}
 
-@media only screen and (min-width: 992px) and (max-width:1200px) {
-    .pagewidth {
-        width:992px
+    @include breakpoint(large) {
+        width:992px;
     }
+
 }
 
 header {
@@ -231,93 +268,91 @@ header {
     width: 100%
 }
 
-#container>header hgroup {
-    float: left;
-    line-height: 60px;
-    height: 60px;
-    padding-left: 120px;
-    position: relative;
-    font-size: 30px;
-    color: #dadada
+#container{
+    >header{
+        hgroup {
+            float: left;
+            line-height: 60px;
+            height: 60px;
+            padding-left: 120px;
+            position: relative;
+            font-size: 30px;
+            color: #dadada;
+
+            @include breakpoint(smallest) {
+                padding-left:79px;
+                line-height: 45px;
+            }
+
+            @include breakpoint(small) {
+                padding-left:79px;
+                line-height: 45px;
+            }
+
+            logo {
+                height: 80px;
+                background: url(/Images/icon_color.png);
+                padding: 5px;
+                position: absolute;
+                left: 0;
+                top: -2px;
+                width: 80px;
+                background-size: 100%;
+                box-shadow: 0 0 10px #000;
+
+                &:hover {
+                    background: url(/Images/icon_gray.png);
+                    background-size: 100%
+                }
+
+                @include breakpoint(smallest) {
+                    height:60px;
+                    width: 60px;
+
+                }
+
+                @include breakpoint(small) {
+                    height:60px;
+                    width: 60px;
+                }
+
+                .theme-panel {
+                    transition-property:width,height; 
+                    @include css3(transition, .2s ease-out);
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-size: 100%;
+                    box-shadow: 2px 2px 10px #8c8c8c;
+                    opacity: 0
+                }
+                &:hover .theme-panel {
+                    width: 200%;
+                    height: 200%;
+                    opacity: 1;
+                    top: 100%;
+                    left: 0
+                }
+            }
+
+        }  
+    } 
 }
 
-@media only screen and (max-width: 479px) {
-    #container>header hgroup {
-        padding-left:79px;
-        line-height: 45px
-    }
-}
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
-    #container>header hgroup {
-        padding-left:79px;
-        line-height: 45px
-    }
-}
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(9) {transition: transform 0.8s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(8) {transition: transform 0.7s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px) }
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(7) {transition: transform 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(6) {transition: transform 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(5) {transition: transform 0.5s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(4) {transition: transform 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(3) {transition: transform 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(2) {transition: transform 0.3s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
+#container > header hgroup logo .theme-panel .theme-rect:nth-child(1) {transition: transform 0.2s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
 
-#container>header hgroup logo {
-    height: 80px;
-    background: url(/Images/icon_color.png);
-    padding: 5px;
-    position: absolute;
-    left: 0;
-    top: -2px;
-    width: 80px;
-    background-size: 100%;
-    box-shadow: 0 0 10px #000
-}
-
-#container>header hgroup logo:hover {
-    background: url(/Images/icon_gray.png);
-    background-size: 100%
-}
-
-@media only screen and (max-width: 479px) {
-    #container>header hgroup logo {
-        height:60px;
-        width: 60px
-    }
-}
-
-@media only screen and (min-width: 480px) and (max-width:767px) {
-    #container>header hgroup logo {
-        height:60px;
-        width: 60px
-    }
-}
-
-#container>header hgroup logo .theme-panel {
-    transition: width .2s ease-out , height .2s ease-out;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-size: 100%;
-    box-shadow: 2px 2px 10px #8c8c8c;
-    opacity: 0
-}
-#container > header hgroup logo .theme-panel div:nth-child(9) {transition: transform 0.8s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(8) {transition: transform 0.7s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px) }
-#container > header hgroup logo .theme-panel div:nth-child(7) {transition: transform 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(6) {transition: transform 0.6s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(5) {transition: transform 0.5s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(4) {transition: transform 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(3) {transition: transform 0.4s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(2) {transition: transform 0.3s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-#container > header hgroup logo .theme-panel div:nth-child(1) {transition: transform 0.2s ease-in-out;transform: scale(0) translateY(-50px)  translateX(-50px)}
-
-
-#container>header hgroup logo:hover .theme-panel {
-    width: 200%;
-    height: 200%;
-    opacity: 1;
-    top: 100%;
-    left: 0
-}
-#container > header hgroup logo:hover .theme-panel div {
-    transform: scale(1) translateY(0px)  translateX(0px);
-}
 
 #container > header hgroup logo:hover .theme-panel .theme-rect {
+    transform: scale(1) translateY(0px)  translateX(0px);
     position: initial;
     width: 33.3%;
     height: 33.3%;
@@ -325,9 +360,9 @@ header {
 
 }
 
-#container > header hgroup logo:hover .theme-panel .theme-rect:hover {
+#container > header hgroup logo .theme-panel .theme-rect:hover {
     transform: scale(1.1);
-    transition: transform 0.2s ease-out;
+    @include css3(transition, transform 0.2s ease-out);
 }
 
 #container>header hgroup logo:hover .theme-panel .theme-rect i {
@@ -348,7 +383,7 @@ header {
     font-size: 25px
 }
 
-@media only screen and (max-width: 479px) {
+@include breakpoint(smallest) {
     #container > header hgroup h3:nth-child(3n) {
         display:none
     }
@@ -359,7 +394,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
+@include breakpoint(small) {
     #container > header hgroup h3:nth-child(3n) {
         display:none
     }
@@ -369,7 +404,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width:991px) {
+@include breakpoint(medium) {
     #container > header hgroup h3:nth-child(3n) {
         display:none
     }
@@ -416,24 +451,8 @@ header {
     margin-right: 0
 }
 
-#container>header nav .small-display #tray {
-    display: none
-}
 
-#container>header nav .small-display a {
-}
-
-#container>header nav .small-display a:hover {
-}
-
-#container>header nav .small-display a img {
-    background: url(/Images/me.png);
-    height: 50px;
-    width: 50px;
-    border-radius: 100px
-}
-
-@media only screen and (max-width: 479px) {
+@include breakpoint(smallest) {
     #container>header nav .big-display a {
         font-size:26px;
         color: #1d1b1b;
@@ -446,7 +465,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
+@include breakpoint(small) {
     #container>header nav .big-display a {
         font-size:24px;
         color: #fff;
@@ -463,52 +482,50 @@ header {
     width: 100%;
     height: 100px;
     padding-top: 100px;
-    min-height: 750px
-}
+    min-height: 750px;
+    
+    article {
+        cursor: pointer!important;
+        position: relative;
+        border-radius: 350px;
+        margin: 2%;
+        float: left;
+        overflow: hidden;
+        width: 290px;
+        height: 290px;
+        box-shadow: 2px 2px 10px #8c8c8c;
+        
+        @include breakpoint(smallest) {
+                width:100%;
+                height: 123px;
+                border-radius: 0;
+                box-shadow: none;
+                border: none;
+                border-bottom: solid 1px #dadada;
+        }
+        
+        @include breakpoint(small) {
+                width:220px;
+                height: 220px;            
+        }
 
-.portfolio article {
-    cursor: pointer!important;
-    position: relative;
-    border-radius: 350px;
-    margin: 2%;
-    float: left;
-    overflow: hidden;
-    width: 290px;
-    height: 290px;
-    box-shadow: 2px 2px 10px #8c8c8c
-}
+        @include breakpoint(medium) {
+                width:290px;
+                height: 290px;
+        }
 
-@media only screen and (max-width: 479px) {
-    .portfolio article {
-        width:100%;
-        height: 123px;
-        border-radius: 0;
-        box-shadow: none;
-        border: none;
-        border-bottom: solid 1px #dadada
+        @include breakpoint(large) {
+                width:290px;
+                height: 290px;
+        }       
+        
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
-    .portfolio article {
-        width:220px;
-        height: 220px
-    }
-}
 
-@media only screen and (min-width: 768px) and (max-width:991px) {
-    .portfolio article {
-        width:290px;
-        height: 290px
-    }
-}
 
-@media only screen and (min-width: 992px) and (max-width:1200px) {
-    .portfolio article {
-        width:290px;
-        height: 290px
-    }
-}
+
+
 
 .portfolio article:hover header {
     border: solid 7px rgba(0,0,0,.7)
@@ -524,7 +541,7 @@ header {
     border: solid 7px rgba(189,189,189,.7);
     border-radius: 500px;
     float: left;
-    transition: 0.3s ease-in-out;
+    @include css3(transition, 0.3s ease-in-out);
     transition-property: border
 }
 
@@ -536,14 +553,14 @@ header {
     background-size: 100%;
 }
 
-@media only screen and (max-width: 479px) {
+@include breakpoint(smallest) {
     .portfolio article header {
         width:100px;
         height: 100px
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
+@include breakpoint(small) {
     .portfolio article header {
         border:solid 7px rgba(0,0,0,.7)
     }
@@ -553,7 +570,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width:991px) {
+@include breakpoint(medium) {
     .portfolio article header {
         border:solid 7px rgba(0,0,0,.7)
     }
@@ -563,13 +580,13 @@ header {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width:1200px) {
+@include breakpoint(large) {
     .portfolio article header {
     }
 }
 
 .portfolio article .details {
-    transition: top .3s ease-in-out;
+    @include css3(transition, top .3s ease-in-out);
     width: 100%;
     height: calc(75%);
     position: absolute;
@@ -581,7 +598,7 @@ header {
     top: 35%;
 }
 
-@media only screen and (max-width: 479px) {
+@include breakpoint(smallest) {
     .portfolio article .details {
         top:0;
         left: 120px;
@@ -597,19 +614,19 @@ header {
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
+@include breakpoint(small) {
     .portfolio article .details {
         top:25%
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width:991px) {
+@include breakpoint(medium) {
     .portfolio article .details {
         top:25%
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width:1200px) {
+@include breakpoint(large) {
     .portfolio article:hover .details {
         top:35%
     }
@@ -628,7 +645,7 @@ header {
     font-style: italic
 }
 
-@media only screen and (max-width: 479px) {
+@include breakpoint(smallest) {
     .portfolio article .details h4 {
         text-align:center;
         font-size: 24px;
@@ -646,7 +663,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
+@include breakpoint(small) {
     .portfolio article .details h4 {
         text-align:center;
         font-size: 24px;
@@ -663,7 +680,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width:991px) {
+@include breakpoint(medium) {
     .portfolio article .details h4 {
         text-align:center;
         font-size: 35px;
@@ -677,7 +694,7 @@ header {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width:1200px) {
+@include breakpoint(large) {
     .portfolio article .details h4 {
         text-align:center;
         font-size: 35px;
@@ -716,14 +733,14 @@ header {
     min-height: 757px
 }
 
-@media only screen and (max-width: 479px) {
+@include breakpoint(smallest) {
     .work-details-container .img-container {
         width:100%;
         float: left
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
+@include breakpoint(small) {
     .work-details-container .img-container {
         width:100%;
         float: left
@@ -739,7 +756,7 @@ header {
     width: 80%;
     margin: 0 auto;
     display: block;
-    transition: .3s ease-in-out;
+    @include css3(transition, .3s ease-in-out);
     transition-property: height,transform,z-index;
 }
 
@@ -789,14 +806,14 @@ header {
     float: right
 }
 
-@media only screen and (max-width: 479px) {
+@include breakpoint(smallest) {
     .work-details-container .work-header {
         width:100%;
         float: left
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
+@include breakpoint(small) {
     .work-details-container .work-header {
         width:100%;
         float: left
@@ -817,8 +834,8 @@ header {
 }
 
 .work-details-container .work-header .view-website {
-    transition: box-shadow .1s ease-out;
-    background: #006bb5;
+    @include css3(transition, box-shadow .1s ease-out);
+    background: $theme-blue;
     padding: 5px 20px;
     border-radius: 5px;
     color: #d4d4d4;
@@ -903,27 +920,27 @@ header {
     min-height: 150px;
     background: rgba(255, 255, 255, 0.64);
     border-radius: 3px;
-    transition: background .2s ease-out;
+    @include css3(transition, background .2s ease-out);
     margin: 2%;
     float: left;
     position: relative;
 }
 
-@media only screen and (max-width: 479px) {
+@include breakpoint(smallest) {
     .about-container .me-links .linker {
         width:46%;
         margin: 2%
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width:767px) {
+@include breakpoint(small) {
     .about-container .me-links .linker {
         width:46%;
         margin: 2%
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width:991px) {
+@include breakpoint(medium) {
     .about-container .me-links .linker {
         width:21%;
         margin: 2%
@@ -944,7 +961,7 @@ header {
 
 .about-container .me-links .linker .material-icons {
     opacity: 0;
-    transition: opacity .2s ease-out;
+    @include css3(transition,opacity .2s ease-out)
     font-size: 70px;
     right: 0;
     position: absolute;
