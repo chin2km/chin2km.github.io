@@ -1,9 +1,9 @@
 var NavigationController = angular.module("chin2km")
 .controller('NavigationController', NavigationController);
 
-NavigationController.$inject = ['$rootScope', '$scope', '$location', '$timeout', 'AppService', 'chin2kmThemes'];
+NavigationController.$inject = ['$scope', '$location', 'chin2kmThemes'];
 
-function NavigationController($rootScope, $scope, $location, $timeout, AppService, chin2kmThemes) {
+function NavigationController( $scope, $location, chin2kmThemes) {
 
     $scope.chin2kmThemes = chin2kmThemes;
 

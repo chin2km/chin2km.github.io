@@ -5,7 +5,7 @@ var chin2km = angular.module("chin2km", [
                 'chin2km.about',
             ])
             .config(['$routeProvider','$compileProvider', '$locationProvider',
-                  function ($routeProvider, $compileProvider, $locationProvider) {
+                  function ($routeProvider) {
                       $routeProvider
                         .otherwise({
                             redirectTo: '/works'
@@ -14,6 +14,6 @@ var chin2km = angular.module("chin2km", [
 
 
 
-chin2km.run(function ($route, $rootScope, $location, AppService) {
+chin2km.run(function () {
 
 });
