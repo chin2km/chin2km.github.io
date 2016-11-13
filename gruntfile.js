@@ -5,22 +5,7 @@ module.exports=function(grunt){
         uglify:{
             build:{
                 src:['js_setup/Angular.js',
-                    'js_setup/Angular-Route.js',
-                    'ng_app/App.js',
-                    'ng_app/common/AppService.js',
-                    'ng_app/common/Constants.js',
-                    'ng_app/common/Directives.js',
-                    'ng_app/common/NavigationController.js',
-                    'ng_app/common/Filters.js',
-                    'ng_app/components/works/works.service.js',
-                    'ng_app/components/works/works.controller.js',
-                    'ng_app/components/works/works.module.js',
-                    'ng_app/components/work_details/work_details.service.js',
-                    'ng_app/components/work_details/work_details.controller.js',
-                    'ng_app/components/work_details/work_details.module.js',    
-                    'ng_app/components/about/about.service.js',
-                    'ng_app/components/about/about.controller.js',
-                    'ng_app/components/about/about.module.js'
+                    'js_setup/Angular-Route.js'
                 ],
                 dest:'js/script.min.js'
             },
@@ -32,22 +17,7 @@ module.exports=function(grunt){
                     preserveComments:'all'
                 },
                 src:['js_setup/Angular.js',
-                    'js_setup/Angular-Route.js',
-                    'ng_app/App.js',
-                    'ng_app/common/AppService.js',
-                    'ng_app/common/Constants.js',
-                    'ng_app/common/Directives.js',
-                    'ng_app/common/NavigationController.js',
-                    'ng_app/common/Filters.js',
-                    'ng_app/components/works/works.service.js',
-                    'ng_app/components/works/works.controller.js',
-                    'ng_app/components/works/works.module.js',
-                    'ng_app/components/work_details/work_details.service.js',
-                    'ng_app/components/work_details/work_details.controller.js',
-                    'ng_app/components/work_details/work_details.module.js',    
-                    'ng_app/components/about/about.service.js',
-                    'ng_app/components/about/about.controller.js',
-                    'ng_app/components/about/about.module.js'
+                    'js_setup/Angular-Route.js'
                 ],
                 dest:'js/script.min.js'
             }
