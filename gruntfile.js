@@ -38,7 +38,7 @@ module.exports=function(grunt){
                     outputStyle:'expanded'
                 },
                 files:{
-                    'css/common.css':'css/scss/common.scss'
+                    'css/main.css':'css/scss/common.scss'
                 }
             }
         }
