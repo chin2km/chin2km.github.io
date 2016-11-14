@@ -548,7 +548,6 @@ header {
     width: calc(100%);
     height: calc(100%);
     border-radius: 500px;
-    @include css3(transition, 0.8s ease-in-out);
     @include css3(filter,grayscale(100%));
     background-size: 100%;
 }
