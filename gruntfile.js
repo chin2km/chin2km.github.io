@@ -22,6 +22,24 @@ module.exports=function(grunt){
                 dest:'js/script.min.js'
             }
         },
+        sass:{
+            build:{
+                options:{
+                    outputStyle:'compressed'
+                },
+                files:{
+                    'css/main.css':'css/scss/common.scss'
+                }
+            },
+            dev:{
+                options:{
+                    outputStyle:'expanded'
+                },
+                files:{
+                    'css/main.css':'css/scss/common.scss'
+                }
+            }
+        },
         watch:{
             js:{
                 files:['js_setup/Angular.js','js_setup/Angular-Route.js'],
@@ -31,25 +49,8 @@ module.exports=function(grunt){
                 files:['css/scss/*.scss'],
                 tasks:['sass:dev']
             }
-        },
-        sass:{
-            dev:{
-                options:{
-                    outputStyle:'expanded'
-                },
-                files:{
-                    'css/main.css':'css/scss/common.scss'
-                }
-            },
-            build:{
-                options:{
-                    outputStyle:'compressed'
-                },
-                files:{
-                    'css/main.css':'css/scss/common.scss'
-                }
-            }
         }
+
     });
     
     grunt.loadNpmTasks('grunt-contrib-uglify');
