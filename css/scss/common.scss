@@ -489,6 +489,7 @@ header {
         border-radius: 350px;
         margin: 2%;
         float: left;
+        z-index: 0;
         overflow: hidden;
         width: 290px;
         height: 290px;
@@ -830,6 +831,7 @@ header {
 }
 
 .work-details-container .work-header .work-detailed-decription {
+    position: relative;
 }
 
 .work-details-container .work-header .view-website {
@@ -971,11 +973,6 @@ header {
     background: rgba(169, 169, 169, 0.91);
 }
 
-.about-container .me-links .linker h4 {
-}
-
-.about-container .me-links .linker h5 {
-}
 
 footer {
     min-height: 126px;
