@@ -3,9 +3,9 @@
     angular.module('chin2km.works.controllers', [])
             .controller('worksController', worksController);
 
-    worksController.$inject = ['$rootScope', '$scope', '$route', '$location', '$timeout', '$interval', 'AppService','$http', '$q'];
+    worksController.$inject = ['$location', 'AppService'];
 
-    function worksController($rootScope, $scope, $route, $location, $timeout, $interval, AppService,$http, $q) {
+    function worksController($location, AppService) {
         var _this = this;
         _this.AppService=AppService;
 
@@ -14,7 +14,6 @@
         })();
 
         window.scrollTo(0,0);       
-
 
         AppService.fetchData().then(function (data) {
             _this.allWorks = data;

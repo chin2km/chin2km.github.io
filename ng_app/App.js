@@ -4,7 +4,7 @@ var chin2km = angular.module("chin2km", [
                 'chin2km.work_details',
                 'chin2km.about',
             ])
-            .config(['$routeProvider','$compileProvider', '$locationProvider',
+            .config(['$routeProvider',
                   function ($routeProvider) {
                       $routeProvider
                         .otherwise({
