@@ -73,10 +73,10 @@ export const WORKS: IWork[] = [
         tags: ["ReactJs", "MaterialUi"],
     },
     {
-        name: "OnePush",
-        description: "Responsive Web Design, Development",
-        tags: ["AngularJs", "Responsive", "Material"],
-        link: "http://www.chin2km.com/Angular-Again/",
+        name: "StarWars",
+        description: "React.JS app, Development",
+        tags: ["ReactJs", "Redux", "Responsive", "Material"],
+        link: "http://www.chin2km.com/React-Redux-Tuto/",
     },
     {
         name: "Workflow System",
@@ -94,15 +94,15 @@ export const WORKS: IWork[] = [
         tags: ["AngularJs", "Responsive", "Material"],
     },
     {
+        name: "OnePush",
+        description: "Responsive Web Design, Development",
+        tags: ["AngularJs", "Responsive", "Material"],
+        link: "http://www.chin2km.com/Angular-Again/",
+    },
+    {
         name: "Infusion",
         description: "Web Design, Development",
         tags: ["AngularJs", "Responsive", "Material"],
-    },
-    {
-        name: "StarWars",
-        description: "React.JS app, Development",
-        tags: ["ReactJs", "Redux", "Responsive", "Material"],
-        link: "http://www.chin2km.com/React-Redux-Tuto/",
     },
     {
         name: "Leadersboard",
