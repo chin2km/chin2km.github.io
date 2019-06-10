@@ -7,7 +7,6 @@ import { INTRO, WORKS } from "../MyData";
 
 const Layout = styled.div`
     font-size: 1rem;
-    font-family: "Lato";
     text-align: center;
     display: flex;
     flex-direction: column;

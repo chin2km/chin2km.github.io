@@ -29,7 +29,7 @@ module.exports = {
                 },
             ],
             links: [
-                "https://fonts.googleapis.com/css?family=Lato&display=swap",
+                "https://fonts.googleapis.com/css?family=Ubuntu&display=swap",
                 {
                     href: "/manifest.json",
                     rel: "manifest",
