@@ -9,12 +9,11 @@ const Wrapper = styled.header`
     top: 0px;
     background: #1a1a1ab3;
     z-index: 1;
-
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     padding: 0.5rem 0.8rem;
-    width: 100%;
+    width: 96%;
 
     ${onScreenXtraLarge(
         css`
