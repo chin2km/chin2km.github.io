@@ -93,7 +93,7 @@ export class Teaser extends Component<IWork> {
                     <TeaserWrapper ref={ref} inView={inView}>
                         <Box inView={inView}>
                             <H1 as="h4">{name}</H1>
-                            <TeaserImage inView={inView} src={`../images/screenshots/${name}/1.png`}></TeaserImage>
+                            <TeaserImage inView={inView} src={`../images/thumbs/${name}.png`}></TeaserImage>
                             <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
                         </Box>
                     </TeaserWrapper>
