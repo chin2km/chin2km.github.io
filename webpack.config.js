@@ -17,7 +17,7 @@ module.exports = {
             inject: false,
             template: "./src/view/template.ejs",
             mobile: true,
-            title: "chin2km.github.io",
+            title: "built by chin2km",
             meta: [
                 {
                     name: "viewport",
