@@ -38,7 +38,7 @@ const Wrapper = styled.header`
     }
 
     background: rgba(27, 27, 27, 0.33);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(5px);
     &:after {
         content: " ";
         position: absolute;
