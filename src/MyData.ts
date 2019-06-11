@@ -11,7 +11,7 @@ const getExperience = (month: number, day: number, year: number) => {
 
 export const INTRO: string[] = [
     "👋🏻 Hey there",
-    "I am Chintu Kishen Kuthirangattil Mohandas. I live in Hamburg, Germany 🇩🇪",
+    "I am Chintu Kishen Kuthirangattil Mohandas. I'm an Indian 🇮🇳 💪  living in Hamburg, Germany 🇩🇪",
     `I am a fullstack software developer with over ${getExperience(10, 1, 2012)} years of work experience...`,
     "I love developing software products based on web technologies ❣️. And sometimes I design them too, like this one 😉",
     "I've got a keen eye for details. plus, I'm really good at team work 🤩",

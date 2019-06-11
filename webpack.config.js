@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: __dirname,
         publicPath: "/",
-        filename: "bundle.js",
+        filename: "[name].[contenthash].js",
     },
     plugins: [
         new HtmlWebpackPlugin({

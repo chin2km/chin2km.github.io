@@ -1,12 +1,8 @@
-# react-pwa-starter-typescript
+# chin2km.github.io
 
-This is a dead simple yet feature filled starter pack for building PWA ready React Applications.
+This is a personal portfolio for my works 😇
 
-### Demo: https://chin2km.github.io/react-pwa-starter-typescript/
-
-## Current lighthouse scores:
-
-![screenshot](public/lighthouse.png)
+### Demo: https://chin2km.github.io
 
 ## Features
 ```
@@ -20,10 +16,6 @@ This is a dead simple yet feature filled starter pack for building PWA ready Rea
 ✅ prettier
 ```
 
-## TODOs
-```
-❌ SSR
-```
 
 ### Available commands
 
