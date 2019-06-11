@@ -7,7 +7,6 @@ const Wrapper = styled.header`
     display: flex;
     position: sticky;
     top: 0px;
-    background: #1a1a1ab3;
     z-index: 1;
     flex-direction: column;
     justify-content: space-between;
@@ -36,6 +35,22 @@ const Wrapper = styled.header`
                 border-bottom: solid 2px #d82881;
             }
         }
+    }
+
+    background: rgba(27, 27, 27, 0.33);
+    backdrop-filter: blur(8px);
+    &:after {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: 0%;
+        bottom: 0;
+        width: 120%;
+        height: 90%;
+        left: -10%;
+        right: -10%;
+        opacity: 0.1;
+        background: radial-gradient(ellipse at 50% -3%, #d82881, #8d27da, rgba(255, 116, 225, 0) 50%);
     }
 `;
 
