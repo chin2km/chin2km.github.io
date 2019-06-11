@@ -14,6 +14,8 @@ const Bubble = styled.div`
     font-size: 0.8rem;
     word-spacing: 0.1rem;
     text-align: left;
+    text-decoration: pre;
+
     ${onScreenLarge(
         css`
             font-size: 0.8rem;

@@ -11,6 +11,8 @@ const Layout = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    align-self: center;
+    max-width: 110rem;
 `;
 
 const Home = () => (

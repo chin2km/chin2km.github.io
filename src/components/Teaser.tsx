@@ -34,7 +34,7 @@ const Box = styled.div<{ inView: boolean }>`
     flex-direction: column;
     transition: all 0.5s ease-in-out;
     color: #000;
-    box-shadow: 1px 3px 10px #0f0f0f;
+    box-shadow: 2px 3px 15px #000;
     margin: 3rem 1.6rem;
     padding: 1rem;
     height: 100% !important;

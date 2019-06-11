@@ -21,9 +21,9 @@ export const INTRO: string[] = [
 ];
 
 export const CONTACT_CHAT: string[] = [
-    "👋🏻 Hello again",
-    "here are some of the places on web where you can find me..",
-    "or alternatively you can mail me at me.chintukm@gmail.com",
+    "Hello again 👀",
+    "here are some of the places on web where you can find me...",
+    "or alternatively you can email me @ me.chintukm@gmail.com",
     "looking forward to new connections 😇",
 ];
 

@@ -9,3 +9,9 @@ body {
     font-family: "Ubuntu", sans-serif;
 }
 
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
