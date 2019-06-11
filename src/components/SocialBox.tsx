@@ -1,29 +1,25 @@
 import React, { Component } from "react";
 import InView from "react-intersection-observer";
 import styled, { css } from "styled-components";
-import { IWork } from "../MyData";
+import { ISocial } from "../MyData";
 import { onScreenMedium } from "../utils/styleSettings";
-import { H1 } from "./BaseElements/H1";
 
 const InViewAsAny: any = InView;
 
-const TeaserWrapper = styled.div<{ inView: boolean }>`
+const SocialBoxWrapper = styled.div<{ inView: boolean }>`
     display: flex;
     flex-direction: column;
     transition: all 0.5s ease-in-out;
 
-    width: 50%;
-    height: 10rem;
-    ${onScreenMedium(css`
-        width: 33.33%;
-    `)}
+    width: 33.33%;
+    height: 5rem;
 
     ${({ inView }) =>
         inView &&
         css`
-            height: 23rem !important;
+            height: 13rem !important;
             ${onScreenMedium(css`
-                height: 25rem !important;
+                height: 23rem !important;
             `)}
         `}
 `;
@@ -32,6 +28,7 @@ const Box = styled.div<{ inView: boolean }>`
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     transition: all 0.5s ease-in-out;
     color: #000;
     box-shadow: 2px 3px 15px #000;
@@ -60,45 +57,34 @@ const Box = styled.div<{ inView: boolean }>`
 
     @media (hover: hover) {
         &:hover {
-            transform: scale(1.25);
+            transform: scale(1.3);
         }
     }
 `;
 
 const TeaserImage = styled.img<{ inView: boolean }>`
-    width: 80%;
+    width: 50%;
     max-height: 10rem;
     align-self: center;
     border-radius: 3px;
     margin: 1rem 0rem;
     transition: all 0.7s ease-in-out;
-    opacity: ${({ inView }) => (inView ? 0.5 : 0)};
+    opacity: ${({ inView }) => (inView ? 0.8 : 0)};
 `;
 
-const Tag = styled.span`
-    background: linear-gradient(75deg, #d82881 10%, #8d27da);
-    opacity: 0.8;
-    border-radius: 1rem;
-    font-size: 0.6rem;
-    margin: 0.2rem;
-    padding: 0.1rem 0.5rem;
-    float: right;
-    display: block;
-`;
-
-export class Teaser extends Component<IWork> {
+export class SocialBox extends Component<ISocial> {
     render() {
-        const { name, tags } = this.props;
+        const { name, link } = this.props;
         return (
             <InViewAsAny triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
                 {({ inView, ref }) => (
-                    <TeaserWrapper ref={ref} inView={inView}>
+                    <SocialBoxWrapper ref={ref} inView={inView}>
                         <Box inView={inView}>
-                            <H1 as="h4">{name}</H1>
-                            <TeaserImage inView={inView} src={`../images/thumbs/${name}.png`}></TeaserImage>
-                            <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
+                            <a href={link} target={"_blank"}>
+                                <TeaserImage inView={inView} src={`../images/contacts/${name}.svg`}></TeaserImage>
+                            </a>
                         </Box>
-                    </TeaserWrapper>
+                    </SocialBoxWrapper>
                 )}
             </InViewAsAny>
         );

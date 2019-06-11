@@ -12,8 +12,8 @@ const Wrapper = styled.header`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 0.5rem 0.8rem;
-    width: 96%;
+    padding: 0.5rem 0rem;
+    width: 100%;
 
     ${onScreenXtraLarge(
         css`
@@ -82,8 +82,8 @@ export const Header: React.FunctionComponent = () => (
             <Title>{`< built by chin2km />`}</Title>
         </Link>
         <nav>
-            <Link to="/">{`<home>`}</Link>
-            <Link to="/contact">{`<contact>`}</Link>
+            <Link to="/">{`< home />`}</Link>
+            <Link to="/contact">{`< contact />`}</Link>
         </nav>
     </Wrapper>
 );
