@@ -14,10 +14,10 @@ export const INTRO: string[] = [
     "I am Chintu Kishen Kuthirangattil Mohandas. I'm an Indian 🇮🇳 💪  living in Hamburg, Germany 🇩🇪",
     `I am a fullstack software developer with over ${getExperience(10, 1, 2012)} years of work experience...`,
     "I love developing software products based on web technologies ❣️. And sometimes I design them too, like this one 😉",
-    "I've got a keen eye for details. plus, I'm really good at team work 🤩",
+    "I've got a keen eye for details. Plus, I'm really good at team work 🤩",
     "I work with latest tools & tech like: ReactJs, NodeJs, Redux, RxJs, MongoDb, TypeScript etc 🚀",
-    "some of my works ( only the ones I'm allowed to share 👀🙏🏻) are detailed below ↓",
-    "enjoy your time here and have a nice day 😇",
+    "Some of my works ( only the ones I'm allowed to share 👀🙏🏻) are detailed below ↓",
+    "Enjoy your time here and have a nice day 😇",
 ];
 
 export const CONTACT_CHAT: string[] = [

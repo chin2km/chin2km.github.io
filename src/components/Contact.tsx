@@ -19,7 +19,7 @@ const Wrapper = styled.div`
     }
     ${onScreenXtraLarge(
         css`
-            width: 30%;
+            width: 50%;
         `,
     )}
 `;
@@ -30,11 +30,6 @@ const Layout = styled.div`
     flex-wrap: wrap;
     align-self: center;
     width: 100%;
-    ${onScreenXtraLarge(
-        css`
-            width: 60%;
-        `,
-    )}
 `;
 
 export const Contact = () => (
