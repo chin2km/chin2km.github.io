@@ -15,6 +15,40 @@ const Bubble = styled.div`
     word-spacing: 0.1rem;
     text-align: left;
     text-decoration: pre;
+    transition: all 0.2s ease-in-out;
+    animation: come-up 1.5s forwards ease-in-out;
+
+    &.loading {
+        animation: come-up-slow 2s forwards ease-in-out;
+        animation-delay: 0s;
+        border-radius: 1rem;
+        opacity: 0;
+        display: none;
+
+        &:last-of-type {
+            display: block;
+        }
+    }
+
+    @keyframes come-up {
+        0% {
+            opacity: 0;
+            transform: translateY(1rem);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+    }
+
+    @keyframes come-up-slow {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 
     ${onScreenLarge(
         css`
@@ -49,7 +83,7 @@ export const ChatComponent: FunctionComponent<IProps> = ({ data: intros, classNa
                 clearInterval(interval);
             }
             idx++;
-        }, 1500);
+        }, 2000);
     }, [intros]);
     return (
         <div className={className}>
@@ -82,24 +116,4 @@ export const Chat = styled(ChatComponent)`
             width: 60%;
         `,
     )}
-
-    ${Bubble}.loading {
-        display: none;
-        animation: come-up 1.5s forwards ease-in-out;
-
-        &:last-of-type {
-            display: block;
-        }
-    }
-
-    @keyframes come-up {
-        0% {
-            opacity: 0;
-            transform: translateY(1rem);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0px);
-        }
-    }
 `;
