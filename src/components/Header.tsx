@@ -26,6 +26,7 @@ const Wrapper = styled.header`
     nav {
         align-self: flex-end;
         display: flex;
+        margin-right: 20px;
         a {
             text-decoration: none;
             border-bottom: solid 2px #8d27da;
@@ -37,21 +38,9 @@ const Wrapper = styled.header`
         }
     }
 
-    background: rgba(27, 27, 27, 0.33);
+    background-color: rgba(27, 27, 27, 0.33);
     backdrop-filter: blur(5px);
-    &:after {
-        content: " ";
-        position: absolute;
-        z-index: -1;
-        top: 0%;
-        bottom: 0;
-        width: 120%;
-        height: 90%;
-        left: -10%;
-        right: -10%;
-        opacity: 0.1;
-        background: radial-gradient(ellipse at 50% -3%, #d82881, #8d27da, rgba(255, 116, 225, 0) 50%);
-    }
+    overflow: hidden;
 `;
 
 const Title = styled.h1`
@@ -80,6 +69,7 @@ const Logo = styled.img`
     width: 30px;
     height: 30px;
     margin: 10px;
+    margin-left: 20px;
 
     ${onScreenMedium(
         css`
