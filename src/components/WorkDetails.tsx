@@ -8,7 +8,7 @@ const DetailsWrapper = styled.div`
 `;
 export const WorkDetails = ({ match }: any) => (
     <DetailsWrapper>
-        <H1>This page is under development 🤷🏻‍♂️. Coming soon I guess..</H1>
+        <H1>This page is under development 🤷🏻‍♂️.</H1>
         <H1>Coming soon I guess... 👻</H1>
         <br></br>
         <br></br>
