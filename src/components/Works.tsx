@@ -21,7 +21,7 @@ export const Works: FunctionComponent<IProps> = ({ works }) => (
         <H1 as="h2">{`< some of my works />`}</H1>
         <Layout>
             {works.map(({ name, description, link, tags }, index) => (
-                <Teaser key={index} name={name} description={description} link={link} tags={tags} />
+                <Teaser key={index} index={index} name={name} description={description} link={link} tags={tags} />
             ))}
         </Layout>
     </>

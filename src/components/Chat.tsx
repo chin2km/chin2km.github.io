@@ -71,19 +71,26 @@ interface IProps {
     data: string[];
     className?: string;
 }
+
+const getRandomBetween = (start: number, end: number): number => Math.floor(Math.random() * end) + start;
+
 export const ChatComponent: FunctionComponent<IProps> = ({ data: intros, className }) => {
     const [chats, setChats] = useState(buildChat(intros));
+    let interval: number;
+    let idx = 0;
+    const pushChat = () => {
+        if (idx < intros.length) {
+            const newChats = chats.map((chat, index) => (index <= idx ? { ...chat, loading: false } : chat));
+            setChats(newChats);
+        } else {
+            clearInterval(interval);
+        }
+        idx++;
+        clearInterval(interval);
+        interval = setInterval(pushChat, getRandomBetween(1.5, 2.5) * 1000);
+    };
     useEffect(() => {
-        let idx = 0;
-        const interval = setInterval(() => {
-            if (idx < intros.length) {
-                const newChats = chats.map((chat, index) => (index <= idx ? { ...chat, loading: false } : chat));
-                setChats(newChats);
-            } else {
-                clearInterval(interval);
-            }
-            idx++;
-        }, 2000);
+        interval = setInterval(pushChat, 1500);
     }, [intros]);
     return (
         <div className={className}>

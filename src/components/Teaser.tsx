@@ -4,6 +4,7 @@ import styled, { css } from "styled-components";
 import { IWork } from "../MyData";
 import { onScreenMedium } from "../utils/styleSettings";
 import { H1 } from "./BaseElements/H1";
+import { Link } from "react-router-dom";
 
 const InViewAsAny: any = InView;
 
@@ -63,6 +64,11 @@ const Box = styled.div<{ inView: boolean }>`
             transform: scale(1.25);
         }
     }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 `;
 
 const TeaserImage = styled.img<{ inView: boolean }>`
@@ -86,17 +92,19 @@ const Tag = styled.span`
     display: block;
 `;
 
-export class Teaser extends Component<IWork> {
+export class Teaser extends Component<IWork & { index: number }> {
     render() {
-        const { name, tags } = this.props;
+        const { name, tags, index } = this.props;
         return (
             <InViewAsAny triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
                 {({ inView, ref }) => (
                     <TeaserWrapper ref={ref} inView={inView}>
                         <Box inView={inView}>
-                            <H1 as="h4">{name}</H1>
-                            <TeaserImage inView={inView} src={`../images/thumbs/${name}.png`}></TeaserImage>
-                            <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
+                            <Link to={`/works/${index}`}>
+                                <H1 as="h4">{name}</H1>
+                                <TeaserImage inView={inView} src={`../images/thumbs/${name}.png`}></TeaserImage>
+                                <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
+                            </Link>
                         </Box>
                     </TeaserWrapper>
                 )}
