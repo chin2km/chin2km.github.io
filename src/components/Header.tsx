@@ -17,7 +17,6 @@ const Wrapper = styled.header`
 
     ${onScreenXtraLarge(
         css`
-            width: 60%;
             align-items: center;
         `,
     )}

@@ -79,7 +79,7 @@ export const Chat = styled(ChatComponent)`
     )}
     ${onScreenXtraLarge(
         css`
-            width: 30%;
+            width: 60%;
         `,
     )}
 

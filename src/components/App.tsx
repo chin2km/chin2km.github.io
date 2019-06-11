@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Header, Works, Contact, WorkDetails } from "../components";
 import { HashRouter as Router, Route } from "react-router-dom";
 import { Chat } from "./Chat";
 import { INTRO, WORKS } from "../MyData";
+import { onScreenLarge, onScreenXtraLarge } from "../utils/styleSettings";
 
 const Layout = styled.div`
     font-size: 1rem;
@@ -13,6 +14,12 @@ const Layout = styled.div`
     align-items: center;
     align-self: center;
     max-width: 110rem;
+    ${onScreenLarge(css`
+        width: 60%;
+    `)}
+    ${onScreenXtraLarge(css`
+        width: 40%;
+    `)}
 `;
 
 const Home = () => (

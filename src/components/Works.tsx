@@ -1,9 +1,8 @@
 import React, { FunctionComponent } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { IWork } from "../MyData";
-import { onScreenXtraLarge } from "../utils/styleSettings";
-import { Teaser } from "./Teaser";
 import { H1 } from "./BaseElements/H1";
+import { Teaser } from "./Teaser";
 
 const Layout = styled.div`
     display: flex;
@@ -11,11 +10,6 @@ const Layout = styled.div`
     flex-wrap: wrap;
     align-self: center;
     width: 100%;
-    ${onScreenXtraLarge(
-        css`
-            width: 60%;
-        `,
-    )}
 `;
 
 interface IProps {
