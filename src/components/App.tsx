@@ -27,9 +27,11 @@ const Layout = styled.div`
         transform: scale(1.3);
         display: inline-block;
         margin-left: 0.5rem;
+        vertical-align: middle;
+        margin-right: 0.3rem;
         ${onScreenMedium(css`
+            vertical-align: middle;
             transform: scale(1.6);
-            margin-left: 0.5rem;
             margin-right: 0.2rem;
         `)}
     }
