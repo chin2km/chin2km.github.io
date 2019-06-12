@@ -23,3 +23,8 @@ export const onScreenXtraLarge = (style: any) => css`
         ${style}
     }
 `;
+
+export const hrefHtml = (url: string): string => `<a href='${url}' target='_blank' class='fancy'>${url}</a>`;
+
+export const inlineEmoji = (emoji: string): string =>
+    `<b style='display: inline-block; transform: scale(1.6); margin-left: 0.5rem; margin-right: 0.2rem;'>${emoji}</b>`;

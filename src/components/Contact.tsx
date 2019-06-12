@@ -1,27 +1,17 @@
 import React from "react";
-import { Chat } from "./Chat";
+import styled from "styled-components";
 import { CONTACT_CHAT, SOCIAL } from "../MyData";
-import styled, { css } from "styled-components";
 import { H1 } from "./BaseElements/H1";
-import { onScreenXtraLarge } from "../utils/styleSettings";
+import { Chat } from "./Chat";
 import { SocialBox } from "./SocialBox";
 
-const Wrapper = styled.div`
+const ChatWrapper = styled.div`
     display: flex;
-    width: 80%;
+    width: 100%;
+    flex-direction: column;
     ${Chat} {
         min-height: 15rem;
-        ${onScreenXtraLarge(
-            css`
-                width: 100%;
-            `,
-        )}
     }
-    ${onScreenXtraLarge(
-        css`
-            width: 50%;
-        `,
-    )}
 `;
 
 const Layout = styled.div`
@@ -34,9 +24,9 @@ const Layout = styled.div`
 
 export const Contact = () => (
     <>
-        <Wrapper>
+        <ChatWrapper>
             <Chat data={CONTACT_CHAT} />
-        </Wrapper>
+        </ChatWrapper>
         <H1 as="h2">{`< social />`}</H1>
         <Layout>
             {SOCIAL.map(({ name, link }, index) => (

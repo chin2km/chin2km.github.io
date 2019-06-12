@@ -7,7 +7,7 @@ const Wrapper = styled.header`
     display: flex;
     position: sticky;
     top: 0px;
-    z-index: 1;
+    z-index: 100;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;

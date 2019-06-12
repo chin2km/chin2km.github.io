@@ -92,7 +92,7 @@ const Tag = styled.span`
     display: block;
 `;
 
-export class Teaser extends Component<IWork & { index: number }> {
+export class Teaser extends Component<Pick<IWork, "tags" | "name"> & { index: number }> {
     render() {
         const { name, tags, index } = this.props;
         return (

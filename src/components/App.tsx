@@ -14,6 +14,8 @@ const Layout = styled.div`
     align-items: center;
     align-self: center;
     max-width: 110rem;
+    width: 100%;
+
     ${onScreenLarge(css`
         width: 60%;
     `)}

@@ -1,6 +1,6 @@
-import React, { FunctionComponent, useState, useEffect } from "react";
+import React, { FunctionComponent, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-import { onScreenXtraLarge, onScreenLarge } from "../utils/styleSettings";
+import { onScreenLarge } from "../utils/styleSettings";
 
 const Bubble = styled.div`
     background: linear-gradient(to left, #6e48aa, #9d50bb);
@@ -100,7 +100,7 @@ export const ChatComponent: FunctionComponent<IProps> = ({ data: intros, classNa
                         · · ·
                     </Bubble>
                 ) : (
-                    <Bubble key={index}>{text}</Bubble>
+                    <Bubble key={index} dangerouslySetInnerHTML={{ __html: text }}></Bubble>
                 );
             })}
         </div>
@@ -110,17 +110,14 @@ export const ChatComponent: FunctionComponent<IProps> = ({ data: intros, classNa
 export const Chat = styled(ChatComponent)`
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 70%;
     min-height: 30rem;
     margin-bottom: 1rem;
+    align-self: center;
+    justify-self: center;
     ${onScreenLarge(
         css`
             min-height: 28rem;
-        `,
-    )}
-    ${onScreenXtraLarge(
-        css`
-            width: 60%;
         `,
     )}
 `;

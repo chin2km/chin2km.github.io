@@ -14,3 +14,11 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+a.fancy {
+    color: white;
+    text-decoration: none;
+    border-bottom: solid 1.5px;
+    padding-bottom: 1px;
+    line-height: 2rem;
+}
