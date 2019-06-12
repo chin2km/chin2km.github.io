@@ -112,7 +112,13 @@ export const WORKS: IWork[] = [
         tags: [REACT, REDUX, RESPONSIVE, MATERIAL],
         link: ["here is the link to the application..", hrefHtml("http://chin2km.github.io/React-Redux-Tuto")],
         images: 4,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'StarWars - The Dark Side' is a pet application I developed for mastering in the (then) new technologies like React Redux Redux-Saga etc`,
+            `This application makes use of ${hrefHtml(
+                "http://swapi.co",
+            )} endpoint to display details about people and things in StarWar`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "Workflow System",
@@ -126,14 +132,23 @@ export const WORKS: IWork[] = [
         description: "Web Design,Responsive Design, Online Game",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 3,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Fantasy League' is a Game where Cricket Fans in a big Corporate predict the outcome of Cricket matches and earn point when their predictions are correct`,
+            `I used AngularJs and Materialize.css to build it`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "Glasswall",
         description: "Web Design,Responsive Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 4,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Glasswall' is an Incidents Management tool built for a big corporate in India. This tool allows the HR team in the company to effectively keep track of incidents.`,
+            `It had functionalities like Excel reports, calendar management, admin panels and a very complex dashboard.`,
+            `I used AngularJs and Materialize.css to build it`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "OnePush",
@@ -141,35 +156,57 @@ export const WORKS: IWork[] = [
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         link: ["here is the link to the application..", hrefHtml("http://chin2km.github.io/Angular-Again")],
         images: 4,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'OnePush' is an pet application to do complex searches in Github repositories.`,
+            `I used AngularJs and Materialize.css to build it`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "Infusion",
         description: "Web Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 2,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Infusion' is the website for annual sports meet for a big Corporate Company in India.`,
+            `It had functionalities like admin CMS, daily news updates and functionality to register for sports events.`,
+            `I used AngularJs and Materialize.css to build it.`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "Leadersboard",
         description: "Web Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 3,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Leadersboard' is a portal where Interviews with Leaders in the company is published.`,
+            `It had functionalities like admin CMS, and a very classy UI.`,
+            `I used AngularJs and Materialize.css to build it.`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "Assets Syncer",
         description: "Cross-platfrom App Development",
         tags: [ELECTRON, ANGULAR, DESKTOP],
         images: 1,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Assets Syncer' is a cross-platform ElectronJs Taskbar/menu-bar application which syncs the data from Shoe Designers local machine with the server.`,
+            `I used ElectronJs and AngularNode to build it.`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "Solution Studio",
         description: "Desktop Development(Windows), Responsive",
         tags: [WPF, XAML, DESKTOP],
         images: 3,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Solution Studio' is a Windows Desktop application which is used to generate customized VisualStudio Project Solutions which makes reuse of code and good practices easy.`,
+            `It was written in C#, WPF, XAML Ui.`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "Groups",
@@ -177,7 +214,13 @@ export const WORKS: IWork[] = [
         tags: [WPF, XAML, DESKTOP],
         link: ["here is the link to the demo..", hrefHtml("https://1drv.ms/v/s!Aitx-4hcnVYtiYJ_EGZqDPBNLzQM_w")],
         images: 6,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Groups' is a Windows Desktop application which allows to create WhatsApp kinda groups with Contacts from Link/Skype. Skype didn't had such functionalities in the past ${inlineEmoji(
+                `😉`,
+            )}.`,
+            `It was written in C#, WPF, XAML Ui.`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} and care as always.`,
+        ],
     },
     {
         name: "Learning Paths",
@@ -185,13 +228,21 @@ export const WORKS: IWork[] = [
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         link: ["here is the link to the demo..", hrefHtml("http://chin2km.github.io/My-Angular1.5-App")],
         images: 3,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Learning Paths' is a website which can advice Students to choose the best possible Learning Paths for them.`,
+            `I used ElectronJs and AngularJs to build it.`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
     {
         name: "Chin2km Portfolio old",
         tags: [REACT, RESPONSIVE, UI_UX],
         description: "Web Design,Mobile Responsive Design",
         images: 4,
-        chat: LOREM_IPSUM,
+        chat: [
+            `'Chin2km portfolio'. This is my old portfolio I built in 2014 ${inlineEmoji(`😅`)}.`,
+            `I used AngularJs and lot of css3 animations in SASS to build it.`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
     },
 ];
