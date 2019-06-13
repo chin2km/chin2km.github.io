@@ -16,6 +16,8 @@ const TeaserWrapper = styled.div<{ inView: boolean }>`
     width: 50%;
     height: 10rem;
     ${onScreenMedium(css`
+        height: 15rem;
+        min-height: 15rem;
         width: 33.33%;
     `)}
 
@@ -39,11 +41,11 @@ const Box = styled.div<{ inView: boolean }>`
     margin: 3rem 1.6rem;
     padding: 1rem;
     height: 100% !important;
+    min-height: 15rem;
     position: relative;
 
     background: linear-gradient(to bottom, rgb(27, 27, 27), #000);
     border: 1px solid #8d27da;
-    border-radius: 3px;
 
     ${onScreenMedium(css`
         margin: 4rem 3rem;
@@ -54,11 +56,13 @@ const Box = styled.div<{ inView: boolean }>`
         css`
             background: linear-gradient(to bottom, rgb(27, 27, 27), #000);
             border-image: linear-gradient(90deg, #d82881 36%, #8d27da) 1;
-
             transform: scale(1.2);
             color: #fff;
         `}
-
+    > * {
+        transition: all 0.7s ease-in-out;
+        opacity: ${({ inView }) => (inView ? 1 : 0.2)} !important;
+    }
     @media (hover: hover) {
         &:hover {
             transform: scale(1.25);
@@ -68,17 +72,16 @@ const Box = styled.div<{ inView: boolean }>`
     a {
         text-decoration: none;
         color: white;
+        height: 100%;
     }
 `;
 
-const TeaserImage = styled.img<{ inView: boolean }>`
+const TeaserImage = styled.img`
     width: 80%;
     max-height: 10rem;
     align-self: center;
     border-radius: 3px;
     margin: 1rem 0rem;
-    transition: all 0.7s ease-in-out;
-    opacity: ${({ inView }) => (inView ? 0.5 : 0)};
 `;
 
 const Tag = styled.span`
@@ -102,7 +105,7 @@ export class Teaser extends Component<Pick<IWork, "tags" | "name"> & { index: nu
                         <Box inView={inView}>
                             <Link to={`/works/${index}`}>
                                 <H1 as="h4">{name}</H1>
-                                <TeaserImage inView={inView} src={`../images/thumbs/${name}.png`}></TeaserImage>
+                                <TeaserImage src={`../images/thumbs/${name}.png`}></TeaserImage>
                                 <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
                             </Link>
                         </Box>
