@@ -113,7 +113,7 @@ export const WORKS: IWork[] = [
             )}`,
             `I built it using technologies like React, Styled-components and is written in TypeScript`,
             `I had a portfolio in the past which was built using AngularJs. Here -> ${hrefHtml(
-                "https://chin2km.github.io/chin2km.github.io.old",
+                "http://chin2km.github.io/chin2km-old-portfolio",
             )}`,
             `I loved building this, and found it difficult to give it a name and finally I settled with the name "built by chin2km" ${inlineEmoji(
                 `👻`,
@@ -253,6 +253,7 @@ export const WORKS: IWork[] = [
         name: "Chin2km Portfolio old",
         tags: [REACT, RESPONSIVE, UI_UX],
         images: 4,
+        link: ["here is the link to the demo..", hrefHtml("http://chin2km.github.io/chin2km-old-portfolio")],
         chat: [
             `'Chin2km portfolio'. This is my old portfolio I built in 2014 ${inlineEmoji(`😅`)}.`,
             `I used AngularJs and lot of css3 animations in SASS to build it.`,
