@@ -203,7 +203,7 @@ export const WORKS: IWork[] = [
         imageShadow: true,
         images: 4,
         chat: [
-            `'OnePush' is an pet application to do complex searches in Github repositories.`,
+            `'OnePush' is on of my pet application to do complex searches in Github repositories.`,
             `I used AngularJs and Materialize.css to build it`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],

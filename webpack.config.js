@@ -54,7 +54,7 @@ module.exports = {
         new CompressionPlugin({
             algorithm: "gzip",
             compressionOptions: { level: 9 },
-            test: /\.(js|css|html|svg)$/,
+            test: /\.(js|css)$/,
             cache: true,
         }),
     ],

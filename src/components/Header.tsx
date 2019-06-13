@@ -83,7 +83,7 @@ const Logo = styled.img`
 export const Header: React.FunctionComponent = () => (
     <Wrapper>
         <Link to="/" style={{ textDecoration: "none" }}>
-            <Logo src={"../../icon.png"} />
+            <Logo src={"../../icon192.png"} />
             <Title>{`< built by chin2km />`}</Title>
         </Link>
         <nav>

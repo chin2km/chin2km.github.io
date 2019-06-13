@@ -1,10 +1,10 @@
-import React, { Component } from "react";
+import React, { FunctionComponent } from "react";
 import InView from "react-intersection-observer";
+import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { IWork } from "../MyData";
 import { onScreenMedium } from "../utils/styleSettings";
 import { H1 } from "./BaseElements/H1";
-import { Link } from "react-router-dom";
 
 const InViewAsAny: any = InView;
 
@@ -58,10 +58,13 @@ const Box = styled.div<{ inView: boolean }>`
             border-image: linear-gradient(90deg, #d82881 36%, #8d27da) 1;
             transform: scale(1.2);
             color: #fff;
+            > * {
+                opacity: 1 !important;
+            }
         `}
     > * {
         transition: all 0.7s ease-in-out;
-        opacity: ${({ inView }) => (inView ? 1 : 0.2)} !important;
+        opacity: 0.1;
     }
     @media (hover: hover) {
         &:hover {
@@ -72,13 +75,12 @@ const Box = styled.div<{ inView: boolean }>`
     a {
         text-decoration: none;
         color: white;
-        height: 100%;
     }
 `;
 
 const TeaserImage = styled.img`
     width: 80%;
-    max-height: 10rem;
+    max-height: 8rem;
     align-self: center;
     border-radius: 3px;
     margin: 1rem 0rem;
@@ -95,23 +97,23 @@ const Tag = styled.span`
     display: block;
 `;
 
-export class Teaser extends Component<Pick<IWork, "tags" | "name"> & { index: number }> {
-    render() {
-        const { name, tags, index } = this.props;
-        return (
-            <InViewAsAny triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
-                {({ inView, ref }) => (
-                    <TeaserWrapper ref={ref} inView={inView}>
-                        <Box inView={inView}>
-                            <Link to={`/works/${index}`}>
-                                <H1 as="h4">{name}</H1>
-                                <TeaserImage src={`../images/thumbs/${name}.png`}></TeaserImage>
-                                <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
-                            </Link>
-                        </Box>
-                    </TeaserWrapper>
-                )}
-            </InViewAsAny>
-        );
-    }
-}
+export const Teaser: FunctionComponent<Pick<IWork, "tags" | "name"> & { index: number }> = ({ name, tags, index }) => {
+    const navigateTo = (index: number) => () => {
+        window.location.href = `#/works/${index}`;
+    };
+    return (
+        <InViewAsAny triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
+            {({ inView, ref }) => (
+                <TeaserWrapper ref={ref} inView={inView}>
+                    <Box inView={inView} onClick={navigateTo(index)}>
+                        <Link to={`/works/${index}`}>
+                            <H1 as="h4">{name}</H1>
+                            <TeaserImage src={`../images/thumbs/${name}.png`}></TeaserImage>
+                            <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
+                        </Link>
+                    </Box>
+                </TeaserWrapper>
+            )}
+        </InViewAsAny>
+    );
+};

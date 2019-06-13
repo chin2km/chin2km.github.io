@@ -91,6 +91,9 @@ export const ChatComponent: FunctionComponent<IProps> = ({ data: intros, classNa
     };
     useEffect(() => {
         interval = setInterval(pushChat, 1500);
+        return () => {
+            clearInterval(interval);
+        };
     }, [intros]);
     return (
         <div className={className}>
