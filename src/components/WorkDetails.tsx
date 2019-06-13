@@ -31,8 +31,7 @@ const Screenshot = styled.img<{ inView: boolean; imageShadow: boolean }>`
     ${({ inView }) =>
         inView &&
         css`
-            transform: scale(1.05);
-            z-index: 1;
+            transform: scale(1.1);
         `}
     ${({ imageShadow }) =>
         imageShadow &&

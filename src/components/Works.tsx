@@ -9,6 +9,7 @@ const Layout = styled.div`
     flex: 1 1 100%;
     flex-wrap: wrap;
     align-self: center;
+    justify-content: center;
     width: 100%;
 `;
 

@@ -14,10 +14,8 @@ const TeaserWrapper = styled.div<{ inView: boolean }>`
     transition: all 0.5s ease-in-out;
 
     width: 50%;
-    height: 10rem;
+    height: 15rem;
     ${onScreenMedium(css`
-        height: 15rem;
-        min-height: 15rem;
         width: 33.33%;
     `)}
 
@@ -42,7 +40,7 @@ const Box = styled.div<{ inView: boolean }>`
     height: 100% !important;
     min-height: 15rem;
     position: relative;
-
+    box-shadow: 2px 3px 15px #000;
     background: linear-gradient(to bottom, rgb(27, 27, 27), #000);
     border: 1px solid #8d27da;
 
