@@ -73,6 +73,8 @@ export interface IWork {
     chat: string[];
 }
 const REACT = "ReactJs";
+const STYLED = "StyledComponents";
+const TYPESCRIPT = "Typescript";
 const ANGULAR = "AngularJs";
 const ELECTRON = "ElectronJs";
 const MATERIAL = "MaterialUi";
@@ -94,7 +96,7 @@ const LOREM_IPSUM = [
 export const WORKS: IWork[] = [
     {
         name: "Built by chin2km",
-        tags: [ANGULAR, MATERIAL],
+        tags: [REACT, STYLED, TYPESCRIPT],
         link: [
             "here is the link to the application..",
             hrefHtml("http://chin2km.github.io"),
