@@ -40,6 +40,7 @@ const Wrapper = styled.header`
 
     background-color: rgba(27, 27, 27, 0.5);
     backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     overflow: hidden;
 `;
 
