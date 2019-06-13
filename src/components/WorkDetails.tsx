@@ -20,7 +20,7 @@ const DetailsWrapper = styled.div`
     }
 `;
 
-const Screenshot = styled.img<{ inView: boolean }>`
+const Screenshot = styled.img<{ inView: boolean; imageShadow: boolean }>`
     max-height: 40rem;
     max-width: 80%;
     align-self: center;
@@ -33,6 +33,11 @@ const Screenshot = styled.img<{ inView: boolean }>`
         css`
             transform: scale(1.05);
             z-index: 1;
+        `}
+    ${({ imageShadow }) =>
+        imageShadow &&
+        css`
+            box-shadow: 0px 5px 20px #000000de;
         `}
 `;
 
@@ -56,6 +61,7 @@ export const WorkDetails = ({ match }) => {
                     {({ inView, ref }) => (
                         <Screenshot
                             ref={ref}
+                            imageShadow={work.imageShadow}
                             inView={inView}
                             src={`../images/screenshots/${work.name}/${key}.png`}
                         ></Screenshot>

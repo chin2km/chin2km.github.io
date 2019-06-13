@@ -67,10 +67,11 @@ export const SOCIAL: ISocial[] = [
 
 export interface IWork {
     name: string;
-    tags?: string[];
-    link?: string[];
-    images: number;
     chat: string[];
+    images: number;
+    imageShadow: boolean;
+    link?: string[];
+    tags?: string[];
 }
 const REACT = "ReactJs";
 const STYLED = "StyledComponents";
@@ -104,6 +105,7 @@ export const WORKS: IWork[] = [
             hrefHtml("https://github.com/chin2km/chin2km.github.io"),
         ],
         images: 4,
+        imageShadow: false,
         chat: [
             `'Built by chin2km' is my works portfolio ${inlineEmoji(
                 `😇`,
@@ -121,6 +123,23 @@ export const WORKS: IWork[] = [
         ],
     },
     {
+        name: "StyleLounge",
+        tags: [REACT, STYLED, TYPESCRIPT],
+        link: [
+            `the code base is not open sourced, but the Webapp is live ${inlineEmoji(`🚀`)}`,
+            hrefHtml("https://www.stylelounge.fr/Vetements"),
+        ],
+        images: 5,
+        imageShadow: false,
+        chat: [
+            `'StyleLounge' is one of the best company I've worked for. It is a startup in Hamburg. I was an employee for them for over an year. It is a Fashion meta search Web application.`,
+            `I was a Full-stack NodeJs developer for them. Together we built an amazing Webapp, which is elegant, easy and intuitive to use and an extraordinary reactive message driven micro-service architecture for the products inventory.`,
+            `My contribution to the team includes, building/integrating a React UI components library, building/enhancing/maintaining NodeJs reactive micro-services.`,
+            `We wrote our micro-services in TypeScript and used technologies like RxJs, RabbitMq, ElasticSearch, MongoDb and 'n' number of other cutting edge tools and technologies...`,
+            `I loved working with this team and the company is one of the best!.  ${inlineEmoji(` ❤️❤️❤️`)} `,
+        ],
+    },
+    {
         name: "Designers Portal",
         tags: [ANGULAR, MATERIAL],
         images: 4,
@@ -131,12 +150,14 @@ export const WORKS: IWork[] = [
             "Its built using AngularJs, Material bootstrap",
             "I was the main developer in the team. I enjoyed developing it and giving inputs on UI/UX too",
         ],
+        imageShadow: true,
     },
     {
         name: "StarWars",
         tags: [REACT, REDUX, RESPONSIVE, MATERIAL],
         link: ["here is the link to the application..", hrefHtml("http://chin2km.github.io/React-Redux-Tuto")],
         images: 4,
+        imageShadow: false,
         chat: [
             `'StarWars - The Dark Side' is a pet application I developed for mastering in the (then) new technologies like React Redux Redux-Saga etc`,
             `This application makes use of ${hrefHtml(
@@ -148,12 +169,14 @@ export const WORKS: IWork[] = [
     {
         name: "Workflow System",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
+        imageShadow: true,
         images: 4,
         chat: LOREM_IPSUM,
     },
     {
         name: "Fantasy League",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
+        imageShadow: true,
         images: 3,
         chat: [
             `'Fantasy League' is a Game where Cricket Fans in a big Corporate predict the outcome of Cricket matches and earn point when their predictions are correct`,
@@ -164,6 +187,7 @@ export const WORKS: IWork[] = [
     {
         name: "Glasswall",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
+        imageShadow: true,
         images: 4,
         chat: [
             `'Glasswall' is an Incidents Management tool built for a big corporate in India. This tool allows the HR team in the company to effectively keep track of incidents.`,
@@ -176,6 +200,7 @@ export const WORKS: IWork[] = [
         name: "OnePush",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         link: ["here is the link to the application..", hrefHtml("http://chin2km.github.io/Angular-Again")],
+        imageShadow: true,
         images: 4,
         chat: [
             `'OnePush' is an pet application to do complex searches in Github repositories.`,
@@ -186,6 +211,7 @@ export const WORKS: IWork[] = [
     {
         name: "Infusion",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
+        imageShadow: true,
         images: 2,
         chat: [
             `'Infusion' is the website for annual sports meet for a big Corporate Company in India.`,
@@ -197,6 +223,7 @@ export const WORKS: IWork[] = [
     {
         name: "Leadersboard",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
+        imageShadow: true,
         images: 3,
         chat: [
             `'Leadersboard' is a portal where Interviews with Leaders in the company is published.`,
@@ -208,6 +235,7 @@ export const WORKS: IWork[] = [
     {
         name: "Assets Syncer",
         tags: [ELECTRON, ANGULAR, DESKTOP],
+        imageShadow: true,
         images: 1,
         chat: [
             `'Assets Syncer' is a cross-platform ElectronJs Taskbar/menu-bar application which syncs the data from Shoe Designers local machine with the server.`,
@@ -218,6 +246,7 @@ export const WORKS: IWork[] = [
     {
         name: "Solution Studio",
         tags: [WPF, XAML, DESKTOP],
+        imageShadow: true,
         images: 3,
         chat: [
             `'Solution Studio' is a Windows Desktop application which is used to generate customized VisualStudio Project Solutions which makes reuse of code and good practices easy.`,
@@ -229,6 +258,7 @@ export const WORKS: IWork[] = [
         name: "Groups",
         tags: [WPF, XAML, DESKTOP],
         link: ["here is the link to the demo..", hrefHtml("https://1drv.ms/v/s!Aitx-4hcnVYtiYJ_EGZqDPBNLzQM_w")],
+        imageShadow: true,
         images: 6,
         chat: [
             `'Groups' is a Windows Desktop application which allows to create WhatsApp kinda groups with Contacts from Link/Skype. Skype didn't had such functionalities in the past ${inlineEmoji(
@@ -242,6 +272,7 @@ export const WORKS: IWork[] = [
         name: "Learning Paths",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         link: ["here is the link to the demo..", hrefHtml("http://chin2km.github.io/My-Angular1.5-App")],
+        imageShadow: true,
         images: 3,
         chat: [
             `'Learning Paths' is a website which can advice Students to choose the best possible Learning Paths for them.`,
@@ -255,7 +286,10 @@ export const WORKS: IWork[] = [
         link: [
             "here is the link to the demo..",
             hrefHtml("https://chin2km.github.io/Snake-and-Ladder-Board-with-FlexBox"),
+            "here is the link to the code repo..",
+            hrefHtml("https://github.com/chin2km/Snake-and-Ladder-Board-with-FlexBox"),
         ],
+        imageShadow: false,
         images: 1,
         chat: [
             `'Snake & Ladder Flexbox Board' is a pet application . Its a Snake and Ladder Board built using CSS Display Flex.`,
@@ -266,6 +300,7 @@ export const WORKS: IWork[] = [
     {
         name: "Chin2km Portfolio old",
         tags: [ANGULAR, RESPONSIVE, UI_UX],
+        imageShadow: false,
         images: 7,
         link: ["here is the link to the demo..", hrefHtml("http://chin2km.github.io/chin2km-old-portfolio")],
         chat: [
