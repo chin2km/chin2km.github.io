@@ -251,8 +251,8 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Chin2km Portfolio old",
-        tags: [REACT, RESPONSIVE, UI_UX],
-        images: 4,
+        tags: [ANGULAR, RESPONSIVE, UI_UX],
+        images: 7,
         link: ["here is the link to the demo..", hrefHtml("http://chin2km.github.io/chin2km-old-portfolio")],
         chat: [
             `'Chin2km portfolio'. This is my old portfolio I built in 2014 ${inlineEmoji(`😅`)}.`,
