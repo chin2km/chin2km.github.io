@@ -111,7 +111,7 @@ export const WORKS: IWork[] = [
             `Its a PWA too. By being a PWA its installable as a webapp on Mobile/Desktop. And it works offline too ${inlineEmoji(
                 `⚡️`,
             )}`,
-            `I built it using technologies like React, Styled-components and is written in TypeScript`,
+            `I built it using technologies like React, Styled-components, React-Intersection-Observer and is written in TypeScript`,
             `I had a portfolio in the past which was built using AngularJs. Here -> ${hrefHtml(
                 "http://chin2km.github.io/chin2km-old-portfolio",
             )}`,
@@ -246,6 +246,20 @@ export const WORKS: IWork[] = [
         chat: [
             `'Learning Paths' is a website which can advice Students to choose the best possible Learning Paths for them.`,
             `I used ElectronJs and AngularJs to build it.`,
+            `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
+        ],
+    },
+    {
+        name: "Snake & Ladder Flexbox Board",
+        tags: [REACT, "Flexbox"],
+        link: [
+            "here is the link to the demo..",
+            hrefHtml("https://chin2km.github.io/Snake-and-Ladder-Board-with-FlexBox"),
+        ],
+        images: 1,
+        chat: [
+            `'Snake & Ladder Flexbox Board' is a pet application . Its a Snake and Ladder Board built using CSS Display Flex.`,
+            `I used React to build it.`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],
     },

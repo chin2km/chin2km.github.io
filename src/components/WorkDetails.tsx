@@ -84,6 +84,25 @@ export const WorkDetails = ({ match }) => {
             <br />
         </DetailsWrapper>
     ) : (
-        <H1> Whaaaaat? Thats a {`<404/>`} 🤷🏻‍♂️</H1>
+        <>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <H1> Whaaaaat? Thats a {`<404/>`} 🤷🏻‍♂️</H1>
+            <br />
+            <br />
+            <br />
+            <Link to="/">
+                <H1>← Back to home</H1>
+            </Link>
+        </>
     );
 };
