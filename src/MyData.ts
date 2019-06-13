@@ -67,7 +67,6 @@ export const SOCIAL: ISocial[] = [
 
 export interface IWork {
     name: string;
-    description: string;
     tags?: string[];
     link?: string[];
     images: number;
@@ -94,8 +93,33 @@ const LOREM_IPSUM = [
 
 export const WORKS: IWork[] = [
     {
+        name: "Built by chin2km",
+        tags: [ANGULAR, MATERIAL],
+        link: [
+            "here is the link to the application..",
+            hrefHtml("http://chin2km.github.io"),
+            "and here is the link to the code repo..",
+            hrefHtml("https://github.com/chin2km/chin2km.github.io"),
+        ],
+        images: 4,
+        chat: [
+            `'Built by chin2km' is my works portfolio ${inlineEmoji(
+                `😇`,
+            )} the site you are browsing now! Its a responsive web application built using React ${inlineEmoji(`❤️`)}`,
+            `Its a PWA too. By being a PWA its installable as a webapp on Mobile/Desktop. And it works offline too ${inlineEmoji(
+                `⚡️`,
+            )}`,
+            `I built it using technologies like React, Styled-components and is written in TypeScript`,
+            `I had a portfolio in the past which was built using AngularJs. Here -> ${hrefHtml(
+                "https://chin2km.github.io/chin2km.github.io.old",
+            )}`,
+            `I loved building this, and found it difficult to give it a name and finally I settled with the name "built by chin2km" ${inlineEmoji(
+                `👻`,
+            )} `,
+        ],
+    },
+    {
         name: "Designers Portal",
-        description: "Responsive Web Design, Development",
         tags: [ANGULAR, MATERIAL],
         images: 4,
         chat: [
@@ -108,7 +132,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "StarWars",
-        description: "React.JS app, Development",
         tags: [REACT, REDUX, RESPONSIVE, MATERIAL],
         link: ["here is the link to the application..", hrefHtml("http://chin2km.github.io/React-Redux-Tuto")],
         images: 4,
@@ -122,14 +145,12 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Workflow System",
-        description: "Responsive Web Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 4,
         chat: LOREM_IPSUM,
     },
     {
         name: "Fantasy League",
-        description: "Web Design,Responsive Design, Online Game",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 3,
         chat: [
@@ -140,7 +161,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Glasswall",
-        description: "Web Design,Responsive Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 4,
         chat: [
@@ -152,7 +172,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "OnePush",
-        description: "Responsive Web Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         link: ["here is the link to the application..", hrefHtml("http://chin2km.github.io/Angular-Again")],
         images: 4,
@@ -164,7 +183,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Infusion",
-        description: "Web Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 2,
         chat: [
@@ -176,7 +194,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Leadersboard",
-        description: "Web Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         images: 3,
         chat: [
@@ -188,7 +205,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Assets Syncer",
-        description: "Cross-platfrom App Development",
         tags: [ELECTRON, ANGULAR, DESKTOP],
         images: 1,
         chat: [
@@ -199,7 +215,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Solution Studio",
-        description: "Desktop Development(Windows), Responsive",
         tags: [WPF, XAML, DESKTOP],
         images: 3,
         chat: [
@@ -210,7 +225,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Groups",
-        description: "Desktop Development(Windows), Chat App",
         tags: [WPF, XAML, DESKTOP],
         link: ["here is the link to the demo..", hrefHtml("https://1drv.ms/v/s!Aitx-4hcnVYtiYJ_EGZqDPBNLzQM_w")],
         images: 6,
@@ -224,7 +238,6 @@ export const WORKS: IWork[] = [
     },
     {
         name: "Learning Paths",
-        description: "Responsive Web Design, Development",
         tags: [ANGULAR, RESPONSIVE, MATERIAL],
         link: ["here is the link to the demo..", hrefHtml("http://chin2km.github.io/My-Angular1.5-App")],
         images: 3,
@@ -237,7 +250,6 @@ export const WORKS: IWork[] = [
     {
         name: "Chin2km Portfolio old",
         tags: [REACT, RESPONSIVE, UI_UX],
-        description: "Web Design,Mobile Responsive Design",
         images: 4,
         chat: [
             `'Chin2km portfolio'. This is my old portfolio I built in 2014 ${inlineEmoji(`😅`)}.`,
