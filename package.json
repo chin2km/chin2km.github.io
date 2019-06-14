@@ -19,6 +19,7 @@
     "devDependencies": {
         "@babel/core": "^7.4.5",
         "@babel/plugin-proposal-class-properties": "^7.4.4",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
         "@babel/preset-env": "^7.4.5",
         "@babel/preset-react": "^7.0.0",
         "@babel/preset-typescript": "^7.3.3",
@@ -50,6 +51,7 @@
     },
     "dependencies": {
         "classnames": "^2.2.6",
+        "intersection-observer": "^0.7.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "react-intersection-observer": "^8.23.0",
