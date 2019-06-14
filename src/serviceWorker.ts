@@ -9,7 +9,6 @@ const isLocalhost = Boolean(
 export function registerServiceWorkerForPWA(): void {
     if (!isLocalhost && process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
         window.addEventListener("load", (): void => {
-            console.log("TESTTTTT");
             navigator.serviceWorker.register("./service-worker.js");
         });
     }
