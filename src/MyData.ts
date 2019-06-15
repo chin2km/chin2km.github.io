@@ -1,4 +1,4 @@
-import { hrefHtml, inlineEmoji } from "./utils/styleSettings";
+import { hrefHtml, inlineEmoji, preTag } from "./utils/styleSettings";
 
 const getExperience = (month: number, day: number, year: number) => {
     let yearNow = new Date().getFullYear();
@@ -85,6 +85,7 @@ const UI_UX = "UI/UX";
 const WPF = "WPF";
 const XAML = "XAML";
 const DESKTOP = "Desktop";
+const NODE = "NodeJs";
 
 const LOREM_IPSUM = [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gdignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
@@ -137,6 +138,24 @@ export const WORKS: IWork[] = [
             `My contribution to the team includes, building/integrating a React UI components library, building/enhancing/maintaining NodeJs reactive micro-services.`,
             `We wrote our micro-services in TypeScript and used technologies like RxJs, RabbitMq, ElasticSearch, MongoDb and 'n' number of other cutting edge tools and technologies...`,
             `I loved working with this team and the company is one of the best!.  ${inlineEmoji(` ❤️❤️❤️`)} `,
+        ],
+    },
+    {
+        name: "Halla",
+        tags: [REACT, MATERIAL, "RabbitMq", "MongoDb", "WebSockets"],
+        link: ["here is the link to the Github repo..", hrefHtml("http://github.com/chin2km/halla")],
+        images: 7,
+        imageShadow: false,
+        chat: [
+            `'Halla' is my favourite pet project. It is a Simple real-time persistent Chat application. I built it in 2018 to learn few key technologies.`,
+            `It consists of 3 applications. And these are the key technologies I used in them.<br/>
+            1) halla-client: ReactJs, Socket.IO, Redux, RxJs, Redux-observable, Ramda, MomentJs <br/>
+            2) halla-db-server: RabbitMq, MongoDb, Mongoose <br/>
+            3) halla-socket-server: Socket.IO, RabbitMq <br/>
+            `,
+            `The client app talks to the database and other clients through the nodejs socket-server, which uses RabbitMq messaging.`,
+            `I wrote these apps in TypeScript. The RabbitMq and MongoDb are installed as docker images.`,
+            `I learned a lot through this project and loved it... ${inlineEmoji(`❤️❤️❤️`)} `,
         ],
     },
     {
