@@ -1,4 +1,4 @@
-import { hrefHtml, inlineEmoji, preTag } from "./utils/styleSettings";
+import { hrefHtml, inlineEmoji } from "./utils/styleSettings";
 
 const getExperience = (month: number, day: number, year: number) => {
     let yearNow = new Date().getFullYear();
@@ -85,7 +85,6 @@ const UI_UX = "UI/UX";
 const WPF = "WPF";
 const XAML = "XAML";
 const DESKTOP = "Desktop";
-const NODE = "NodeJs";
 
 const LOREM_IPSUM = [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Gdignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",

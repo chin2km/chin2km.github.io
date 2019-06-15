@@ -2,6 +2,37 @@ import React, { FunctionComponent, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
 import { onScreenLarge } from "../utils/styleSettings";
 
+const Typing = styled.div`
+    width: auto;
+    display: table;
+    margin: 0 auto;
+    position: relative;
+    animation: 2s bulge infinite ease-out;
+    span {
+        height: 5px;
+        width: 5px;
+        float: left;
+        margin: 0 1px;
+        background-color: #fff;
+        display: block;
+        border-radius: 50%;
+        opacity: 0.4;
+        animation: 1s blink infinite;
+    }
+
+    @keyframes blink {
+        50% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes bulge {
+        50% {
+            transform: scale(1.3);
+        }
+    }
+`;
+
 const Bubble = styled.div`
     background: linear-gradient(to left, #6e48aa, #9d50bb);
     width: auto;
@@ -21,7 +52,6 @@ const Bubble = styled.div`
     &.loading {
         animation: come-up-slow 2s forwards ease-in-out;
         animation-delay: 0s;
-        border-radius: 1rem;
         opacity: 0;
         display: none;
 
@@ -100,7 +130,11 @@ export const ChatComponent: FunctionComponent<IProps> = ({ data: intros, classNa
             {chats.map(({ text, loading }, index) => {
                 return loading ? (
                     <Bubble key={Math.random()} className={"loading"}>
-                        · · ·
+                        <Typing>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </Typing>
                     </Bubble>
                 ) : (
                     <Bubble key={index} dangerouslySetInnerHTML={{ __html: text }}></Bubble>

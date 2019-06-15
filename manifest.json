@@ -10,6 +10,11 @@
         {
             "src": "icon.png",
             "type": "image/png",
+            "sizes": "75x75"
+        },
+        {
+            "src": "icon192.png",
+            "type": "image/png",
             "sizes": "192x192"
         },
         {
@@ -20,6 +25,6 @@
     ],
     "start_url": "/",
     "display": "standalone",
-    "theme_color": "rgb(27, 27, 27)",
-    "background_color": "rgb(27, 27, 27)"
+    "theme_color": "rgb(27, 27, 27, 0.90)",
+    "background_color": "rgb(27, 27, 27, 0.90)"
 }
