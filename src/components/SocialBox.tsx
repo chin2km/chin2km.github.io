@@ -81,7 +81,11 @@ export class SocialBox extends Component<ISocial> {
                     <SocialBoxWrapper ref={ref} inView={inView}>
                         <Box inView={inView}>
                             <a href={link} target={"_blank"}>
-                                <TeaserImage inView={inView} src={`../images/contacts/${name}.svg`}></TeaserImage>
+                                <TeaserImage
+                                    inView={inView}
+                                    src={`../images/contacts/${name}.svg`}
+                                    alt={name}
+                                ></TeaserImage>
                             </a>
                         </Box>
                     </SocialBoxWrapper>

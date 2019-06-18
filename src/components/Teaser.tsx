@@ -76,7 +76,7 @@ const Box = styled.div<{ inView: boolean }>`
 `;
 
 const TeaserImage = styled.img`
-    width: 80%;
+    max-width: 80%;
     max-height: 8rem;
     align-self: center;
     border-radius: 3px;
@@ -105,7 +105,7 @@ export const Teaser: FunctionComponent<Pick<IWork, "tags" | "name"> & { index: n
                     <Box inView={inView} onClick={navigateTo(index)}>
                         <Link to={`/works/${index}`}>
                             <H1 as="h4">{name}</H1>
-                            <TeaserImage src={`../images/thumbs/${name}.png`}></TeaserImage>
+                            <TeaserImage src={`../images/thumbs/${name}.png`} alt={name}></TeaserImage>
                             <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
                         </Link>
                     </Box>
