@@ -25,7 +25,7 @@ module.exports = {
                 },
                 {
                     name: "theme-color",
-                    content: "rgb(27, 27, 27, 0.90)",
+                    content: "rgb(27, 27, 27)",
                 },
             ],
             links: [
