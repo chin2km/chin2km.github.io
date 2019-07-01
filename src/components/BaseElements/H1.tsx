@@ -6,6 +6,7 @@ export const H1 = styled.h1`
     background: -webkit-linear-gradient(left, #d82881 36%, #8d27da);
     background: -o-linear-gradient(left, #d82881 36%, #8d27da 100%);
     background: linear-gradient(90deg, #d82881 36%, #8d27da);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     opacity: 1;
