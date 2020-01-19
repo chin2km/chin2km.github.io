@@ -60,7 +60,7 @@ export const WorkDetails = styled(({ match, className }) => {
             <br />
             <br />
             {getRange(work.images).map(key => (
-                <InViewAsAny key={key} triggerOnce={true} rootMargin={"-20% 0px -20% 0px"}>
+                <InViewAsAny key={key} triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
                     {({ inView, ref }) => (
                         <Screenshot
                             ref={ref}
