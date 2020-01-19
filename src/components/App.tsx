@@ -91,7 +91,6 @@ const Layout = styled.div`
         100% {
             opacity: 0;
             transform: translateX(-10%);
-            filter: blur(2px);
         }
     }
 `;
