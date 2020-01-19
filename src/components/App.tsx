@@ -38,6 +38,7 @@ const Layout = styled.div`
     align-self: center;
     max-width: 110rem;
     width: 100%;
+    height: 100%;
     position: relative;
 
     ${onScreenLarge(css`
@@ -102,7 +103,7 @@ const Layout = styled.div`
 const AnimatedApp = () => {
     let location = useLocation();
     return (
-        <TransitionGroup exit enter>
+        <TransitionGroup exit enter style={{display: 'contents'}} >
             <CSSTransition
                 key={location.pathname}
                 classNames={{ enterActive: "enterNicely", exitActive: "exitNicely" }}
@@ -124,7 +125,7 @@ export const App = () => {
             <Layout>
                 <Header></Header>
                 <Switch>
-                    <Route path="*">
+                    <Route path="*" className="test">
                         <AnimatedApp />
                     </Route>
                 </Switch>
