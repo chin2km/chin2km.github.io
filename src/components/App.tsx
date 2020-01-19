@@ -19,8 +19,10 @@ const Home = styled(({className}) => (
     position: absolute;
     top: 100px;
     left: 0;
+    bottom: 0;
     right: 0;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -66,10 +68,10 @@ const Layout = styled.div`
     }
 
     .enterNicely {
-        animation: 600ms enterNicely ease-out forwards;
+        animation: 600ms enterNicely ease-out;
     }
     .exitNicely {
-        animation: 600ms exitNicely ease-out forwards;
+        animation: 600ms exitNicely ease-out;
     }
 
     @keyframes enterNicely {
@@ -104,7 +106,7 @@ const AnimatedApp = () => {
             <CSSTransition
                 key={location.pathname}
                 classNames={{ enterActive: "enterNicely", exitActive: "exitNicely" }}
-                timeout={750}
+                timeout={600}
             >
                 <Switch location={location}>
                     <Route exact={true} path="/" component={Home} />

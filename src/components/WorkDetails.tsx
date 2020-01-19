@@ -44,11 +44,13 @@ const getRange = (count: number): number[] => Object.keys(Array.from(new Array(c
 
 export const WorkDetails = styled(({ match, className }) => {
     const work = WORKS.find((_, index) => index === Number(match.params.id));
-    window["scrollTo"]({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-    });
+    if (work) {
+        window["scrollTo"]({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        });
+    }
 
     return work ? (
         <DetailsWrapper className={className}>
@@ -118,8 +120,10 @@ export const WorkDetails = styled(({ match, className }) => {
     position: absolute;
     top: 100px;
     left: 0;
+    bottom: 0;
     right: 0;
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
