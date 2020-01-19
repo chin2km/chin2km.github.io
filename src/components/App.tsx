@@ -72,8 +72,9 @@ const Layout = styled.div`
         animation: 600ms enterNicely ease-out;
     }
     .exitNicely {
-        animation: 600ms exitNicely ease-out forwards;
+        animation: 600ms exitNicely ease-out;
     }
+    will-change: transform, opacity;
 
     @keyframes enterNicely {
         0% {
@@ -103,11 +104,11 @@ const Layout = styled.div`
 const AnimatedApp = () => {
     let location = useLocation();
     return (
-        <TransitionGroup exit enter style={{display: 'contents'}} >
+        <TransitionGroup native exit enter style={{display: 'contents'}} >
             <CSSTransition
                 key={location.pathname}
                 classNames={{ enterActive: "enterNicely", exitActive: "exitNicely" }}
-                timeout={700}
+                timeout={600}
             >
                 <Switch location={location}>
                     <Route exact={true} path="/" component={Home} />
