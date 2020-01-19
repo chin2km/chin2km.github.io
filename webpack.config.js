@@ -1,15 +1,16 @@
 /* eslint-disable */
-var HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const WorkboxPlugin = require("workbox-webpack-plugin");
 const CompressionPlugin = require("compression-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { resolve } = require("path");
 
 module.exports = {
     entry: "./src/index.tsx",
     output: {
-        path: __dirname,
+        path: resolve(process.cwd()),
         publicPath: "/",
         filename: "[name].[contenthash].js",
     },

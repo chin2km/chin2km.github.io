@@ -22,8 +22,8 @@ const Layout = styled.div`
     width: 100%;
 `;
 
-export const Contact = () => (
-    <>
+export const Contact = styled(({className}) => (
+    <div className={className}>
         <ChatWrapper>
             <Chat data={CONTACT_CHAT} />
         </ChatWrapper>
@@ -33,5 +33,15 @@ export const Contact = () => (
                 <SocialBox key={index} name={name} link={link} />
             ))}
         </Layout>
-    </>
-);
+    </div>
+))`
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+`;

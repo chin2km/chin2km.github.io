@@ -42,12 +42,12 @@ const Screenshot = styled.img<{ inView: boolean; imageShadow: boolean }>`
 
 const getRange = (count: number): number[] => Object.keys(Array.from(new Array(count))).map((_, index) => index + 1);
 
-export const WorkDetails = ({ match }) => {
+export const WorkDetails = styled(({ match, className }) => {
     const work = WORKS.find((_, index) => index === Number(match.params.id));
     window["scrollTo"](0, 0);
 
     return work ? (
-        <DetailsWrapper>
+        <DetailsWrapper className={className}>
             <H1 as={"h3"}>{`< ${work.name} />`}</H1>
             <br />
             <Chat data={work.chat} />
@@ -110,4 +110,14 @@ export const WorkDetails = ({ match }) => {
             </Link>
         </>
     );
-};
+})`
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+`;
