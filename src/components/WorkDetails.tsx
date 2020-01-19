@@ -44,13 +44,11 @@ const getRange = (count: number): number[] => Object.keys(Array.from(new Array(c
 
 export const WorkDetails = styled(({ match, className }) => {
     const work = WORKS.find((_, index) => index === Number(match.params.id));
-    if (work) {
-        window["scrollTo"]({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        });
-    }
+    window["scrollTo"]({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+    });
 
     return work ? (
         <DetailsWrapper className={className}>
@@ -62,7 +60,7 @@ export const WorkDetails = styled(({ match, className }) => {
             <br />
             <br />
             {getRange(work.images).map(key => (
-                <InViewAsAny key={key} triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
+                <InViewAsAny key={key} triggerOnce={true} rootMargin={"-20% 0px -20% 0px"}>
                     {({ inView, ref }) => (
                         <Screenshot
                             ref={ref}
@@ -90,9 +88,9 @@ export const WorkDetails = styled(({ match, className }) => {
 
             <Link to="/">
                 <H1>← Back to home</H1>
+                <br />
+                <br />
             </Link>
-            <br />
-            <br />
         </DetailsWrapper>
     ) : (
         <>
@@ -114,6 +112,8 @@ export const WorkDetails = styled(({ match, className }) => {
             <Link to="/">
                 <H1>← Back to home</H1>
             </Link>
+            <br />
+            <br />
         </>
     );
 })`

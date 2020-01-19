@@ -71,7 +71,7 @@ const Layout = styled.div`
         animation: 600ms enterNicely ease-out;
     }
     .exitNicely {
-        animation: 600ms exitNicely ease-out;
+        animation: 600ms exitNicely ease-out forwards;
     }
 
     @keyframes enterNicely {
@@ -106,7 +106,7 @@ const AnimatedApp = () => {
             <CSSTransition
                 key={location.pathname}
                 classNames={{ enterActive: "enterNicely", exitActive: "exitNicely" }}
-                timeout={600}
+                timeout={700}
             >
                 <Switch location={location}>
                     <Route exact={true} path="/" component={Home} />
