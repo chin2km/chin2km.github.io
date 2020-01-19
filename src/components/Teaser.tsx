@@ -94,15 +94,12 @@ const Tag = styled.span`
     display: block;
 `;
 
-export const Teaser: FunctionComponent<Pick<IWork, "tags" | "name"> & { index: number }> = ({ name, tags, index }) => {
-    const navigateTo = (index: number) => () => {
-        window.location.href = `#/works/${index}`;
-    };
-    return (
+export const Teaser: FunctionComponent<Pick<IWork, "tags" | "name"> & { index: number }> = ({ name, tags, index }) =>
+    (
         <InViewAsAny triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
             {({ inView, ref }) => (
                 <TeaserWrapper ref={ref} inView={inView}>
-                    <Box inView={inView} onClick={navigateTo(index)}>
+                    <Box inView={inView}>
                         <Link to={`/works/${index}`}>
                             <H1 as="h4">{name}</H1>
                             <TeaserImage src={`../images/thumbs/${name}.png`} alt={name}></TeaserImage>
@@ -113,4 +110,3 @@ export const Teaser: FunctionComponent<Pick<IWork, "tags" | "name"> & { index: n
             )}
         </InViewAsAny>
     );
-};
