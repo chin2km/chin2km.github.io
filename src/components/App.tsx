@@ -66,16 +66,16 @@ const Layout = styled.div`
     }
 
     .enterNicely {
-        animation: 1s enterNicely forwards;
+        animation: 600ms enterNicely ease-out forwards;
     }
     .exitNicely {
-        animation: 1s exitNicely forwards;
+        animation: 600ms exitNicely ease-out forwards;
     }
 
     @keyframes enterNicely {
         0% {
             opacity: 0;
-            transform: translateX(50%);
+            transform: translateX(30%);
         }
         100% {
             opacity: 1;
@@ -91,7 +91,7 @@ const Layout = styled.div`
         100% {
             opacity: 0;
             transform: translateX(-10%);
-            filter: blur(5px);
+            filter: blur(2px);
         }
     }
 `;
@@ -105,7 +105,7 @@ const AnimatedApp = () => {
             <CSSTransition
                 key={location.pathname}
                 classNames={{ enterActive: "enterNicely", exitActive: "exitNicely" }}
-                timeout={1000}
+                timeout={750}
             >
                 <Switch location={location}>
                     <Route exact={true} path="/" component={Home} />
