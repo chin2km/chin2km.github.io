@@ -60,6 +60,7 @@ const Layout = styled.div`
             margin-right: 0.2rem;
         `)}
     }
+
     a.fancy {
         color: white;
         text-decoration: none;
@@ -68,13 +69,13 @@ const Layout = styled.div`
         line-height: 2rem;
     }
 
+    will-change: transform, opacity;
     .enterNicely {
         animation: 600ms enterNicely ease-out;
     }
     .exitNicely {
         animation: 600ms exitNicely ease-out;
     }
-    will-change: transform, opacity;
 
     @keyframes enterNicely {
         0% {
@@ -99,8 +100,6 @@ const Layout = styled.div`
     }
 `;
 
-
-
 const AnimatedApp = () => {
     let location = useLocation();
     return (
@@ -112,7 +111,7 @@ const AnimatedApp = () => {
             >
                 <Switch location={location}>
                     <Route exact={true} path="/" component={Home} />
-                    <Route path="/contact" children={<Contact />} />
+                    <Route path="/contact" component={Contact} />
                     <Route path="/works/:id" component={WorkDetails} />
                 </Switch>
             </CSSTransition>
@@ -124,9 +123,9 @@ export const App = () => {
     return (
         <Router>
             <Layout>
-                <Header></Header>
+                <Header/>
                 <Switch>
-                    <Route path="*" className="test">
+                    <Route path="*">
                         <AnimatedApp />
                     </Route>
                 </Switch>
