@@ -119,17 +119,15 @@ const AnimatedApp = () => {
     )
 }
 
-export const App = () => {
-    return (
-        <Router>
-            <Layout>
-                <Header/>
-                <Switch>
-                    <Route path="*">
-                        <AnimatedApp />
-                    </Route>
-                </Switch>
-            </Layout>
-        </Router>
-    );
-}
+export const App = () => (
+    <Router>
+        <Layout>
+            <Header/>
+            <Switch>
+                <Route path="*">
+                    <AnimatedApp />
+                </Route>
+            </Switch>
+        </Layout>
+    </Router>
+);
