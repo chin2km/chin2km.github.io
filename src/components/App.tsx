@@ -24,13 +24,7 @@ const Home = styled(({ className }) => (
         <Works works={WORKS} />
     </div>
 ))`
-    position: absolute;
-    top: 20px;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
+    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,8 +33,6 @@ const Home = styled(({ className }) => (
 
 const Container = styled.div`
     display: flex;
-    width: 100%;
-    height: 100%;
     position: relative;
 
     ${onScreenLarge(css`
@@ -59,11 +51,7 @@ const Layout = styled.div`
     align-items: center;
     align-self: center;
     max-width: 110rem;
-    width: 100%;
-    height: 100%;
     position: relative;
-    overflow: auto;
-    overflow-x: hidden;
 
     b.emoji {
         transform: scale(1.3);
@@ -120,11 +108,11 @@ const Layout = styled.div`
 const AnimatedApp = () => {
     let location = useLocation();
     return (
-        <TransitionGroup native={"true"} exit enter style={{ display: "contents" }}>
+        <TransitionGroup native={"true"} exit enter>
             <CSSTransition
                 key={location.pathname}
                 classNames={{ enterActive: "enterNicely", exitActive: "exitNicely" }}
-                timeout={580}
+                timeout={600}
             >
                 <Switch location={location}>
                     <Route exact={true} path="/" component={Home} />
