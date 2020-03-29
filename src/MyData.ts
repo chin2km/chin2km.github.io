@@ -76,7 +76,7 @@ export interface IWork {
 const REACT = "ReactJs";
 const STYLED = "StyledComponents";
 const TYPESCRIPT = "Typescript";
-const ANGULAR = "AngularJs";
+const ANGULAR = "Angular";
 const ELECTRON = "ElectronJs";
 const MATERIAL = "MaterialUi";
 const REDUX = "Redux";
@@ -114,7 +114,7 @@ export const WORKS: IWork[] = [
                 `⚡️`,
             )}`,
             `I built it using technologies like React, Styled-components, React-Intersection-Observer and is written in TypeScript`,
-            `I had a portfolio in the past which was built using AngularJs. Here -> ${hrefHtml(
+            `I had a portfolio in the past which was built using Angular. Here -> ${hrefHtml(
                 "http://chin2km.github.io/chin2km-old-portfolio",
             )}`,
             `I loved building this, and found it difficult to give it a name and finally I settled with the name "built by chin2km" ${inlineEmoji(
@@ -165,7 +165,7 @@ export const WORKS: IWork[] = [
             "Designers Portal is a online shop for one of the well known Sports Shoes brand",
             "It allows the shoe designers in the company to showcase their work in progress designs and also allows them to see the designs from other designers",
             "It has features like Timelines for the Shoe Design, Calendar management etc",
-            "Its built using AngularJs, Material bootstrap",
+            "Its built using Angular, Material bootstrap",
             "I was the main developer in the team. I enjoyed developing it and giving inputs on UI/UX too",
         ],
         imageShadow: true,
@@ -198,7 +198,7 @@ export const WORKS: IWork[] = [
         images: 3,
         chat: [
             `'Fantasy League' is a Game where Cricket Fans in a big Corporate predict the outcome of Cricket matches and earn point when their predictions are correct`,
-            `I used AngularJs and Materialize.css to build it`,
+            `I used Angular and Materialize.css to build it`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],
     },
@@ -210,7 +210,7 @@ export const WORKS: IWork[] = [
         chat: [
             `'Glasswall' is an Incidents Management tool built for a big corporate in India. This tool allows the HR team in the company to effectively keep track of incidents.`,
             `It had functionalities like Excel reports, calendar management, admin panels and a very complex dashboard.`,
-            `I used AngularJs and Materialize.css to build it`,
+            `I used Angular and Materialize.css to build it`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],
     },
@@ -222,7 +222,7 @@ export const WORKS: IWork[] = [
         images: 4,
         chat: [
             `'OnePush' is on of my pet application to do complex searches in Github repositories.`,
-            `I used AngularJs and Materialize.css to build it`,
+            `I used Angular and Materialize.css to build it`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],
     },
@@ -234,7 +234,7 @@ export const WORKS: IWork[] = [
         chat: [
             `'Infusion' is the website for annual sports meet for a big Corporate Company in India.`,
             `It had functionalities like admin CMS, daily news updates and functionality to register for sports events.`,
-            `I used AngularJs and Materialize.css to build it.`,
+            `I used Angular and Materialize.css to build it.`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],
     },
@@ -246,7 +246,7 @@ export const WORKS: IWork[] = [
         chat: [
             `'Leadersboard' is a portal where Interviews with Leaders in the company is published.`,
             `It had functionalities like admin CMS, and a very classy UI.`,
-            `I used AngularJs and Materialize.css to build it.`,
+            `I used Angular and Materialize.css to build it.`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],
     },
@@ -294,7 +294,7 @@ export const WORKS: IWork[] = [
         images: 3,
         chat: [
             `'Learning Paths' is a website which can advice Students to choose the best possible Learning Paths for them.`,
-            `I used ElectronJs and AngularJs to build it.`,
+            `I used ElectronJs and Angular to build it.`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],
     },
@@ -323,7 +323,7 @@ export const WORKS: IWork[] = [
         link: ["here is the link to the demo..", hrefHtml("http://chin2km.github.io/chin2km-old-portfolio")],
         chat: [
             `'Chin2km portfolio'. This is my old portfolio I built in 2014 ${inlineEmoji(`😅`)}.`,
-            `I used AngularJs and lot of css3 animations in SASS to build it.`,
+            `I used Angular and lot of css3 animations in SASS to build it.`,
             `I designed the UI/UX and developed it with ${inlineEmoji(`❤️`)} as always.`,
         ],
     },

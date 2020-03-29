@@ -5,7 +5,7 @@
     "scripts": {
         "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
         "dev": "webpack-dev-server --config ./webpack.config.js --mode development --open",
-        "build": "webpack --config ./webpack.config.js --optimize-minimize --mode production"
+        "build": "rm main.* precache* && webpack --config ./webpack.config.js --optimize-minimize --mode production"
     },
     "keywords": [
         "react starter",
