@@ -1,28 +1,36 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
-import { onScreenMedium, onScreenXtraLarge } from "../utils/styleSettings";
+import { onScreenMedium, onScreenXtraLarge, onScreenLarge } from "../utils/styleSettings";
 import { ThemeProp } from "../themes";
+
+const Container = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    ${onScreenLarge(css`
+        width: 60%;
+        flex-direction: row;
+    `)}
+    ${onScreenXtraLarge(css`
+        width: 40%;
+        align-items: center;
+    `)}
+`;
 
 const Wrapper = styled.header`
     display: flex;
     position: sticky;
     top: 0px;
     z-index: 100;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+    justify-content: center;
     padding: 0.5rem 0rem;
     width: 100%;
-
-    ${onScreenXtraLarge(
-        css`
-            align-items: center;
-        `,
-    )}
-    ${onScreenMedium(css`
-        flex-direction: row;
-    `)}
 
     nav {
         align-self: flex-end;
@@ -44,6 +52,7 @@ const Wrapper = styled.header`
     -webkit-backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter};
     transition: all 0.5s ease-in;
     overflow: hidden;
+    box-shadow: ${({ theme }: ThemeProp) => theme.header.shadow};
 `;
 
 const Title = styled.h1`
@@ -84,13 +93,15 @@ const Logo = styled.img`
 
 export const Header: React.FunctionComponent = () => (
     <Wrapper>
-        <Link to="/" style={{ textDecoration: "none" }}>
-            <Logo src={"../../icon.png"} />
-            <Title>{`< built by chin2km />`}</Title>
-        </Link>
-        <nav>
-            <Link to="/">{`< home />`}</Link>
-            <Link to="/contact">{`< contact />`}</Link>
-        </nav>
+        <Container>
+            <Link to="/" style={{ textDecoration: "none" }}>
+                <Logo src={"../../icon.png"} />
+                <Title>{`< built by chin2km />`}</Title>
+            </Link>
+            <nav>
+                <Link to="/">{`< home />`}</Link>
+                <Link to="/contact">{`< contact />`}</Link>
+            </nav>
+        </Container>
     </Wrapper>
 );

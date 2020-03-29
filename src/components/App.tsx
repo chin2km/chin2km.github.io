@@ -25,7 +25,7 @@ const Home = styled(({ className }) => (
     </div>
 ))`
     position: absolute;
-    top: 100px;
+    top: 20px;
     left: 0;
     bottom: 0;
     right: 0;
@@ -35,6 +35,20 @@ const Home = styled(({ className }) => (
     flex-direction: column;
     align-items: center;
     align-self: center;
+`;
+
+const Container = styled.div`
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    ${onScreenLarge(css`
+        width: 60%;
+    `)}
+    ${onScreenXtraLarge(css`
+        width: 40%;
+    `)}
 `;
 
 const Layout = styled.div`
@@ -48,13 +62,8 @@ const Layout = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-
-    ${onScreenLarge(css`
-        width: 60%;
-    `)}
-    ${onScreenXtraLarge(css`
-        width: 40%;
-    `)}
+    overflow: auto;
+    overflow-x: hidden;
 
     b.emoji {
         transform: scale(1.3);
@@ -137,11 +146,13 @@ export const App = () => {
                     <GlobalStyle />
                     <Layout>
                         <Header />
-                        <Switch>
-                            <Route path="*">
-                                <AnimatedApp />
-                            </Route>
-                        </Switch>
+                        <Container>
+                            <Switch>
+                                <Route path="*">
+                                    <AnimatedApp />
+                                </Route>
+                            </Switch>
+                        </Container>
                     </Layout>
                 </>
             </ThemeProvider>

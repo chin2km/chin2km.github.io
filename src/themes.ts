@@ -3,6 +3,7 @@ export interface ITheme {
     header: {
         bg: string;
         filter: string;
+        shadow: string;
     };
     teaser: {
         bg: string;
@@ -22,6 +23,7 @@ export const THEMES: Record<string, ITheme> = {
         header: {
             bg: "rgba(27, 27, 27, 0.5)",
             filter: "blur(5px)",
+            shadow: "none"
         },
         teaser: {
             bg: "linear-gradient(to bottom, rgb(27, 27, 27), #000)",
@@ -32,10 +34,11 @@ export const THEMES: Record<string, ITheme> = {
         },
     },
     light: {
-        bg: "rgb(240, 242, 245)",
+        bg: "rgb(234, 239, 247)",
         header: {
-            bg: "rgba(255, 255, 255, 0.58)",
+            bg: "rgba(234, 239, 247, 0.84)",
             filter: "blur(5px)",
+            shadow: "rgba(130,130,130,0.1) 0px 8px 7px 0px, rgba(0,0,0,0.09) 2px 3px 5px 0px"
         },
         teaser: {
             bg: "linear-gradient(to bottom,rgb(241, 242, 245),#eee8f7)",

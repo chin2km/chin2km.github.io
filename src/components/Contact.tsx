@@ -36,7 +36,7 @@ export const Contact = styled(({ className }) => (
     </div>
 ))`
     position: absolute;
-    top: 100px;
+    top: 20px;
     left: 0;
     bottom: 0;
     right: 0;
