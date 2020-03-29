@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { useCookies } from "react-cookie";
 import { CONSTANTS } from "../constants";
 
-const Bubble = styled.div<{ isLightTheme: boolean }>`
+const Bubble = styled.span<{ isLightTheme: boolean }>`
     width: 40px;
     height: 40px;
     position: fixed;
@@ -17,10 +17,6 @@ const Bubble = styled.div<{ isLightTheme: boolean }>`
     &:hover {
         transform: scale(1.2);
         cursor: pointer;
-    }
-
-    &:active {
-        box-shadow: ${({ isLightTheme }) => (isLightTheme ? "0px 0px 0px 2000px #ffffff29" : "0px 0px 0px 2000px #00000029")};
     }
 `;
 
