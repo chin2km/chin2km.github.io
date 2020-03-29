@@ -19,9 +19,9 @@ export const INTRO: string[] = [
     `I am a fullstack software developer with over ${getExperience(10, 1, 2012)} years of work experience...`,
     `I love developing software products based on web technologies ${inlineEmoji(
         `❣️`,
-    )}. And sometimes I design them too, like this one ${inlineEmoji(`😉`)}`,
+    )} and sometimes I design them too, like this one ${inlineEmoji(`😉`)}`,
     `I've got a keen eye for details. Plus, I'm really good at team work ${inlineEmoji(`🤩`)}`,
-    `I work with latest tools & tech like: ReactJs, NodeJs, Redux, RxJs, MongoDb, TypeScript etc ${inlineEmoji(`🚀`)}`,
+    `I work with latest tools & tech like: ReactJs, NodeJs, GraphQl, RxJs, Redux, MongoDb, TypeScript etc ${inlineEmoji(`🚀`)}`,
     `Some of my works ( only the ones I'm allowed to share 👀🙏🏻) are detailed below ${inlineEmoji(`↓`)}`,
     `Enjoy your time here and have a nice day ${inlineEmoji(`😇`)}`,
 ];

@@ -22,7 +22,7 @@ const Layout = styled.div`
     width: 100%;
 `;
 
-export const Contact = styled(({className}) => (
+export const Contact = styled(({ className }) => (
     <div className={className}>
         <ChatWrapper>
             <Chat data={CONTACT_CHAT} />

@@ -7,3 +7,4 @@ export * from "./Teaser";
 export * from "./SocialBox";
 export * from "./WorkDetails";
 export * from "./BaseElements/H1";
+export * from "./Themer";

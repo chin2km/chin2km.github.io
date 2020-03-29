@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { onScreenMedium, onScreenXtraLarge } from "../utils/styleSettings";
+import { ThemeProp } from "../themes";
 
 const Wrapper = styled.header`
     display: flex;
@@ -38,9 +39,10 @@ const Wrapper = styled.header`
         }
     }
 
-    background-color: rgba(27, 27, 27, 0.5);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background-color: ${({ theme }: ThemeProp) => theme.header.bg};
+    backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter};
+    -webkit-backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter};
+    transition: all 0.5s ease-in;
     overflow: hidden;
 `;
 

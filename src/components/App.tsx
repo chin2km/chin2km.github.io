@@ -1,16 +1,24 @@
 import React from "react";
 import { HashRouter as Router, Route, Switch, useLocation } from "react-router-dom";
-import styled, { css } from "styled-components";
-import { Contact, Header, WorkDetails, Works } from "../components";
+import styled, { css, ThemeProvider, createGlobalStyle } from "styled-components";
+import { Contact, Header, WorkDetails, Works, Themer } from "../components";
 import { INTRO, WORKS } from "../MyData";
 import { onScreenLarge, onScreenMedium, onScreenXtraLarge } from "../utils/styleSettings";
 import { Chat } from "./Chat";
-import {
-    TransitionGroup,
-    CSSTransition
-} from "react-transition-group";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { THEMES, ThemeProp } from "../themes";
+import { useCookies } from "react-cookie";
+import { CONSTANTS } from "../constants";
 
-const Home = styled(({className}) => (
+const GlobalStyle = createGlobalStyle`
+  body {
+    background: ${({ theme }: ThemeProp) => theme.bg};
+    transition: background 0.5s ease-in-out;
+    will-change: background;
+  }
+`;
+
+const Home = styled(({ className }) => (
     <div className={className}>
         <Chat data={INTRO} />
         <Works works={WORKS} />
@@ -103,11 +111,11 @@ const Layout = styled.div`
 const AnimatedApp = () => {
     let location = useLocation();
     return (
-        <TransitionGroup native exit enter style={{display: 'contents'}} >
+        <TransitionGroup native={"true"} exit enter style={{ display: "contents" }}>
             <CSSTransition
                 key={location.pathname}
                 classNames={{ enterActive: "enterNicely", exitActive: "exitNicely" }}
-                timeout={600}
+                timeout={580}
             >
                 <Switch location={location}>
                     <Route exact={true} path="/" component={Home} />
@@ -116,18 +124,28 @@ const AnimatedApp = () => {
                 </Switch>
             </CSSTransition>
         </TransitionGroup>
-    )
-}
+    );
+};
 
-export const App = () => (
-    <Router>
-        <Layout>
-            <Header/>
-            <Switch>
-                <Route path="*">
-                    <AnimatedApp />
-                </Route>
-            </Switch>
-        </Layout>
-    </Router>
-);
+export const App = () => {
+    const [{ useLightTheme }] = useCookies([CONSTANTS.COOKIES.useLightTheme]);
+    const isLightTheme = useLightTheme === "true" ? true : false;
+    return (
+        <Router>
+            <ThemeProvider theme={isLightTheme ? THEMES.light : THEMES.dark}>
+                <>
+                    <GlobalStyle />
+                    <Layout>
+                        <Header />
+                        <Switch>
+                            <Route path="*">
+                                <AnimatedApp />
+                            </Route>
+                        </Switch>
+                    </Layout>
+                </>
+            </ThemeProvider>
+            <Themer />
+        </Router>
+    );
+};

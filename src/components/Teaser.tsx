@@ -5,6 +5,7 @@ import styled, { css } from "styled-components";
 import { IWork } from "../MyData";
 import { onScreenMedium } from "../utils/styleSettings";
 import { H1 } from "./BaseElements/H1";
+import { ThemeProp } from "../themes";
 
 const InViewAsAny: any = InView;
 
@@ -33,15 +34,15 @@ const Box = styled.div<{ inView: boolean }>`
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    transition: all 0.5s ease-in-out;
     color: #fff;
     margin: 3rem 1.6rem;
     padding: 1rem;
     height: 100% !important;
     min-height: 15rem;
     position: relative;
-    box-shadow: 2px 3px 15px #000;
-    background: linear-gradient(to bottom, rgb(27, 27, 27), #000);
+    box-shadow: ${({ theme }: ThemeProp) => theme.teaser.shadow};
+    background: ${({ theme }: ThemeProp) => theme.teaser.bg};
+    transition: all 0.3s ease-in-out;
     border: 1px solid #8d27da;
 
     ${onScreenMedium(css`
@@ -51,9 +52,7 @@ const Box = styled.div<{ inView: boolean }>`
     ${({ inView }) =>
         inView &&
         css`
-            background: linear-gradient(to bottom, rgb(27, 27, 27), #000);
             border-image: linear-gradient(90deg, #d82881 36%, #8d27da) 1;
-            box-shadow: 2px 3px 15px #000;
             transform: scale(1.2);
             > * {
                 opacity: 1 !important;
@@ -76,7 +75,8 @@ const Box = styled.div<{ inView: boolean }>`
 `;
 
 const TeaserImage = styled.img`
-    max-width: 80%;
+    opacity: 0.9;
+    max-width: 90%;
     max-height: 8rem;
     align-self: center;
     border-radius: 3px;
@@ -94,19 +94,18 @@ const Tag = styled.span`
     display: block;
 `;
 
-export const Teaser: FunctionComponent<Pick<IWork, "tags" | "name"> & { index: number }> = ({ name, tags, index }) =>
-    (
-        <InViewAsAny triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
-            {({ inView, ref }) => (
-                <TeaserWrapper ref={ref} inView={inView}>
-                    <Box inView={inView}>
-                        <Link to={`/works/${index}`}>
-                            <H1 as="h4">{name}</H1>
-                            <TeaserImage src={`../images/thumbs/${name}.png`} alt={name}></TeaserImage>
-                            <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
-                        </Link>
-                    </Box>
-                </TeaserWrapper>
-            )}
-        </InViewAsAny>
-    );
+export const Teaser: FunctionComponent<Pick<IWork, "tags" | "name"> & { index: number }> = ({ name, tags, index }) => (
+    <InViewAsAny triggerOnce={false} rootMargin={"-20% 0px -20% 0px"}>
+        {({ inView, ref }) => (
+            <TeaserWrapper ref={ref} inView={inView}>
+                <Box inView={inView}>
+                    <Link to={`/works/${index}`}>
+                        <H1 as="h4">{name}</H1>
+                        <TeaserImage src={`../images/thumbs/${name}.png`} alt={name}></TeaserImage>
+                        <div>{tags && tags.map((tag, index) => <Tag key={index}>{tag}</Tag>)}</div>
+                    </Link>
+                </Box>
+            </TeaserWrapper>
+        )}
+    </InViewAsAny>
+);

@@ -3,6 +3,7 @@ import InView from "react-intersection-observer";
 import styled, { css } from "styled-components";
 import { ISocial } from "../MyData";
 import { onScreenMedium } from "../utils/styleSettings";
+import { ThemeProp } from "../themes";
 
 const InViewAsAny: any = InView;
 
@@ -31,13 +32,13 @@ const Box = styled.div<{ inView: boolean }>`
     justify-content: center;
     transition: all 0.5s ease-in-out;
     color: #000;
-    box-shadow: 2px 3px 15px #000;
+    box-shadow: ${({ theme }: ThemeProp) => theme.teaser.shadow};
     margin: 3rem 1.6rem;
     padding: 1rem;
     height: 100% !important;
     position: relative;
 
-    background: linear-gradient(to bottom, rgb(27, 27, 27), #000);
+    background: ${({ theme }: ThemeProp) => theme.teaser.bg};
     border: 1px solid #8d27da;
     border-radius: 3px;
 
@@ -48,7 +49,7 @@ const Box = styled.div<{ inView: boolean }>`
     ${({ inView }) =>
         inView &&
         css`
-            background: linear-gradient(to bottom, rgb(27, 27, 27), #000);
+            background: ${({ theme }: ThemeProp) => theme.teaser.bg};
             border-image: linear-gradient(90deg, #d82881 36%, #8d27da) 1;
 
             transform: scale(1.2);

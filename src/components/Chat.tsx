@@ -1,6 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
 import styled, { css } from "styled-components";
-import { onScreenLarge } from "../utils/styleSettings";
+import { onScreenLarge, onScreenMedium } from "../utils/styleSettings";
 
 const Typing = styled.div`
     width: auto;
@@ -152,10 +152,17 @@ export const Chat = styled(ChatComponent)`
     display: flex;
     flex-direction: column;
     width: 70%;
-    min-height: 30rem;
+    min-height: 38rem;
     margin-bottom: 1rem;
     align-self: center;
     justify-self: center;
+
+    ${onScreenMedium(
+        css`
+            min-height: 32rem;
+        `,
+    )}
+
     ${onScreenLarge(
         css`
             min-height: 28rem;
