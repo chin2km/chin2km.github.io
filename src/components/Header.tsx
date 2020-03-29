@@ -9,7 +9,7 @@ const Container = styled.div`
     width: 100%;
     height: 100%;
     position: relative;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 
@@ -19,18 +19,9 @@ const Container = styled.div`
     `)}
     ${onScreenXtraLarge(css`
         width: 40%;
+        flex-direction: row;
         align-items: center;
     `)}
-`;
-
-const Wrapper = styled.header`
-    display: flex;
-    position: sticky;
-    top: 0px;
-    z-index: 100;
-    justify-content: center;
-    padding: 0.5rem 0rem;
-    width: 100%;
 
     nav {
         align-self: flex-end;
@@ -46,7 +37,16 @@ const Wrapper = styled.header`
             }
         }
     }
+`;
 
+const Wrapper = styled.header`
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    justify-content: center;
+    padding: 0.5rem 0 1rem 0;
+    width: 100%;
     background-color: ${({ theme }: ThemeProp) => theme.header.bg};
     backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter};
     -webkit-backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter};

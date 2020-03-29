@@ -16,7 +16,7 @@ export const INTRO: string[] = [
     `I am Chintu Kishen Kuthirangattil Mohandas. I'm an Indian${inlineEmoji(
         `🇮🇳`,
     )}living in Hamburg, Germany ${inlineEmoji(`🇩🇪`)}`,
-    `I am a fullstack software developer with over ${getExperience(10, 1, 2012)} years of work experience...`,
+    `I am a fullstack software developer with over ${getExperience(10, 1, 2012)} years of professional experience working with some awesome developers...`,
     `I love developing software products based on web technologies ${inlineEmoji(
         `❣️`,
     )} and sometimes I design them too, like this one ${inlineEmoji(`😉`)}`,
