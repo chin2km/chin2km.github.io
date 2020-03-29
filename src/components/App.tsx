@@ -34,6 +34,7 @@ const Home = styled(({ className }) => (
 const Container = styled.div`
     display: flex;
     position: relative;
+    justify-content: center;
 
     ${onScreenLarge(css`
         width: 60%;
