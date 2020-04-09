@@ -44,6 +44,9 @@ const Container = styled.div`
     `)}
 `;
 
+const enterAnimation = `enterAnimation`;
+const exitAnimation = `exitAnimation`;
+
 const Layout = styled.div`
     font-size: 1rem;
     text-align: center;
@@ -53,6 +56,7 @@ const Layout = styled.div`
     align-self: center;
     max-width: 110rem;
     position: relative;
+    will-change: transform, opacity;
 
     b.emoji {
         transform: scale(1.3);
@@ -75,15 +79,14 @@ const Layout = styled.div`
         line-height: 2rem;
     }
 
-    will-change: transform, opacity;
-    .enterNicely {
-        animation: 600ms enterNicely ease-out;
+    .${enterAnimation} {
+        animation: 600ms ${enterAnimation} ease-out;
     }
-    .exitNicely {
-        animation: 600ms exitNicely ease-out;
+    .${exitAnimation} {
+        animation: 600ms ${exitAnimation} ease-out;
     }
 
-    @keyframes enterNicely {
+    @keyframes ${enterAnimation} {
         0% {
             opacity: 0;
             transform: translateX(30%);
@@ -94,7 +97,7 @@ const Layout = styled.div`
         }
     }
 
-    @keyframes exitNicely {
+    @keyframes ${exitAnimation} {
         0% {
             opacity: 1;
             transform: translateX(0);
@@ -112,7 +115,7 @@ const AnimatedApp = () => {
         <TransitionGroup native={"true"} exit enter>
             <CSSTransition
                 key={location.pathname}
-                classNames={{ enterActive: "enterNicely", exitActive: "exitNicely" }}
+                classNames={{ enterActive: enterAnimation, exitActive: exitAnimation }}
                 timeout={600}
             >
                 <Switch location={location}>
