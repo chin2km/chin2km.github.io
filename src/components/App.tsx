@@ -29,12 +29,25 @@ const Home = styled(({ className }) => (
     flex-direction: column;
     align-items: center;
     align-self: center;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
 `;
 
 const Container = styled.div`
     display: flex;
     position: relative;
     justify-content: center;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 110px;
+    margin: auto;
 
     ${onScreenLarge(css`
         width: 60%;
@@ -54,9 +67,13 @@ const Layout = styled.div`
     flex-direction: column;
     align-items: center;
     align-self: center;
-    max-width: 110rem;
     position: relative;
     will-change: transform, opacity;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
 
     b.emoji {
         transform: scale(1.3);
@@ -80,10 +97,11 @@ const Layout = styled.div`
     }
 
     .${enterAnimation} {
-        animation: 600ms ${enterAnimation} ease-out;
+        animation: 700ms ${enterAnimation} ease-out;
+        z-index: 1;
     }
     .${exitAnimation} {
-        animation: 600ms ${exitAnimation} ease-out;
+        animation: 700ms ${exitAnimation} ease-out forwards;
     }
 
     @keyframes ${enterAnimation} {
@@ -116,7 +134,7 @@ const AnimatedApp = () => {
             <CSSTransition
                 key={location.pathname}
                 classNames={{ enterActive: enterAnimation, exitActive: exitAnimation }}
-                timeout={600}
+                timeout={700}
             >
                 <Switch location={location}>
                     <Route exact={true} path="/" component={Home} />

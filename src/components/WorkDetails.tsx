@@ -124,4 +124,10 @@ export const WorkDetails = styled(({ match, className }) => {
     flex-direction: column;
     align-items: center;
     align-self: center;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
 `;

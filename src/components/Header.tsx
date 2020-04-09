@@ -41,7 +41,7 @@ const Container = styled.div`
 
 const Wrapper = styled.header`
     display: flex;
-    position: sticky;
+    position: fixed;
     top: 0px;
     z-index: 100;
     justify-content: center;
