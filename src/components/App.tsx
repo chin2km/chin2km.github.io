@@ -68,7 +68,6 @@ const Layout = styled.div`
     align-items: center;
     align-self: center;
     position: relative;
-    will-change: transform, opacity;
     position: absolute;
     left: 0;
     right: 0;
