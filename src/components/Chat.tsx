@@ -156,6 +156,7 @@ export const Chat = styled(ChatComponent)`
     margin-bottom: 1rem;
     align-self: center;
     justify-self: center;
+    transition: all 0.3s ease-in-out;
 
     ${onScreenMedium(
         css`

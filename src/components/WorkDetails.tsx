@@ -16,7 +16,7 @@ const DetailsWrapper = styled.div`
     min-width: 100%;
     width: 100%;
     ${Chat} {
-        min-height: 18rem;
+        min-height: 30rem;
     }
 `;
 
