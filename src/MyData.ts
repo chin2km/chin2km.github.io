@@ -128,7 +128,7 @@ export const WORKS: IWork[] = [
         tags: [SVELTE, UI_UX],
         link: [
             "here is the link to the application..",
-            hrefHtml("https://chin2km.github.io/svelte-tryout/public"),
+            hrefHtml("https://chin2km.github.io/svelte-tryout"),
             "and here is the link to the code repo..",
             hrefHtml("https://github.com/chin2km/svelte-tryout"),
         ],
