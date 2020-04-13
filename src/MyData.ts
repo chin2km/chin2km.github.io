@@ -21,7 +21,7 @@ export const INTRO: string[] = [
         `❣️`,
     )} and sometimes I design them too, like this one ${inlineEmoji(`😉`)}`,
     `I've got a keen eye for details. Plus, I'm really good at team work ${inlineEmoji(`🤩`)}`,
-    `I work with latest tools & tech like: ReactJs, NodeJs, GraphQl, RxJs, Redux, MongoDb, TypeScript etc ${inlineEmoji(`🚀`)}`,
+    `I like to work with NodeJs, ReactJs, Svelte, Vue, Angular, GraphQl, RxJs, Redux, Express, MongoDb, TypeScript etc ${inlineEmoji(`🚀`)}`,
     `Some of my works ( only the ones I'm allowed to share 👀🙏🏻) are detailed below ${inlineEmoji(`↓`)}`,
     `Enjoy your time here and have a nice day ${inlineEmoji(`😇`)}`,
 ];
@@ -74,6 +74,7 @@ export interface IWork {
     tags?: string[];
 }
 const REACT = "ReactJs";
+const SVELTE = "Svelte";
 const STYLED = "StyledComponents";
 const TYPESCRIPT = "Typescript";
 const ANGULAR = "Angular";
@@ -120,6 +121,23 @@ export const WORKS: IWork[] = [
             `I loved building this, and found it difficult to give it a name and finally I settled with the name "built by chin2km" ${inlineEmoji(
                 `👻`,
             )} `,
+        ],
+    },
+    {
+        name: "TuTuDo - svelte",
+        tags: [SVELTE, UI_UX],
+        link: [
+            "here is the link to the application..",
+            hrefHtml("https://chin2km.github.io/svelte-tryout/public"),
+            "and here is the link to the code repo..",
+            hrefHtml("https://github.com/chin2km/svelte-tryout"),
+        ],
+        images: 3,
+        imageShadow: false,
+        chat: [
+            `This is me playing with Svelte during a corona lockdown weekend and falling in love with it ${inlineEmoji(`❤️`)}`,
+            `I designed and built it using svelte.js framework and is written in plain javascript.`,
+            `I loved building this and I'm very hopeful about the future of Svelte!`,
         ],
     },
     {
