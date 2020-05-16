@@ -42,7 +42,12 @@ module.exports = {
             filename: "[name].css",
             chunkFilename: "[id].css",
         }),
-        new WorkboxPlugin.GenerateSW(),
+        new WorkboxPlugin.GenerateSW({
+            runtimeCaching: [{
+                urlPattern: /\.(?:html)/,
+                handler: "CacheFirst"
+            }]
+        }),
         new CopyWebpackPlugin([
             {
                 from: "public",

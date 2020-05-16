@@ -5,7 +5,8 @@
     "scripts": {
         "lint": "eslint 'src/**/*.{js,ts,tsx}' --quiet --fix",
         "start": "webpack-dev-server --config ./webpack.config.js --mode development --open",
-        "build": "rm main.* precache* && webpack --config ./webpack.config.js --optimize-minimize --mode production"
+        "build": "webpack --config ./webpack.config.js --optimize-minimize --mode production",
+        "re-build": "rm main.* workbox* service-* && npm run build"
     },
     "keywords": [
         "react starter",
@@ -51,6 +52,7 @@
     "dependencies": {
         "@types/react-transition-group": "^4.2.4",
         "classnames": "2.2.6",
+        "framer-motion": "^2.0.0-beta.70",
         "intersection-observer": "^0.10.0",
         "react": "^16.13.1",
         "react-cookie": "^4.0.3",

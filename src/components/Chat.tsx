@@ -160,13 +160,13 @@ export const Chat = styled(ChatComponent)`
 
     ${onScreenMedium(
         css`
-            min-height: 32rem;
+            min-height: 37rem;
         `,
     )}
 
     ${onScreenLarge(
         css`
-            min-height: 28rem;
+            min-height: 33rem;
         `,
     )}
 `;

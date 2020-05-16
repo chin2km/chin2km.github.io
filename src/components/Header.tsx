@@ -47,12 +47,12 @@ const Wrapper = styled.header`
     justify-content: center;
     padding: 0.5rem 0 1rem 0;
     width: 100%;
-    background-color: ${({ theme }: ThemeProp) => theme.header.bg};
-    backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter};
-    -webkit-backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter};
+    background-color: ${({ theme }: ThemeProp) => theme.header.bg} !important;
+    backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter} !important;
+    -webkit-backdrop-filter: ${({ theme }: ThemeProp) => theme.header.filter} !important;
     transition: all 0.5s ease-in;
     overflow: hidden;
-    box-shadow: ${({ theme }: ThemeProp) => theme.header.shadow};
+    box-shadow: ${({ theme }: ThemeProp) => theme.header.shadow} !important;
 `;
 
 const Title = styled.h1`

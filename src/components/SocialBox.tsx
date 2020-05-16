@@ -32,13 +32,13 @@ const Box = styled.div<{ inView: boolean }>`
     justify-content: center;
     transition: all 0.5s ease-in-out;
     color: #000;
-    box-shadow: ${({ theme }: ThemeProp) => theme.teaser.shadow};
+    box-shadow: ${({ theme }: ThemeProp) => theme.teaser.shadow} !important;
     margin: 3rem 1.6rem;
     padding: 1rem;
     height: 100% !important;
     position: relative;
 
-    background: ${({ theme }: ThemeProp) => theme.teaser.bg};
+    background: ${({ theme }: ThemeProp) => theme.teaser.bg} !important;
     border: 1px solid #8d27da;
     border-radius: 3px;
 
@@ -49,7 +49,7 @@ const Box = styled.div<{ inView: boolean }>`
     ${({ inView }) =>
         inView &&
         css`
-            background: ${({ theme }: ThemeProp) => theme.teaser.bg};
+            background: ${({ theme }: ThemeProp) => theme.teaser.bg} !important;
             border-image: linear-gradient(90deg, #d82881 36%, #8d27da) 1;
 
             transform: scale(1.2);

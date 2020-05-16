@@ -1,16 +1,22 @@
 import React, { FunctionComponent } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { IWork } from "../MyData";
 import { H1 } from "./BaseElements/H1";
 import { Teaser } from "./Teaser";
+import { onScreenMedium } from "../utils/styleSettings";
 
 const Layout = styled.div`
-    display: flex;
-    flex: 1 1 100%;
-    flex-wrap: wrap;
-    align-self: center;
-    justify-content: center;
-    width: 100%;
+    display: grid;
+    padding: 3rem 0;
+    grid-auto-rows: minmax(min-content, max-content);
+    grid-auto-rows: minmax(min-content, max-content);
+    width: 90%;
+    grid-template-columns: repeat(auto-fill, minmax(calc((100% - 6rem) / 2), 1fr));
+    grid-gap: 3rem 2rem;
+    ${onScreenMedium(css`
+        grid-template-columns: repeat(auto-fill, minmax(calc((100% - 10rem) / 3), 1fr));
+        grid-gap: 6rem 4rem;
+    `)}
 `;
 
 interface IProps {
