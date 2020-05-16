@@ -12,7 +12,7 @@ const Layout = styled.div`
     grid-auto-rows: minmax(min-content, max-content);
     width: 90%;
     grid-template-columns: repeat(auto-fill, minmax(calc((100% - 6rem) / 2), 1fr));
-    grid-gap: 3rem 2rem;
+    grid-gap: 4rem 2rem;
     ${onScreenMedium(css`
         grid-template-columns: repeat(auto-fill, minmax(calc((100% - 10rem) / 3), 1fr));
         grid-gap: 6rem 4rem;
