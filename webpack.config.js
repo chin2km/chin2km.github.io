@@ -45,7 +45,7 @@ module.exports = {
         new WorkboxPlugin.GenerateSW({
             runtimeCaching: [{
                 urlPattern: /\.(?:html)/,
-                handler: "CacheFirst"
+                handler: "StaleWhileRevalidate"
             }]
         }),
         new CopyWebpackPlugin([
