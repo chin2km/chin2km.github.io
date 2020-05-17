@@ -10,7 +10,7 @@ const { resolve } = require("path");
 module.exports = {
     entry: "./src/index.tsx",
     output: {
-        path: resolve(process.cwd()),
+        path: resolve(process.cwd(), 'dist'),
         publicPath: "/",
         filename: "[name].[contenthash].js",
     },
