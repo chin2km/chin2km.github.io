@@ -21,6 +21,7 @@ const Box = motion.custom(styled.div<{ inView: boolean }>`
     transition: all 0.3s ease-in-out;
     border: 1px solid #8d27da;
     height: 15rem;
+    opacity: 1 !important;
 
     > * {
         transition: all 0.7s ease-in-out;
