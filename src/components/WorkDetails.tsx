@@ -4,11 +4,9 @@ import { H1 } from "./BaseElements/H1";
 import { Link } from "react-router-dom";
 import { WORKS } from "../MyData";
 import { Chat } from "./Chat";
-import InView from "react-intersection-observer";
 import { hrefHtml, inlineEmoji, onScreenLarge, onScreenXtraLarge } from "../utils/styleSettings";
 import { motion } from "framer-motion";
 import { ThemeProp } from "../themes";
-const InViewAsAny: any = InView;
 
 const Overlay = motion.custom(styled.div`
     z-index: 1;
@@ -70,7 +68,6 @@ const Screenshot = styled.img<{ inView: boolean; imageShadow: boolean }>`
     border-radius: 3px;
     margin: 3rem 0rem;
     transition: all 0.7s ease-in-out;
-    opacity: ${({ inView }) => (inView ? 1 : 0.1)};
     ${({ inView }) =>
         inView &&
         css`
@@ -112,16 +109,12 @@ export const WorkDetails = ({ id }) => {
                 <br />
                 <br />
                 {getRange(work.images).map((key) => (
-                    <InViewAsAny key={key} triggerOnce={false} rootMargin={"-10% 0px -10% 0px"}>
-                        {({ inView, ref }) => (
-                            <Screenshot
-                                ref={ref}
-                                imageShadow={work.imageShadow}
-                                inView={inView}
-                                src={`../images/screenshots/${work.name}/${key}.png`}
-                            />
-                        )}
-                    </InViewAsAny>
+                    <Screenshot
+                        key={key}
+                        imageShadow={work.imageShadow}
+                        inView={true}
+                        src={`../images/screenshots/${work.name}/${key}.png`}
+                    />
                 ))}
 
                 <br />

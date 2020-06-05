@@ -1,20 +1,46 @@
-/* eslint-disable */
-const isLocalhost = Boolean(
-    window.location.hostname === 'localhost' ||
-    // [::1] is the IPv6 localhost address.
-    window.location.hostname === '[::1]' ||
-    // 127.0.0.1/8 is considered localhost for IPv4.
-    window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
-);
+export function registerServiceWorker() {
+    window["isUpdateAvailable"] = new Promise((resolve) => {
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", async () => {
+                navigator.serviceWorker
+                    .register("/service-worker.js", { scope: "/" })
+                    .then((registration) => {
+                        console.info("⚙️ Service worker registration succeeded:", registration);
 
-export function registerServiceWorkerForPWA(): void {
-    // @ts-ignore
-    if (!isLocalhost && process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
-        // @ts-ignore
-        window.addEventListener("load", (): void => {
-            // @ts-ignore
-            navigator.serviceWorker.register("./service-worker.js");
-        });
-    }
+                        registration.onupdatefound = () => {
+                            const installingWorker = registration.installing;
+                            if (installingWorker) {
+                                installingWorker.onstatechange = () => {
+                                    if (installingWorker.state === "installed") {
+                                        if (navigator.serviceWorker.controller) {
+                                            // tslint:disable-next-line:no-console
+                                            console.log("Service worker new update available", navigator.serviceWorker);
+                                            resolve(true);
+                                        } else {
+                                            // tslint:disable-next-line:no-console
+                                            console.log("Service worker no new update", navigator.serviceWorker);
+                                            resolve(false);
+                                        }
+                                    }
+                                };
+                            }
+                        };
+                    })
+                    .catch((error) => {
+                        console.error({
+                            message: "Service worker registration failed",
+                            error,
+                            additionalData: {
+                                tags: {
+                                    component: "service-worker",
+                                },
+                                level: "info",
+                            },
+                        });
+                    });
+            });
+        } else {
+            console.error({ message: "Service workers are not supported." });
+        }
+    });
 }
-/* eslint-enable */

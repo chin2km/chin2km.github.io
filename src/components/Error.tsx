@@ -9,25 +9,21 @@ const GlobalStyle = createGlobalStyle`
 
 export class ErrorBoundary extends React.Component<any, any> {
     constructor(props) {
-      super(props);
-      this.state = { hasError: false };
+        super(props);
+        this.state = { hasError: false };
     }
-  
+
     static getDerivedStateFromError(error) {
-      return { hasError: true };
+        return { hasError: true };
     }
-  
-    componentDidCatch(error, errorInfo) {
-        setTimeout(() => {
-            window.location.reload()
-        }, 0);
-    }
-  
+
+    componentDidCatch(error, errorInfo) {}
+
     render() {
-      if (this.state.hasError) {
-        return <GlobalStyle />;
-      }
-  
-      return this.props.children; 
+        if (this.state.hasError) {
+            return <GlobalStyle />;
+        }
+
+        return this.props.children;
     }
-  }
+}

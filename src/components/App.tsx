@@ -1,7 +1,7 @@
 import { AnimatePresence, AnimateSharedLayout } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 import { useCookies } from "react-cookie";
-import { HashRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled, { createGlobalStyle, css, ThemeProvider } from "styled-components";
 import { Contact, Header, Themer, WorkDetails, Works } from "../components";
 import { CONSTANTS } from "../constants";
@@ -95,7 +95,7 @@ const AnimatedApp = ({ match }) => {
             <Home />
             <AnimatePresence>{id ? <WorkDetails id={id} /> : null}</AnimatePresence>
         </AnimateSharedLayout>
-    ) : (
+    ) : path.includes("/app-shell") ? null : (
         <Route path="/contact" component={Contact} />
     );
 };
@@ -103,6 +103,15 @@ const AnimatedApp = ({ match }) => {
 export const App = () => {
     const [{ useLightTheme }] = useCookies([CONSTANTS.COOKIES.useLightTheme]);
     const isLightTheme = useLightTheme === "true";
+    useEffect(() => {
+        if (window["isUpdateAvailable"]) {
+            window["isUpdateAvailable"].then((isAvailable: boolean) => {
+                if (isAvailable) {
+                    window.location.reload();
+                }
+            });
+        }
+    }, []);
     return (
         <ErrorBoundary>
             <ThemeProvider theme={isLightTheme ? THEMES.light : THEMES.dark}>
@@ -111,7 +120,7 @@ export const App = () => {
                     <Layout>
                         <Header />
                         <Container>
-                            <Route path={["/works/:id", "/contact", "/"]} component={AnimatedApp} />
+                            <Route path={["/works/:id", "/contact", "/app-shell", "/"]} component={AnimatedApp} />
                         </Container>
                         <Themer />
                     </Layout>
